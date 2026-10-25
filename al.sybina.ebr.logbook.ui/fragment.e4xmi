@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:basic_1="http://www.eclipse.org/ui/2010/UIModel/application/descriptor/basic" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_JgAS4KEwEeaBuMVwP1ynmA">
+  <imports xsi:type="commands:Command" xmi:id="_lfrqUKTUEeao54ifrX_o2A" elementId="al.sybina.ebr.rcp.command.showView"/>
+  <imports xsi:type="commands:Command" xmi:id="_p9YksKTUEeao54ifrX_o2A" elementId="al.sybina.ebr.rcp.command.switchperspective"/>
+  <imports xsi:type="basic:Part" xmi:id="_uzCDcFyWEeqvrpdS_JEu_g" elementId="al.sybina.ebr.login.part.manageUsers"/>
+  <imports xsi:type="basic:Part" xmi:id="_82RsECtoEeufBO2Bs6oJdw" elementId="al.sybina.ebr.logbook.commons.part.audit"/>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_v1WdoKTUEeao54ifrX_o2A" featurename="children" parentElementId="org.eclipse.ui.ide.perspectivestack">
+    <elements xsi:type="advanced:Perspective" xmi:id="_K8fj4KTyEeao54ifrX_o2A" elementId="al.sybina.ebr.logbook.ui.perspective.logbook" label="Logbook Marpol Oil1" iconURI="platform:/plugin/org.eclipse.e4.tools.resources/icons/ibr/euMrv/observed-data64.png" tooltip="Logbook Marpol Oil1">
+      <children xsi:type="basic:PartStack" xmi:id="_b9VQwCO-EemMY5RTIvfYPA" elementId="al.sybina.ebr.logbook.ui.partstack.0" selectedElement="_3zJX8PJkEeiKM7iWpmDXug">
+        <children xsi:type="basic:Part" xmi:id="_3zJX8PJkEeiKM7iWpmDXug" elementId="al.sybina.ebr.logbook.ui.part.oilrecordbook1" contributionURI="bundleclass://al.sybina.ebr.logbook.ui/al.sybina.ebr.logbook.views.OilRecordBookPart1View" label="Oil Record Book Part 1 (Machinery space operations(all ships)) "/>
+        <children xsi:type="basic:Part" xmi:id="_S29qoKTzEeao54ifrX_o2A" elementId="al.sybina.ebr.logbook.ui.part.marpolDetail" contributionURI="bundleclass://al.sybina.ebr.logbook.commons/al.sybina.ebr.logbook.views.marpoldetail.MarpolDetailView" label="Marpol detail" iconURI="platform:/plugin/org.eclipse.e4.tools.resources/icons/ibr/euMrv/observed-data32.png" tooltip=""/>
+        <children xsi:type="basic:Part" xmi:id="_M8HRwEWTEem7t_WioCKUNg" elementId="al.sybina.ebr.logbook.ui.part.history" contributionURI="bundleclass://al.sybina.ebr.logbook.commons/al.sybina.ebr.logbook.views.history.HistoryView" label="History"/>
+        <children xsi:type="basic:Part" xmi:id="_SdfCkF04EeqE1dt3qSmOhQ" elementId="al.sybina.ebr.logbook.ui.part.users" contributionURI="bundleclass://al.sybina.ebr.login/al.sybina.ebr.login.views.ManageUsersView" label="Users"/>
+        <children xsi:type="basic:Part" xmi:id="_DTxCACtrEeufBO2Bs6oJdw" elementId="al.sybina.ebr.logbook.ui.part.audit" visible="false" contributionURI="bundleclass://al.sybina.ebr.logbook.commons/al.sybina.ebr.logbook.views.audit.AuditView" label="Audit Logging"/>
+      </children>
+    </elements>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_QdrjQKTsEeao54ifrX_o2A" featurename="children" parentElementId="al.sybina.ebr.rcp.menu.views">
+    <elements xsi:type="menu:HandledMenuItem" xmi:id="_MqGRAKT5Eeao54ifrX_o2A" elementId="al.sybina.ebr.logbook.ui.handledmenuitem.marpolDetail" label="Logbook Marpol Detail" iconURI="platform:/plugin/org.eclipse.e4.tools.resources/icons/ibr/euMrv/total-observed-data16.png" command="_lfrqUKTUEeao54ifrX_o2A">
+      <parameters xmi:id="_iKWGYKT5Eeao54ifrX_o2A" elementId="al.sybina.ebr.logbook.ui.parameter.1" name="org.eclipse.ui.views.showView.viewId" value="al.sybina.ebr.logbook.ui.partdescriptor.marpolDetail"/>
+    </elements>
+    <elements xsi:type="menu:HandledMenuItem" xmi:id="_ceKuYPJlEeiKM7iWpmDXug" elementId="al.sybina.ebr.logbook.ui.handledmenuitem.oilRecordBook1" label="Oil Record Book Part 1" command="_lfrqUKTUEeao54ifrX_o2A">
+      <parameters xmi:id="_fq3T4PJlEeiKM7iWpmDXug" elementId="al.sybina.ebr.logbook.ui.parameter.0" name="org.eclipse.ui.views.showView.viewId" value="al.sybina.ebr.logbook.ui.partdescriptor.oilRecordBook1"/>
+    </elements>
+    <elements xsi:type="menu:HandledMenuItem" xmi:id="_8Xxy8E_pEemEdukLtdLzZA" elementId="al.sybina.ebr.logbook.ui.handledmenuitem.history" label="History" command="_lfrqUKTUEeao54ifrX_o2A">
+      <parameters xmi:id="_Dy8kAE_qEemEdukLtdLzZA" elementId="al.sybina.ebr.logbook.ui.parameter.2" name="org.eclipse.ui.views.showView.viewId" value="al.sybina.ebr.logbook.ui.partdescriptor.history"/>
+    </elements>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_wl3AoKTsEeao54ifrX_o2A" featurename="descriptors" parentElementId="al.sybina.ebr.rcp.application">
+    <elements xsi:type="basic_1:PartDescriptor" xmi:id="_f9VjoKT2Eeao54ifrX_o2A" elementId="al.sybina.ebr.logbook.ui.partdescriptor.marpolDetail" label="Marpol detail" iconURI="platform:/plugin/org.eclipse.e4.tools.resources/icons/ibr/euMrv/observed-data32.png" closeable="true" contributionURI="bundleclass://al.sybina.ebr.logbook.ui/al.sybina.ebr.logbook.views.marpoldetail.MarpolDetailView"/>
+    <elements xsi:type="basic_1:PartDescriptor" xmi:id="_mfBvUPJlEeiKM7iWpmDXug" elementId="al.sybina.ebr.logbook.ui.partdescriptor.oilRecordBook1" label="Oil Record Book Part 1 (Machinery space operations(all ships))" iconURI="platform:/plugin/org.eclipse.e4.tools.resources/icons/ibr/euMrv/observed-data32.png" closeable="true" contributionURI="bundleclass://al.sybina.ebr.logbook.ui/al.sybina.ebr.logbook.views.OilRecordBookPart1View"/>
+    <elements xsi:type="basic_1:PartDescriptor" xmi:id="_UGEbEEmFEemi877iGVfyGA" elementId="al.sybina.ebr.logbook.ui.partdescriptor.history" label="History" closeable="true" contributionURI="bundleclass://al.sybina.ebr.logbook.ui/al.sybina.ebr.logbook.views.history.HistoryView"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_PfjcMKTuEeao54ifrX_o2A" featurename="children" parentElementId="org.eclipse.ui.perspectives.showPerspective">
+    <elements xsi:type="menu:HandledMenuItem" xmi:id="_FBjuIKUAEeao54ifrX_o2A" elementId="al.sybina.ebr.logbook.ui.handledmenuitem.logbook" label="Oil Record Book Part I   " iconURI="platform:/plugin/org.eclipse.e4.tools.resources/icons/ibr/euMrv/total-observed-data16.png" command="_p9YksKTUEeao54ifrX_o2A">
+      <parameters xmi:id="_5lsSUKUAEeao54ifrX_o2A" elementId="al.sybina.ebr.logbook.ui.parameter.7" name="org.eclipse.ui.perspectives.showPerspective.perspectiveId" value="al.sybina.ebr.logbook.ui.perspective.logbook"/>
+    </elements>
+  </fragments>
+</fragment:ModelFragments>

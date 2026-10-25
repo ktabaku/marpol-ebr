@@ -1,0 +1,79 @@
+package al.sybina.ebr.log4j.configuration;
+
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javafx.application.Platform;
+import javafx.collections.ObservableList;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
+import javafx.scene.paint.Paint;
+
+
+/**
+ * Utility functions for JavaFX-related functionality.
+ */
+public class FxUtils {
+
+    private static final Logger log = LoggerFactory.getLogger( FxUtils.class );
+    private static final Map<Paint, Background> bkgByPaint = new HashMap<>();
+
+    /**
+     * Creates and caches a simple {@link Background} for the given {@link Paint}.
+     *
+     * @param paint of the background
+     * @return simple background
+     */
+    public static Background simpleBackground( Paint paint ) {
+        return bkgByPaint.computeIfAbsent( paint,
+                ignored -> new Background(
+                        new BackgroundFill( paint, CornerRadii.EMPTY, Insets.EMPTY ) ) );
+    }
+
+    /**
+     * Setup the stylesheet for the given Scene.
+     *
+     * @param scene to setup stylesheet for
+     */
+    public static void setupStylesheet( Scene scene ) {
+        String stylesheet = "css/LogFX.css";
+
+        String iconsStylesheet = "css/icons.css";
+
+        Runnable resetStylesheet = () -> Platform.runLater( () -> {
+            scene.getStylesheets().clear();
+            scene.getStylesheets().addAll( stylesheet, iconsStylesheet );
+        } );
+
+        
+        log.debug( "Using default stylesheet for new Scene" );
+        resetStylesheet.run();
+    }
+
+
+    private static String toAbsoluteFileUri( File file ) {
+        String absolutePath = file.getAbsolutePath();
+        if ( File.separatorChar == '\\' ) {
+            // windows stuff
+            return "file:///" + absolutePath.replace( "\\", "/" );
+        } else {
+            return "file:" + absolutePath;
+        }
+    }
+
+    public static void addIfNotPresent( ObservableList<String> styleClasses,
+                                        String... cssClasses ) {
+        for ( String cssClass : cssClasses ) {
+            if ( !styleClasses.contains( cssClass ) ) {
+                styleClasses.add( cssClass );
+            }
+        }
+    }
+}

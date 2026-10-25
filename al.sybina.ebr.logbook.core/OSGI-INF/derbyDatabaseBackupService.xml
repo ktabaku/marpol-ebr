@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="al.sybina.ebr.logbook.db.derbyDatabaseBackup" activate="activate" deactivate="deactivate">   
+   <implementation class="al.sybina.ebr.logbook.core.services.DerbyDatabaseBackupServiceImpl"/>
+   <service>
+      <provide interface="al.sybina.ebr.logbook.core.services.DerbyDatabaseBackupService"/>
+   </service>
+   <reference bind="setEventAdmin" cardinality="1..1" interface="org.osgi.service.event.EventAdmin" name="eventAdmin" policy="static" unbind="unsetEventAdmin"/>
+</scr:component>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TaskList Version="2.0">
+	<Query ConnectorKind="trac" Handle="handle-1"
+		LastRefreshTimeStamp="août 7, 23:42:08" Name="all tasks"
+		QueryString="http://sourceforge.net/apps/trac/capcode/query?format=tab&amp;status=accepted&amp;status=assigned&amp;status=new&amp;status=reopened"
+		RepositoryUrl="http://sourceforge.net/apps/trac/capcode">
+		<QueryHit Handle="http://sourceforge.net/apps/trac/capcode-2" />
+		<QueryHit Handle="http://sourceforge.net/apps/trac/capcode-7" />
+		<QueryHit Handle="http://sourceforge.net/apps/trac/capcode-8" />
+		<QueryHit Handle="http://sourceforge.net/apps/trac/capcode-9" />
+		<QueryHit Handle="http://sourceforge.net/apps/trac/capcode-10" />
+		<QueryHit Handle="http://sourceforge.net/apps/trac/capcode-21" />
+		<QueryHit Handle="http://sourceforge.net/apps/trac/capcode-24" />
+		<QueryHit Handle="http://sourceforge.net/apps/trac/capcode-27" />
+		<QueryHit Handle="http://sourceforge.net/apps/trac/capcode-47" />
+		<QueryHit Handle="http://sourceforge.net/apps/trac/capcode-72" />
+		<QueryHit Handle="http://sourceforge.net/apps/trac/capcode-74" />
+		<QueryHit Handle="http://sourceforge.net/apps/trac/capcode-76" />
+		<QueryHit Handle="http://sourceforge.net/apps/trac/capcode-77" />
+		<QueryHit Handle="http://sourceforge.net/apps/trac/capcode-78" />
+	</Query>
+</TaskList>

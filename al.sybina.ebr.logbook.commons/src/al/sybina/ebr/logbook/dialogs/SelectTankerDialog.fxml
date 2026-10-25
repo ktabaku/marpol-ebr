@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="anchorPane" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="al.sybina.ebr.logbook.dialogs.SelectTankerDialogController">
+   <children>
+      <VBox fx:id="vBoxSelectTanker" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane VBox.vgrow="ALWAYS">
+               <children>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" style="-fx-fit-to-width: true; -fx-min-height: true;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <content>
+                      <AnchorPane>
+                           <children>
+                              <GridPane id="mainGridPane" fx:id="parentGridPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="50.0" percentWidth="20.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" percentWidth="60.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="50.0" percentWidth="20.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="75.0" vgrow="ALWAYS" />
+                                  <RowConstraints minHeight="75.0" vgrow="ALWAYS" />
+                                  <RowConstraints minHeight="75.0" vgrow="ALWAYS" />
+                                    <RowConstraints minHeight="75.0" vgrow="ALWAYS" />
+                                    <RowConstraints minHeight="75.0" vgrow="ALWAYS" />
+                                    <RowConstraints minHeight="75.0" vgrow="ALWAYS" />
+                                    <RowConstraints minHeight="75.0" vgrow="ALWAYS" />
+                                </rowConstraints>
+                                 <children>
+                                    <GridPane fx:id="ballastForePeakGridPane" gridLinesVisible="true" GridPane.columnSpan="2147483647">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="125.0" percentWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="75.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                    </GridPane>
+                                    <GridPane fx:id="ballastPortSideGridPane" gridLinesVisible="true" GridPane.rowIndex="1" GridPane.rowSpan="2">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="50.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="75.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                    </GridPane>
+                                    <GridPane fx:id="cargoGridPane" gridLinesVisible="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="50.0" percentWidth="33.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="50.0" percentWidth="34.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="50.0" percentWidth="33.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="75.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                    </GridPane>
+                                    <GridPane fx:id="ballastSbdSideGridPane" gridLinesVisible="true" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.rowSpan="2">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="50.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="75.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                    </GridPane>
+                                    <GridPane fx:id="slopGridPane" gridLinesVisible="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="50.0" percentWidth="33.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="50.0" percentWidth="34.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="50.0" percentWidth="33.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="75.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                    </GridPane>
+                                    <GridPane fx:id="fuelOilGridPane" gridLinesVisible="true" GridPane.columnSpan="2147483647" GridPane.rowIndex="3">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="62.5" percentWidth="25.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="62.5" percentWidth="25.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="62.5" percentWidth="25.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="62.5" percentWidth="25.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="75.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                    </GridPane>
+                                    <GridPane fx:id="sludgeGridPane" gridLinesVisible="true" GridPane.columnSpan="2147483647" GridPane.rowIndex="5">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="62.5" percentWidth="25.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="62.5" percentWidth="25.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="62.5" percentWidth="25.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="62.5" percentWidth="25.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="75.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                    </GridPane>
+                                    <GridPane fx:id="oilBilgeGridPane" gridLinesVisible="true" GridPane.columnSpan="2147483647" GridPane.rowIndex="4">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="62.5" percentWidth="25.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="62.5" percentWidth="25.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="62.5" percentWidth="25.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="62.5" percentWidth="25.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="75.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                    </GridPane>
+                                    <GridPane fx:id="ballastAftPeakGridPane" gridLinesVisible="true" GridPane.columnSpan="2147483647" GridPane.rowIndex="6">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="125.0" percentWidth="50.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="125.0" percentWidth="50.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="75.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                    </GridPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="al.sybina.ebr.login.views.ManageUsersController">
+<BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+   <left>
+      <VBox spacing="10.0" styleClass="background" BorderPane.alignment="CENTER">
+         <children>
+               <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Add New User">
+                  <VBox.margin>
+                     <Insets bottom="10.0" left="30.0" top="30.0" />
+                  </VBox.margin>
+                  <font>
+                     <Font name="Arial Black" size="20.0" />
+                  </font>
+               </Text>
+            <ComboBox fx:id="cbRole" prefHeight="30.0" prefWidth="246.0" promptText="Select Role" styleClass="logbookManageUserscombo-box">
+               <VBox.margin>
+                  <Insets left="25.0" />
+               </VBox.margin>
+            </ComboBox>
+               <TextField fx:id="username" prefHeight="30.0" prefWidth="246.0" promptText="Username">
+                  <VBox.margin>
+                     <Insets left="25.0" right="25.0" />
+                  </VBox.margin>
+                  <styleClass>
+                     <String fx:value="whiteBackground" />
+                     <String fx:value="logbook-users-text-field" />
+                  </styleClass>
+               </TextField>
+            <PasswordField fx:id="password" prefHeight="30.0" prefWidth="246.0" promptText="Password">
+               <VBox.margin>
+                  <Insets left="25.0" right="25.0" />
+               </VBox.margin>
+                  <styleClass>
+                     <String fx:value="whiteBackground" />
+                     <String fx:value="logbook-users-text-field" />
+                  </styleClass>
+            </PasswordField>
+            <TextField fx:id="firstName" prefHeight="30.0" prefWidth="246.0" promptText="First Name">
+               <VBox.margin>
+                  <Insets left="25.0" right="25.0" />
+               </VBox.margin>
+                  <styleClass>
+                     <String fx:value="whiteBackground" />
+                     <String fx:value="logbook-users-text-field" />
+                  </styleClass></TextField>
+            <TextField fx:id="lastName" prefHeight="30.0" prefWidth="246.0" promptText="Last Name">
+               <VBox.margin>
+                  <Insets left="25.0" right="25.0" />
+               </VBox.margin>
+                  <styleClass>
+                     <String fx:value="whiteBackground" />
+                     <String fx:value="logbook-users-text-field" />
+                  </styleClass></TextField>
+            <DatePicker id="manageUsersDateOfBirth" fx:id="dob" prefHeight="30.0" prefWidth="245.0" promptText="Date of Birth" styleClass="logbook-users-date-picker">
+               <VBox.margin>
+                  <Insets left="25.0" />
+               </VBox.margin>
+            </DatePicker>
+            <TextField fx:id="email" prefHeight="30.0" prefWidth="246.0" promptText="Email">
+               <VBox.margin>
+                  <Insets left="25.0" right="25.0" />
+               </VBox.margin>
+                  <styleClass>
+                     <String fx:value="whiteBackground" />
+                     <String fx:value="logbook-users-text-field" />
+                  </styleClass></TextField>
+            <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Button fx:id="reset" mnemonicParsing="false" onAction="#reset" styleClass="btnReset" text="Reset">
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" color="#1965d0" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="saveUser" mnemonicParsing="false" onAction="#saveUser" styleClass="btnSave" text="Save">
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" color="#6468b2" />
+                     </effect>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+            <padding>
+               <Insets bottom="5.0" left="5.0" right="5.0" />
+            </padding>
+      </VBox>
+   </left>
+   <center>
+      <VBox alignment="TOP_RIGHT" styleClass="whiteBackground" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="userTable" styleClass="usersTableView" tableMenuButtonVisible="true" VBox.vgrow="ALWAYS">
+              <columns>
+                  <TableColumn fx:id="colRole" maxWidth="4000.0" prefWidth="75.0" text="Role" />
+                     <TableColumn fx:id="colUsername" maxWidth="4000.0" prefWidth="75.0" text="Username" />
+                <TableColumn fx:id="colFirstName" maxWidth="4000.0" prefWidth="75.0" text="First Name" />
+                  <TableColumn fx:id="colLastName" maxWidth="4000.0" prefWidth="75.0" text="Last Name" />
+                  <TableColumn fx:id="colDOB" maxWidth="4000.0" prefWidth="75.0" text="Date of Birth" />
+                  <TableColumn fx:id="colEmail" maxWidth="6000.0" prefWidth="130.0" text="Email" />
+                  <TableColumn fx:id="colEdit" maxWidth="3500.0" prefWidth="75.0" text="Edit" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </VBox.margin>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem fx:id="deleteUsers" mnemonicParsing="false" onAction="#deleteUsers" text="Delete" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
+</AnchorPane>

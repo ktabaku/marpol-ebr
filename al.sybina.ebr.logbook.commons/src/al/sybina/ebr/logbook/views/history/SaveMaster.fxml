@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainAnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="al.sybina.ebr.logbook.views.history.SaveMasterController">
+   <children>
+      <ScrollPane focusTraversable="false" style="-fx-fit-to-width: true; -fx-fit-to-height: true;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <VBox alignment="CENTER" style="-fx-background-color: #D6DCE5;">
+               <children>
+               		<TableView id="logtable" fx:id="logTableView" styleClass="saveMasterChiefTableView" VBox.vgrow="SOMETIMES">
+	                    <columns>
+	                      <TableColumn fx:id="typeCol" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="-1.0" sortable="false" text="Log Type" visible="false" />
+	                      <TableColumn fx:id="dateCol" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="-1.0" sortable="false" style="-fx-alignment: center-left;" text="Date" />
+	                      <TableColumn fx:id="codeLetterGroupCol" maxWidth="1.7976931348623157E308" minWidth="90.0" prefWidth="-1.0" sortable="false" text="Code Letter" />
+                          <TableColumn fx:id="codeNumberGroupCol" maxWidth="1.7976931348623157E308" minWidth="90.0" prefWidth="-1.0" sortable="false" text="Code Number" />
+                          <TableColumn id="content" fx:id="contentGroupCol" maxWidth="1.7976931348623157E308" minWidth="300.0" prefWidth="-1.0" sortable="false" text="Content" />
+	                      <TableColumn fx:id="nameCreatorCol" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="-1.0" sortable="false" text="Name" />
+	                      <TableColumn fx:id="signatureCreatorCol" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="-1.0" sortable="false" styleClass="table-signature-column" text="Signature" />
+	                      <TableColumn fx:id="noteCol" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="-1.0" sortable="false" text="Note" />
+	                      <TableColumn fx:id="correctionNoteCol" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="-1.0" sortable="false" text="Correction Note" />
+	                    </columns>
+	                </TableView>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <GridPane fx:id="signaturesGridPane" hgap="20.0" vgap="10.0" HBox.hgrow="SOMETIMES">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="LEFT" />
+                              <ColumnConstraints halignment="LEFT" minWidth="10.0" />
+                              <ColumnConstraints halignment="LEFT" minWidth="10.0" />
+                              <ColumnConstraints halignment="LEFT" minWidth="10.0" />
+                              <ColumnConstraints halignment="LEFT" minWidth="10.0" />
+                              <ColumnConstraints halignment="LEFT" minWidth="10.0" />
+                              <ColumnConstraints halignment="LEFT" minWidth="10.0" />
+                              <ColumnConstraints halignment="LEFT" minWidth="10.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="100.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label styleClass="logbookOtherLabel" text="Name of Master" />
+                              <Label fx:id="masterNameLabel" styleClass="logbookOtherLabel" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="masterSurnameLabel" styleClass="logbookOtherLabel" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label styleClass="logbookOtherLabel" text="Signature" GridPane.columnIndex="4" />
+                              <Label styleClass="logbookOtherLabel" text="Signature Date" GridPane.columnIndex="6" />
+                              <Label fx:id="masterSigDateLabel" styleClass="logbookOtherLabel" GridPane.columnIndex="7">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="50.0" right="50.0" />
+                           </padding>
+                        </GridPane>
+                        <VBox alignment="CENTER" HBox.hgrow="SOMETIMES">
+                           <children>
+                              <HBox alignment="CENTER" spacing="20.0">
+                                 <children>
+                                    <ToggleButton fx:id="approvedToggleButton" mnemonicParsing="false" selected="true" styleClass="toggleButtonLogbook" text="Approved">
+                                    	<toggleGroup>
+                                    		<ToggleGroup fx:id="approvedRejectedToggleGroup" />
+                                    	</toggleGroup>                                    	
+                                    </ToggleButton>
+                                    <ToggleButton fx:id="rejectedToggleButton" mnemonicParsing="false" styleClass="toggleButtonLogbook" text="Rejected" toggleGroup="$approvedRejectedToggleGroup" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <TextArea id="rejectReason" fx:id="rejectedReasonTextArea" disable="true" promptText="Reason...">
+                                 <padding>
+                                    <Insets bottom="10.0" />
+                                 </padding>
+                              </TextArea>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <ButtonBar prefHeight="40.0">
+                     <buttons>
+                        <Button fx:id="masterSignatureButton" mnemonicParsing="false" onAction="#masterSignature" style="-fx-background-color: #333F50;" text="Master Signature" textFill="WHITE" />
+                        <Button fx:id="showPreviewButton" mnemonicParsing="false" onAction="#showPreview" style="-fx-background-color: #ED7D31;" text="Preview" />
+                        <Button fx:id="saveButton" disable="true" mnemonicParsing="false" onAction="#saveLog" style="-fx-background-color: #00B0F0;" text="Save" />
+                     </buttons>
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                  </ButtonBar>
+               </children>
+            </VBox>
+         </content></ScrollPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+  Copyright 2017 Goldman Sachs.
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied. See the License for the
+  specific language governing permissions and limitations
+  under the License.
+  -->
+
+<MithraObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              objectType="transactional"
+              xsi:noNamespaceSchemaLocation="mithraobject.xsd">
+
+    <PackageName>al.sybina.ebr.logbook.domain.reladomo</PackageName>
+    <ClassName>OilLog</ClassName>
+    <DefaultTable>OCEAN_LOGBOOK_OPERATION_OIL_LOG</DefaultTable>
+
+    <AsOfAttribute name="businessDate" fromColumnName="FROM_Z" toColumnName="THRU_Z"
+                   toIsInclusive="false"
+                   isProcessingDate="false"
+                   infinityDate="[al.sybina.ebr.logbook.domain.reladomo.TimestampProvider.getInfinityDate()]"
+                   futureExpiringRowsExist="true"
+            />
+
+    <AsOfAttribute name="processingDate" fromColumnName="IN_Z" toColumnName="OUT_Z"
+                   toIsInclusive="false"
+                   isProcessingDate="true"
+                   infinityDate="[al.sybina.ebr.logbook.domain.reladomo.TimestampProvider.getInfinityDate()]"
+                   defaultIfNotSpecified="[al.sybina.ebr.logbook.domain.reladomo.TimestampProvider.getInfinityDate()]"
+            />
+
+    <Attribute name="id" javaType="long" columnName="ID" primaryKey="true" primaryKeyGeneratorStrategy="Max"/>
+    <Attribute name="uuid" javaType="String" columnName="UUID" nullable="true"/>
+    <Attribute name="ship" javaType="long" columnName="SHIP_ID" nullable="true"/>
+    <Attribute name="type" javaType="String" columnName="TYPE" nullable="false" maxLength="4"/>
+    <Attribute name="codeLetter" javaType="String" columnName="CODELETTER" nullable="false" maxLength="1"/>
+    <Attribute name="codeNumber" javaType="String" columnName="CODENUMBER" nullable="false" maxLength="8"/>
+    <Attribute name="content" javaType="String" columnName="CONTENT" nullable="false" />
+    <Attribute name="signature" javaType="String" columnName="SIGNATURE" nullable="true" />
+    <Attribute name="groupUuid" javaType="String" columnName="GROUPUUID" nullable="false" />
+    <Attribute name="orderInGroup" javaType="String" columnName="ORDERINGROUP" nullable="true" />
+	<Attribute name="signerRank" javaType="String" columnName="SIGNERRANK" nullable="true" />
+	<Attribute name="signerName" javaType="String" columnName="SIGNERNAME" nullable="true" />
+	<Attribute name="signerSurname" javaType="String" columnName="SIGNERSURNAME" nullable="true" />
+	<Attribute name="note" javaType="String" columnName="NOTE" nullable="true" />
+	<Attribute name="correctionNote" javaType="String" columnName="CORRECTIONNOTE" nullable="true" />
+<!-- 	<Attribute name="chiefEngSignerName" javaType="String" columnName="CHIEFENGSIGNERNAME" nullable="true" /> -->
+<!-- 	<Attribute name="chiefEngSignerSurname" javaType="String" columnName="CHIEFENGSIGNERSURNAME" nullable="true" /> -->
+<!-- 	<Attribute name="chiefEngSignature" javaType="String" columnName="CHIEFENGSIGNATURE" nullable="true" /> -->
+<!-- 	<Attribute name="chiefEngSigDate" javaType="Date" columnName="CHIEFENGSIGDATE" nullable="true" /> -->
+	<Attribute name="masterSignerName" javaType="String" columnName="MASTERSIGNERNAME" nullable="true" />
+	<Attribute name="masterSignerSurname" javaType="String" columnName="MASTERSIGNERSURNAME" nullable="true" />
+	<Attribute name="masterSignature" javaType="String" columnName="MASTERSIGNATURE" nullable="true" />
+	<Attribute name="masterSigDate" javaType="Date" columnName="MASTERSIGDATE" nullable="true" />
+	<Attribute name="signatureGroupUuid" javaType="String" columnName="SIGNATUREGROUPUUID" nullable="true" />
+	<Attribute name="attachmentName" javaType="String" columnName="ATTACHMENTNAME" nullable="true" />
+	<Attribute name="attachmentData" javaType="byte[]" columnName="ATTACHMENTDATA" nullable="true" />
+	
+<!-- 	@Basic -->
+<!-- 	private Date date; // Data -->
+<!-- 	@Basic -->
+<!-- 	private Date insertDate; -->
+
+
+</MithraObject>

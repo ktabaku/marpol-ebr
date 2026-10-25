@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="al.sybina.ebr.logbook.db.operationlog" activate="activate" deactivate="deactivate">   
+   <implementation class="com.oceanpro.core.services.impl.OperationLogServiceImpl"/>
+   <service>
+      <provide interface="com.oceanpro.core.services.OperationLogService"/>
+   </service>
+</scr:component>

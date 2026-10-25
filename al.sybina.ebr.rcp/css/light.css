@@ -1,0 +1,2535 @@
+/* JavaFX CSS - Main CSS-File */
+.root {
+	
+	-source-editor-code: rgb(0, 0, 0);
+	-source-editor-operator: rgb(0, 0, 0);
+	-source-editor-bracket: rgb(0, 0, 0);
+	-source-editor-keyword: rgb(127, 0, 85);
+	-source-editor-string:  rgb(42, 0, 255);
+	-source-editor-number:  #6c83c4;
+	-source-editor-doc: rgb(63, 127, 95);
+	-source-editor-api-doc:  rgb(63, 95, 191);
+	-source-editor-buitin-type: #74a567;
+	-source-editor-annotation: rgb(200, 200, 200);
+
+}
+
+.styled-text-area {
+	-fx-fixed-line-height: 24;
+	-fx-font-size: 20;
+
+}
+
+.styled-text-hover {
+	-fx-background-color: #ecebec;
+	-fx-background-radius: 5;
+	-fx-padding: 10;
+	-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.5) , 10, 0.0 , 0 , 3 );
+}
+
+.default-window > * > .window-header {
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+}
+
+
+
+
+
+
+/*TAB PANE */
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+#mainLogbook1TabPane {
+    -fx-tab-min-width:185px; 
+}
+#mainLogbook2TabPane {
+    -fx-tab-min-width:85px; 
+}
+
+.tab-pane {
+  -fx-tab-min-width:150px;
+  -fx-tab-max-width:600px;
+ 
+}
+.tab-pane .tab
+{
+   -fx-font-size:11pt;
+   -fx-opacity: 1;
+   -fx-pref-height: 50px;
+   -fx-background-color:#8497B0;
+   
+	-fx-border-width: 0.8;
+    -fx-border-color: 
+        transparent 
+        transparent 
+        transparent 
+        transparent;
+
+}
+
+.tab-pane .tab:selected{
+    -fx-font-size: 11pt;
+	-fx-background-color:#333F50;
+    -fx-border-color: 
+        transparent 
+        transparent 
+        transparent 
+        transparent;
+}
+.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #000000;
+     -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-font-size:13pt;
+}
+/**/
+.tab:selected .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #ED7D31;
+}
+/* TAB */
+.tab {
+	
+	-fx-font-size: 11pt;
+	
+	-fx-background-color:
+	linear-gradient(to bottom, derive(-fx-base,+50%), derive(-fx-base,-40%), derive(-fx-base,-20%));
+	-fx-background: rgba(77, 80, 82, 0.5);
+	-fx-base: rgba(77, 80, 82, 0.5);
+	
+	-fx-border-width: 0.8;
+    -fx-border-color: 
+        transparent 
+        transparent 
+        transparent 
+        transparent;
+}
+
+
+
+/***************************************************logbook************************************************************************* */
+
+#gridpaneend {
+	-fx-background-color:  #333F50;
+	-fx-border-color:  #333F50;
+	-fx-min-height:60;
+}
+#checkInSpecialArea.check-box .box {
+  -fx-background-color:from rule;
+  -fx-border-color:red;
+  -fx-border-width:3;
+  -fx-background-radius: 100;
+  -fx-effect: dropshadow(three-pass-box, grey, 3, 0, 3, 3);
+}
+#checkOutSpecialArea.check-box .box {
+  -fx-background-color:from rule;
+  -fx-border-color:#71a9da;
+  -fx-border-width:3;
+  -fx-background-radius: 100;
+  -fx-effect: dropshadow(three-pass-box, grey, 3, 0, 3, 3);
+}
+
+#berthing.anchorPane .pane {
+	-fx-background-color: #e91fff; 
+}
+
+
+
+#hBoxHead{
+	-fx-background-color: #ffffff;
+	-fx-border-color: #8497B0;
+	-fx-border-width: 3;
+}
+
+#hBox {
+  -fx-background-color: white;
+  -fx-effect: dropshadow(three-pass-box, grey, 5, 0, 5, 10);
+}
+
+#hBoxB {
+  -fx-background-color: white;
+  -fx-effect: dropshadow(three-pass-box, grey, 5, 0, 5, 10);
+}
+#hBoxC {
+  -fx-background-color: white;
+  -fx-effect: dropshadow(three-pass-box, grey, 5, 0, 5, 10);
+}
+#hBoxInfoMessage {
+  -fx-background-color: #333F50;
+
+}
+#hBoxEraseOperationInfo {
+  -fx-background-color: #4d8ec7;
+  -fx-effect: dropshadow(three-pass-box, grey, 5, 0, 5, 10);
+}
+#hBoxInsertDate {
+  -fx-background-color: white;
+   -fx-border-color: red;
+  -fx-border-width:3;
+  -fx-background-radius:10;
+  -fx-border-radius:10;
+   
+}
+#textFlow{
+	-fx-background-color:#ED7D31;
+	-fx-border-color: #ED7D31;
+
+}
+
+#hBox0A{
+	-fx-background-color: #212C2F;
+	-fx-border-color: #212C2F;
+	-fx-max-height: 50;
+	-fx-max-width: 260;
+}
+
+#hBox02{
+	-fx-background-color: #ADB9CA;
+	-fx-border-color: #ADB9CA;
+	-fx-max-height: 50;
+	-fx-max-width: 450;
+}
+
+#hBox02A{
+	-fx-background-color: #ADB9CA;
+	-fx-border-color: #ADB9CA;
+	-fx-max-height: 450;
+	-fx-max-width: 260;
+}
+#fromEngineRoomBilgeWells{
+	-fx-background-color:#ED7D31;
+	-fx-border-color: #ED7D31;
+}
+#fromBilgeTanks{
+	-fx-background-color:#ED7D31;
+	-fx-border-color: #ED7D31;
+}
+
+#hBoxCheckBoxMethodOfDischargeTransfer{
+	-fx-background-color:#333F50;
+	-fx-border-color: #333F50;
+	-fx-max-height: 45;
+	-fx-max-width: 400;
+}
+.logbook2GreyGridPaneChildHBox {
+	-fx-background-color: #ADB9CA;
+	-fx-border-color: #ADB9CA;
+	-fx-max-height: 45;
+}
+.logbook2CelestGridPaneChildHBox {
+	-fx-background-color: #00ADEF;
+	-fx-border-color:#00ADEF;
+}
+.logbook2BlueGridPaneChildHBox {
+	-fx-background-color: #b3d9ff;
+	-fx-border-color:#b3d9ff;
+}
+.logbook2BDarkGreyGridPaneChildHBox {
+	-fx-background-color: #8497B0;
+	-fx-border-color:#8497B0;
+	
+}
+.logbook2DarkGreyPolyline {
+	-fx-fill: #8497B0;
+	-fx-stroke: #8497B0;
+	-fx-max-height:45;
+}
+.logbook2GreyPolyline {
+	-fx-fill: #ADB9CA;
+	-fx-stroke: #ADB9CA;
+	-fx-max-height:45;
+}
+.logbook2CelestPolyline {
+	-fx-fill: #00ADEF;
+	-fx-stroke: #00ADEF;
+	-fx-max-height: 45;
+}
+.logbook2BLuetPolyline {
+	-fx-fill: #b3d9ff;
+	-fx-stroke: #b3d9ff;
+	-fx-max-height: 45;
+}
+.smallPolylineOrange {
+	-fx-fill: #ed7d31;
+	-fx-stroke: #ed7d31;
+	-fx-max-height: 45;
+}
+
+.polyLineOrange{
+	-fx-fill: #ed7d31;
+	-fx-stroke: #ed7d31;
+	-fx-max-height: 45;
+}
+
+#mainLogbook1TabPane .tab-header-area{
+   -fx-background-color: #ffffff; 
+}
+#mainLogbook2TabPane .tab-header-area{
+   -fx-background-color: #ffffff; 
+}
+
+#anchorPaneSignature{
+   -fx-background-color: #212C2F;
+   -fx-border-color: #71a9da;
+    -fx-border-width:2;
+    -fx-effect: dropshadow(three-pass-box, grey, 5, 0, 5, 5);
+   }
+#anchorPane2{
+   -fx-background-color:red;
+   
+   }
+#anchorPaneInfoMessage{
+   -fx-background-color: #D6DCE5;
+   -fx-border-color: #00ADEF;
+   -fx-border-width:2;
+   -fx-effect: dropshadow(three-pass-box, grey, 5, 0, 5, 5);
+   } 
+#buttonClose {
+	-fx-background-color: #333F50;
+	-fx-text-fill: #ffffff;
+} 
+#infoMessageText{
+	-fx-text-alignment: center;
+	-fx-font-family: "Bookman Old Style";
+	-fx-font-size: 15;
+} 
+#anchorPaneEraseOperationInfo{
+   -fx-background-color: white;
+   -fx-border-color: #71a9da;
+   -fx-border-width:2;
+   -fx-effect: dropshadow(three-pass-box, grey, 5, 0, 5, 5);
+   }    
+
+#labelDateRequired.label {
+  -fx-font-size: 16px;
+  -fx-font-family: "Arial";
+  -fx-text-fill: #000000;
+  
+ }
+ 
+ #hboximageF{
+ 	-fx-background-color:#212C2F;
+  -fx-min-width:20px;
+  -fx-min-height:70px;
+  -fx-border-color: #212C2F; 
+ }
+
+.codeletterLabel.label {
+	-fx-font-size: 25.0px;
+	-fx-font-family: "Arial";
+	-fx-alignment:center ;
+	-fx-text-fill: White;
+	-fx-min-width:170.0px;
+	-fx-min-height:70.0px;
+	-fx-background-color: #ED7D31;
+}  
+
+.codeletterLabel.label {
+	-fx-font-size: 25.0px;
+	-fx-font-family: "Arial";
+	-fx-alignment:center ;
+	-fx-text-fill: White;
+	-fx-min-width:170.0px;
+	-fx-min-height:70.0px;
+	-fx-background-color: #ED7D31;
+}
+
+#ballastingOrCleaningOfoilFuelTanks.label {
+  -fx-font-size: 20px;
+  -fx-font-family: "Arial Black";
+  -fx-text-fill: #ffffff;
+  -fx-alignment: center-left ;
+  -fx-background-color: #333F50;
+  -fx-min-width:720px;
+  -fx-min-height:70px;
+  -fx-opacity: 1;
+}
+
+#CollectionTransferAndDisposal.label {
+  -fx-font-size: 20px;
+  -fx-font-family: "Arial Black";
+  -fx-text-fill: #ffffff;
+  -fx-alignment: center-left ;
+  -fx-background-color: #333F50;
+  -fx-min-width:720px;
+  -fx-min-height:70px;
+  -fx-opacity: 1;
+}
+.codeLetterTitleGridPane {
+	-fx-background-color: #333F50;
+	-fx-background-insets: 0 0 0 0;
+	-fx-hgap: 40;
+	-fx-min-height: 70;
+	
+}
+.logbookBodyVBox {
+	-fx-spacing: 10;
+	-fx-padding: 10 10 10 10;
+}
+
+#dischargeOfDirtyBallastOrCleaningWater.label {
+  -fx-font-size: 20px;
+  -fx-font-family: "Arial Black";
+  -fx-text-fill: #ffffff;
+  -fx-alignment: center-left;
+  -fx-background-color: #333F50;
+  -fx-opacity: 1;
+} 
+
+.logbookTitleOfeveryLetter{
+	-fx-font-size: 20px;
+  -fx-font-family: "Arial Black";
+  -fx-text-fill: #ffffff;
+  -fx-background-color: #333F50;
+  -fx-min-width:720px;
+  -fx-min-height:70px;
+  -fx-opacity: 1;
+}
+
+.logbookYesLabel{
+	-fx-font-size: 16px;
+  -fx-font-family: "Arial Black";
+  -fx-text-fill: #767171;
+  -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+  -fx-padding: 0 5 0 0;
+}
+.logbookNoLabel{
+	-fx-font-size: 16px;
+  -fx-font-family: "Arial Black";
+  -fx-text-fill: #767171;
+  -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+  -fx-padding: 0 5 0 0;
+}
+ #validateDate.label {
+  -fx-font-size: 13px;
+  -fx-font-family: "Arial Black";
+  -fx-text-fill: red;
+ 
+ }
+ #infoMessageLabel.label {
+  -fx-font-size: 18px;
+  -fx-font-family: "Arial Black";
+  -fx-text-fill: white;
+ }
+ #labelEraseOperationInfo.label {
+  -fx-font-size: 18px;
+  -fx-font-family: "Arial Black";
+  -fx-text-fill: white;
+ }
+
+ #buttonMarpolDetail.button {
+	-fx-background-color: #71a9da;
+	-fx-text-fill:#ffffff;
+	-fx-font-size: 11pt; 	
+	-fx-border-color: #71a9da;
+	-fx-effect: dropshadow(three-pass-box, grey, 5, 0, 5, 5);
+}
+#buttonShowMap.button {
+	-fx-background-color: #71a9da;
+	-fx-text-fill:#ffffff;
+	-fx-font-size: 11pt; 
+	-fx-border-color: #71a9da;
+	-fx-effect: dropshadow(three-pass-box, grey, 5, 0, 5, 5);
+}
+
+.logbookEndButton{
+	-fx-background-color: #00ADEF;
+	-fx-text-fill:#ffffff;
+	-fx-font-size: 12pt;
+	-fx-font-family: "Arial Black"
+}
+
+.logbookaddTankButton.button{
+	-fx-background-color: #00ADEF;
+	-fx-text-fill:#000000;
+	-fx-font-size: 11pt;
+	-fx-border-color: #00ADEF;
+	-fx-effect: dropshadow(three-pass-box, grey, 3, 0, 3, 3);
+}
+
+#addCommentRowButton {
+	-fx-background-color: #4d8ec7;
+	-fx-text-fill:#ffffff;
+	-fx-font-size: 11pt;
+	-fx-border-color: #4d8ec7;
+	-fx-effect: dropshadow(three-pass-box, grey, 3, 0, 3, 3);
+}
+
+#addComment.button {
+	-fx-background-color: #4d8ec7;
+	-fx-text-fill:#ffffff;
+	-fx-font-size: 11pt;
+	-fx-border-color: #4d8ec7;
+	-fx-effect: dropshadow(three-pass-box, grey, 3, 0, 3, 3);
+}
+
+#lastEntryTextField {
+	-fx-border-color: #8497B0;
+	-fx-background-color: #D6DCE5;
+}
+
+#marpolDetail,.tab {
+	-fx-opacity: 1;
+	-fx-font-size: 18pt;
+	 -fx-pref-height: 45px;
+	 }
+
+#contentTextArea.text-area {
+	-fx-background-color: #a9a9a9 , white;
+  -fx-background-insets: 0 0 0 0, 0 0 0 0, 0 0 0 0;
+	-fx-text-fill: black;
+	-fx-opacity: 1;
+  -fx-border-color: 
+    #00B0F0
+    #00B0F0
+    #00B0F0
+    #00B0F0;
+  -fx-border-width:2;
+  -fx-border-radius: 0;
+
+}
+#contentTextArea.text-area .content {
+  -fx-background-color: #a9a9a9 , white;
+}
+#contentTextArea.text-area:focused {
+  -fx-background-color: #a9a9a9 , white;
+  -fx-background-insets: 0 0 0 0, 0 0 0 0, 0 0 0 0;
+	-fx-text-fill: black;
+	-fx-opacity: 1;
+  -fx-border-color: 
+    #00B0F0
+    #00B0F0
+    #00B0F0
+    #00B0F0;
+  -fx-border-width:2;
+  -fx-border-radius: 0;
+}
+ 
+#textAreaSignature {
+	-fx-font-size: 18pt;
+	-fx-background-color:rgba(112, 137, 158, 1);
+	-fx-text-fill: black;
+	-fx-opacity: 1;
+  -fx-border-color:black;
+  -fx-effect: dropshadow(three-pass-box, black, 2, 0, 2, 2);
+  }
+  
+.logbookButtonAddTank {
+ -fx-background-color:rgba(112, 137, 158, 0.2);
+ -fx-effect: dropshadow(three-pass-box, grey, 3, 0, 3, 3);
+}
+
+#imageViewHelp.imageViewButton {
+ -fx-border-color: #ef7f2e;
+ -fx-border-width:1;
+ -fx-effect: dropshadow(three-pass-box, grey, 3, 0, 3, 3);
+ }
+
+
+ #buttonAlert.button {
+-fx-border-color: #e3e3e3;
+ }
+ #selectTankerDialog.button {
+-fx-border-color: red;
+ }
+ 
+.radio-button .radio{
+-fx-border-width   : 1px;
+-fx-border-color   : #ED7D31;
+-fx-background-color : #ED7D31;
+-fx-border-radius  : 15px;
+
+}
+.radio-button:selected .radio .dot {
+  -fx-background-color: #000000;
+  -fx-background-insets: 0;
+}
+
+.logbookVBox{
+  -fx-border-color: #2E75B6;
+  -fx-border-width: 2;
+  -fx-padding: 0 10 0 0;
+}
+
+.logbookHBox{
+  -fx-border-color: #2E75B6;
+  -fx-border-width: 2;
+  -fx-padding: 0 10 0 0;
+}
+ 
+#coloreTesto,tab {
+	-fx-background: rgb(255, 255, 255);
+}
+
+.scroll-bar, .scroll-pane > .scroll-bar{
+ -fx-background-color: rgb(0,0,0);
+ -fx-background-insets: 2,2,2,2;
+ -fx-border-image-insets: 2em;
+
+}
+ 
+.scroll-bar:horizontal .thumb,
+.scroll-pane > .scroll-bar:horizontal .thumb{
+ -fx-background-color: #00ADEF;
+ -fx-background-insets: 4 0 4 0;
+ -fx-background-radius: 2em;
+}
+.scroll-bar:vertical .thumb,
+.scroll-pane > .scroll-bar:vertical .thumb{
+ -fx-background-color: #00ADEF;
+ -fx-background-insets: 0 4 0 4;
+ -fx-background-radius: 2em;
+} 
+ 
+.scroll-bar > .increment-button,
+.scroll-bar > .decrement-button {
+  -fx-background-color: -fx-outer-border, -fx-inner-border, -fx-body-color;
+  -fx-color: transparent;
+  -fx-padding: 0.25em; /* 3px */
+}
+.scroll-bar:horizontal > .increment-button,
+.scroll-bar:horizontal > .decrement-button {
+  -fx-background-insets: 2 1 2 1, 3 2 3 2, 4 3 4 3;
+}
+.scroll-bar:vertical > .increment-button,
+.scroll-bar:vertical > .decrement-button {
+  -fx-background-insets: 1 2 1 2, 2 3 2 3, 3 4 3 4;
+}
+.scroll-bar:horizontal > .decrement-button > .decrement-arrow {
+  -fx-padding: 0.333em 0.167em 0.333em 0.167em; /* 4 2 4 2 */
+  -fx-shape: "M5.997,5.072L5.995,6.501l-2.998-4l2.998-4l0.002,1.43l-1.976,2.57L5.997,5.072z";
+  -fx-effect: dropshadow(two-pass-box , -fx-shadow-highlight-color, 1, 0.0 , 0, 1.4);
+  /*-fx-background-insets: 2 0 -2 0, 0;*/
+}
+.scroll-bar:horizontal > .increment-button > .increment-arrow {
+  -fx-padding: 0.333em 0.167em 0.333em 0.167em; /* 4 2 4 2 */
+  -fx-shape: "M2.998-0.07L3-1.499l2.998,4L3,6.501l-0.002-1.43l1.976-2.57L2.998-0.07z";
+  -fx-effect: dropshadow(two-pass-box , -fx-shadow-highlight-color, 1, 0.0 , 0, 1.4);
+  /*-fx-background-insets: 2 0 -2 0, 0;*/
+}
+.scroll-bar:vertical > .decrement-button > .decrement-arrow {
+  -fx-padding: 0.167em 0.333em 0.167em 0.333em; /* 2 4 2 4 */
+  -fx-shape: "M1.929,4L0.5,3.998L4.5,1l4,2.998L7.07,4L4.5,2.024L1.929,4z";
+  -fx-effect: dropshadow(two-pass-box , -fx-shadow-highlight-color, 1, 0.0 , 0, 1.4);
+  /*-fx-background-insets: 2 0 -2 0, 0;*/
+}
+.scroll-bar:vertical > .increment-button > .increment-arrow {
+  -fx-padding: 0.167em 0.333em 0.167em 0.333em; /* 2 4 2 4 */
+  -fx-shape: "M7.071,1L8.5,1.002L4.5,4l-4-2.998L1.93,1L4.5,2.976L7.071,1z";
+  -fx-effect: dropshadow(two-pass-box , -fx-shadow-highlight-color, 1, 0.0 , 0, 1.4);
+  /*-fx-background-insets: 2 0 -2 0, 0;*/
+}
+ 
+/**************************************************** logbook Marpol************************************************************************* */
+
+#cargoTanks{
+	-fx-background-color: #ED7D31;
+	-fx-text-fill: #000000;
+	-fx-min-height: 40;
+	-fx-max-width: 250;
+}
+#cargoTanks.label {
+  -fx-font-size: 20px;
+  -fx-font-family: "Arial";
+  -fx-text-fill: black;
+ }
+#shipParticularsLabel.label {
+  -fx-font-size: 22px;
+  -fx-font-family: "Arial Black";
+  -fx-text-fill: black;
+}
+ #meansOfDisposal.label {
+  -fx-font-size: 22px;
+  -fx-font-family: "Arial Black";
+  -fx-text-fill: black;
+ }
+#returnObr.button {
+	-fx-background-color: #ED7D31;
+	-fx-text-fill:#000000 ;
+	-fx-opacity: 1;
+	-fx-font-size: 11pt;
+}
+#save.button {
+	-fx-background-color: #00ADEF;
+	-fx-text-fill:#000000 ;
+	-fx-opacity: 1;
+	-fx-font-size: 11pt;
+}
+.logbookAddTankMarpolDetail.button{
+	-fx-background-color: #00ADEF;
+	-fx-text-fill:#000000 ;
+	-fx-opacity: 1;
+	-fx-font-size: 11pt;
+}
+
+ #auxilaryBoiler.label {
+  -fx-font-size: 20px;
+  -fx-font-family: "Arial Black";
+  -fx-text-fill: black;
+ }
+ #meansForDisposalOfResiduesInaditionToProvvisionsOfSludgeTanks.label {
+  -fx-font-size: 20px;
+  -fx-font-family: "Arial Black";
+  -fx-text-fill: black;
+ }
+ .logbookMarpolDetailTotalVolumeOfTanks.label{
+ 	-fx-font-size: 12px;
+  -fx-font-family: "Arial Black";
+  -fx-text-fill: black;
+ }
+#hBoxReturnOrSaveMarpol{
+	-fx-background-color: #333F50;
+	-fx-border-color: #333F50;
+	-fx-max-height:50;
+}
+
+
+/***************************************************logbook History************************************************************************* */
+
+.saveMasterChiefTableView .table-column {
+ -fx-alignment: center-left ;
+ -fx-background-color: #D6DCE5;
+ -fx-border-color: #00B0F0;
+ -fx-text-fill: #000000;
+}
+.saveMasterChiefTableView.table-view .column-header .label {
+  -fx-text-fill: white;
+}
+.saveMasterChiefTableView.table-view .column-header,
+.saveMasterChiefTableView.table-view .column-header-background .filler {
+  -fx-background-color: #333F50;
+}
+.historyTableView .table-column {
+ -fx-alignment: center-left;
+ -fx-border-color: #00B0F0;
+ -fx-text-fill: #000000;
+}
+.historyTableView.table-view .column-header,
+.historyTableView.table-view .column-header-background .filler {
+  -fx-background-color: #333F50;
+}
+.historyTableView.table-view .column-header .label {
+  -fx-text-fill: white;
+}
+.historyTableView .table-row-cell {
+	-fx-background-color: #CAD1D8;
+}
+.historyTableView .table-row-cell:selected {
+	-fx-background-color: #e86b11;
+}
+.historyTableView .table-row-cell:empty {
+  -fx-background-color: #CAD1D8;
+}
+#logModificationsTableView .table-column {
+ -fx-alignment: center-left;
+ -fx-border-color: #00B0F0;
+ -fx-text-fill: #000000;
+}
+#logModificationsTableView .chiefEngMasterHbox .label {
+	-fx-text-fill: #000000;
+}
+#logModificationsTableView.table-view .column-header, .table-view .filler {
+	-fx-background-color: #333F50;
+}
+#logModificationsTableView .table-view .column-header .label {
+	-fx-text-fill: white;
+} 
+#logModificationsTableView .table-row-cell {
+	-fx-background-color: #CAD1D8;
+}
+#logModificationsTableView .table-row-cell:selected {
+	-fx-background-color: #748daa;
+}
+#logModificationsTableView .table-row-cell:empty {
+  -fx-background-color: #CAD1D8;
+}
+ 
+#saveButtonChiefEng{
+	-fx-background-color: #00ADEF;
+	-fx-text-fill: #000000;
+}
+.logModificationsButton{
+	-fx-background-color: #00ADEF;
+	-fx-text-fill: #000000;
+}
+#cancelLogModification{
+	-fx-background-color: #ED7D31;
+	-fx-text-fill: #000000;
+}
+#saveButtonMaster{
+	-fx-background-color:#ED7D31;
+	-fx-text-fill: #000000;
+}
+#hBoxLogRegistrationDate{
+	-fx-background-color: #ffffff;
+}
+#buttonBarHistory{
+	-fx-background-color: #333F50;
+}
+#buttonBarLogModifications{
+	-fx-background-color: #333F50;
+}
+
+.sliderLogbookHistory.jfx-slider .thumb {
+  -fx-background-color: #333F50;
+}
+.sliderLogbookHistory.jfx-slider >.track {
+   -fx-background-color:#142234;
+   -fx-pref-width: 2px;
+
+}
+.sliderLogbookHistory.jfx-slider > .colored-track {
+   -fx-background-color: #ED7D31;
+}
+
+.sliderLogbookHistory.jfx-slider > .animated-thumb {
+   -fx-background-color: #ED7D31;
+}
+
+#businessDateSlider{
+	-fx-background-color: #CAD1D8;
+	-fx-border-color: #00ADEF;
+	-fx-border-width: 2;
+}
+#processingDateSlider{
+	-fx-background-color: #CAD1D8;
+	-fx-border-color: #00ADEF;
+	-fx-border-width: 2;
+}
+
+.datePickerHistoryPreview.date-picker > .text-field {
+  -fx-background-color: #ffffff;
+  -fx-border-color: #00ADEF;
+  -fx-text-fill: #000000;
+}
+.datePickerHistoryPreview.jfx-date-picker .month-year-pane{
+  -fx-background-color: #00ADEF;
+}
+.datePickerHistoryPreview.jfx-date-picker .input-line {
+  -fx-background-color: #ffffff;
+}
+.datePickerHistoryPreview.jfx-date-picker .input-focused-line {
+  -fx-background-color: #00ADEF;
+}
+.datePickerHistoryPreview.date-picker .day-name-cell{
+  -fx-text-fill: #00ADEF;
+}
+.datePickerHistoryPreview .date-picker-popup {
+-fx-background-color:white;
+ }
+
+
+#historyPreviewButton{
+	-fx-background-color: #8497B0;
+	-fx-text-fill: #000000;
+}
+#showPreviewButton{
+	-fx-background-color: #D6DCE5;
+	-fx-text-fill: #000000;
+}
+.logbookHistoryCheckBox {
+	-fx-text-fill: #000000;
+	-fx-font-family: "Arial";
+}
+.logbookHistoryCheckBox .box {
+	-fx-background-color: #ffffff;
+	-fx-border-color: #00b7ff;
+	-fx-border-width: 2;
+}
+.logbookHistoryCheckBox:selected .mark {
+	-fx-background-color: #000000;
+}
+
+#description.text-area {
+	-fx-background-color: #a9a9a9 , white;
+ -fx-background-insets: 0 0 0 0, 0 0 0 0, 0 0 0 0;
+	-fx-text-fill: black;
+	-fx-opacity: 1;
+ -fx-border-color: 
+  #00B0F0
+  #00B0F0
+  #00B0F0
+  #00B0F0;
+ -fx-border-width:2;
+ -fx-border-radius: 0;
+
+}
+#description.text-area .content {
+ -fx-background-color: #a9a9a9 , white;
+}
+#description.text-area:focused {
+ -fx-background-color: #a9a9a9 , white;
+ -fx-background-insets: 0 0 0 0, 0 0 0 0, 0 0 0 0;
+	-fx-text-fill: black;
+	-fx-opacity: 1;
+ -fx-border-color: 
+  #00B0F0
+  #00B0F0
+  #00B0F0
+  #00B0F0;
+ -fx-border-width:2;
+ -fx-border-radius: 0;
+}
+/***************************************************logbook Users************************************************************************* */
+
+.btnSave{
+	-fx-background-color: #00b0f0;
+}
+.btnReset{
+	-fx-background-color: #e46c0a;
+}
+.background{
+	-fx-background-color: #333F50;
+}
+
+.whiteBackground {
+  -fx-background-color: #CAD1D8;
+  -fx-border-color: #40c4f4;
+  -fx-border-width: 2;
+  -fx-text-fill: black;
+}
+
+#showData.date-picker .day-name-cell{
+	-fx-background-color:#ffffff;
+  -fx-text-fill: #000000;
+}
+#manageUsersDateOfBirth.date-picker .day-name-cell{
+	-fx-background-color:#ffffff;
+  -fx-text-fill: #000000;
+}
+.date-picker-popup > * > .today {
+  -fx-background-color: #A5A5A5;
+  -fx-background-insets: 1, 2, 3;
+}
+.date-picker-popup > .month-year-pane > .spinner > .button > .left-arrow {
+  -fx-background-color: white;
+}
+
+.date-picker-popup > .month-year-pane > .spinner > .button > .right-arrow {
+  -fx-background-color: white;
+}
+.date-picker > .text-field {
+  -fx-background-color: #CAD1D8;
+
+}
+.usersTableView .table-column {
+ -fx-alignment: center-left ;
+/* -fx-background-color: #CAD1D8; */
+ -fx-border-color: #00B0F0;
+ -fx-text-fill: #000000;
+}
+.usersTableView.table-view .column-header,
+.usersTableView.table-view .column-header-background .filler {
+  -fx-background-color: #333F50;
+}
+.usersTableView .table-row-cell {
+	-fx-background-color: #D6DCE5;
+}
+.usersTableView .table-row-cell:selected {
+	-fx-background-color: #748daa;
+}
+.logbookManageUserscombo-box {
+	-fx-background-color: #CAD1D8;
+	-fx-border-color: #40c4f4;
+  -fx-border-width: 2;
+}
+
+.logbookManageUserscombo-box .list-cell 
+{
+  -fx-background: #CAD1D8;
+  -fx-text-fill: black;
+}
+.logbookcombo-box {
+	-fx-background-color: #ffffff;
+	-fx-border-color: #00B0F0;
+  -fx-border-width: 2;
+}
+.logbookcombo-box:disabled {
+	-fx-opacity: 100.0;
+}
+.logbookcombo-box .list-cell 
+{
+  -fx-background: #ffffff;
+  -fx-text-fill: black;
+}
+
+.logbookjfx-chip-view .chips-pane {
+ -fx-background-color: transparent;
+ -fx-vgap: 4;
+ -fx-hgap: 6;
+ -fx-alignment: center-left;
+ -fx-min-height: 60;
+ -fx-pref-height: 100;
+}
+
+.logbookjfx-chip-view {
+ -fx-background-color: transparent;
+ -fx-pref-width: 150px;
+ -fx-pref-height: 60px;
+}
+.logbookjfx-chip-view .chips-pane > .text-area {
+ -fx-padding: 0 0 0 0;
+ -fx-min-width: 140px;
+ -fx-pref-width: 140px;
+ -fx-pref-height:60;
+}
+.logbookjfx-chip-view .jfx-chip > HBox {
+ -fx-background-color: #8497B0;
+ -fx-background-radius: 8px 8px 8px 8px;
+ -fx-padding: 5px 5px 5px 5px;
+ -fx-pref-height: 35px;
+ -fx-pref-width: 140px;
+ -fx-alignment: center-left;
+ -fx-spacing: 5;
+}
+
+.logbookjfx-chip-view .jfx-chip > HBox > .label {
+	-fx-text-fill: black;
+	-fx-font-size: 11px;
+	-fx-pref-width: 140px;
+	-fx-wrap-text: false;
+}
+
+.jfx-button {
+  -fx-background-color: transparent;
+}
+
+
+.shaped-popup {
+}
+
+.shaped-popup-outline {
+  -fx-fill: white;
+  -fx-background-insets: 0,1;
+  -fx-stroke: #3378cc;
+  -fx-stroke-width: 3;
+  -fx-border-color:#71a9da;
+}
+
+.shaped-popup-content {
+  -fx-font-size: 24px;
+}
+
+.shaped-popup-content > .label {
+  -fx-text-fill: #3378cc;
+  -fx-opacity: 1;
+}
+
+
+.image-view-button:disabled {
+  -fx-opacity: 0.4;
+}
+
+
+/***************************************************logbook Audit Logging************************************************************************* */
+.log-line {
+    -fx-padding: 0, 5, 0, 5;
+}
+
+.log-line.selected {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: derive(-fx-focus-color, -80%);
+}
+
+
+
+
+/**********************************************e-Chart******************************** */
+
+
+.EChartRoutebutton.button{
+	-fx-background-color: #2E353F;
+	-fx-border-color:#4e82a7;
+	-fx-border-width: 1.5;
+	-fx-text-fill: #4e82a7;
+	-fx-font-size: 12;
+	-fx-min-height: 40;
+	-fx-min-width: 160; 
+	}
+
+.EChartRoutebutton.button:focused{
+ -fx-border-color: #ed7c31;
+ -fx-shape: "M 499 301 L 500 449 L 230 450 L 231 451 L 199 400 L 199 351 L 227 302 L 498 301 ";
+	-fx-text-fill: #ed7c31;
+}
+.toggleButtonEchart.toggle-button{
+	-fx-background-color: #2E353F;
+	-fx-text-fill: #4e82a7;
+	-fx-alignment: center;
+	-fx-border-color: #4e82a7;
+	-fx-border-width: 1.5;
+	-fx-min-height: 40;
+	-fx-min-width: 160; 
+}
+.toggleButtonEchart.toggle-button:selected{
+	-fx-text-fill: #ed7c31;
+	-fx-border-color: #ed7c31;
+	-fx-border-width: 1.5;
+	-fx-shape: "M 499 301 L 500 449 L 230 450 L 231 451 L 199 400 L 199 351 L 227 302 L 498 301 ";
+}
+.toggleButtonEchartUsageBand.toogle-button{
+	-fx-text-fill: #ffffff;
+	-fx-text-alignment: center;
+	-fx-font-size: 20;	
+}
+#coverageArea.toggle-button{
+	-fx-background-color: #595C5F;
+	-fx-border-color: #595C5F;
+}
+#all.toggle-button{
+	-fx-background-color: #595C5F;
+	-fx-border-color: #595C5F;
+}
+#overview.toggle-button{
+	-fx-background-color: #7b68ee;
+	-fx-border-color: #7b68ee;	
+}
+#general.toggle-button{
+	-fx-background-color: #00cc66;
+	-fx-border-color: #00cc66;
+}
+#coastal.toggle-button{
+	-fx-background-color: #9900ff;
+	-fx-border-color: #9900ff;
+}
+#approach.toggle-button{
+	-fx-background-color: #9e4e24;
+	-fx-border-color: #9e4e24;
+}
+#harbour.toggle-button{
+	-fx-background-color: #ff6600; 
+	-fx-border-color: #ff6600; 
+}
+#berthing.toggle-button{
+	-fx-background-color: #ff1aff;
+	-fx-border-color:#ff1aff;	
+}
+.toggleButtonEchartUsageBand.toggle-button:selected{
+	-fx-effect: dropshadow(three-pass-box, grey, 3, 0, 3, 3);
+}
+#mainTabPane.tab-pane{
+ -fx-tab-min-width:390px; 
+}
+
+#hBoxLastEncUpdate{
+	-fx-text-fill:#4e82a7;
+	-fx-border-color: #4e82a7;
+	-fx-min-width: 160;
+	-fx-min-height: 40;
+}
+#lastEncUpdateLabel{
+	-fx-text-fill:#4e82a7;
+}
+.RouteSelectionUsagePane {
+	-fx-background-color: #2F353D;
+	-fx-text-fill: #4e82a7;
+	-fx-font-family: "Arial";
+}
+.RouteSelectionUsagePane:focused, .RouteSelectionUsagePane:childFocused {
+	-fx-text-fill: #ed7D31;
+}
+#legend{
+	-fx-text-fill: #ed7D31;
+	-fx-alignment: center;
+	-fx-background-color: transparent;
+	-fx-border-color: #ed7D31;
+	-fx-min-height: 50;
+	-fx-min-width: 150;
+	-fx-font-size: 16;
+}
+#eChartButton{
+	-fx-text-fill: #4e82a7;
+	-fx-background-color: transparent;
+	-fx-font-size: 16;
+
+}
+
+.MapbasketTab.tab{
+	-fx-background-color: transparent;
+	-fx-border-color: #4e82a7;
+	-fx-border-width: 3;
+	-fx-text-fill: #4e82a7;
+	-fx-font-size: 14;
+}
+.MapbasketTab.tab:selected{
+	-fx-background-color:rgba(250, 190, 88, 0.3);
+	-fx-border-color: #ed7c31;
+}
+.MapbasketTab.tab:hover{
+	-fx-background-color:rgba(250, 190, 88, 0.3);
+	-fx-border-color: #ed7c31;
+}
+.mapBasketLabel.tab-pane .tab .tab-label {
+ -fx-text-fill: #4e82a7;
+ -fx-font-family: "Black Arial";
+ -fx-font-size: 18;
+
+}
+.mapBasketLabel.tab-pane .tab:selected .tab-label {
+ -fx-font-family: "Black Arial";
+ -fx-text-fill: #ed7D31;
+ -fx-font-size: 18;
+}
+.mapBasketLabel.tab-pane .tab:hover .tab-label {
+ -fx-font-family: "Black Arial";
+ -fx-text-fill: #ed7D31;
+ -fx-font-size: 18;
+}
+#lastENCUpdateText.text-field{
+	-fx-text-fill:#4e82a7;
+	-fx-border-color: #4e82a7;
+	-fx-background-color: #2F353D;
+}
+#coordinatesLabel{
+	-fx-text-fill: #4e82a7;
+	-fx-border-color: #4e82a7;
+	-fx-border-width: 3;
+	-fx-min-height: 40;
+	-fx-min-width: 75;
+	-fx-font-size: 16;
+	-fx-alignment: center;
+}
+#imageViewMapButtons{
+	-fx-background-color: #2A4A5F;
+}
+#pane{
+ -fx-background-image: url("texture.jpg");
+ -fx-background-repeat: stretch; 
+ -fx-background-position: center center;
+ -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
+}
+
+#sendButton{
+	-fx-font-size: 10pt;
+	-fx-background-color:
+	linear-gradient(to bottom, derive(-fx-base,+50%), derive(-fx-base,-40%), derive(-fx-base,-20%));
+	-fx-background: rgba(77, 80, 82, 0.8);
+	-fx-base: rgba(77, 80, 82, 0.8);
+	-fx-border-width: 0.5;
+ -fx-border-color: 
+  #29fdfd
+  #29fdfd
+  #29fdfd
+  #29fdfd;
+ -fx-border-radius: 5 5 5 5; 
+}
+#encPermitButton.button{
+	-fx-background-color: #2E353F;
+	-fx-border-color:#4e82a7;
+	-fx-border-width: 1.5;
+	-fx-text-fill: #4e82a7;
+	-fx-font-size: 12;
+	-fx-min-height: 40;
+	-fx-min-width: 320;
+	}
+#encPermitButton.button:focused{
+ -fx-border-color: #ed7c31;
+ -fx-shape: "M 499 301 L 500 449 L 230 450 L 231 451 L 199 400 L 199 351 L 227 302 L 498 301 ";
+	-fx-text-fill: #ed7c31;
+}
+.RouteSelectionUsagePane > .title {
+	-fx-background-color: transparent;
+	-fx-border-color: #4e82a7;
+	-fx-text-fill: #4e82a7;
+	-fx-font-family: "Arial";
+	-fx-font-size: 18;
+	-fx-alignment: center;
+}
+
+.RouteSelectionUsagePane > .content {
+	-fx-border-insets: 3 0 0 0;
+	-fx-border-color: #4e82a7;
+}
+.RouteSelectionUsagePane:focused > .content, .RouteSelectionUsagePane:childFocused  > .content {
+	-fx-border-insets: 3 0 0 0;
+	-fx-border-color: #ed7D31;
+}
+.RouteSelectionUsagePane:focused > .title, .RouteSelectionUsagePane:childFocused > .title {
+	-fx-border-color: #ed7D31;
+	-fx-text-fill: #ed7D31;
+}
+
+.RouteSelectionUsagePane.titled-pane > .title > .arrow-button > .arrow {
+-fx-background-color: #4e82a7;
+-fx-padding: 0.60em 0.60em 0.60em 0.60em; 
+}
+.RouteSelectionUsagePane.titled-pane:focused > .title > .arrow-button .arrow, .RouteSelectionUsagePane.titled-pane:childFocused > .title > .arrow-button .arrow {
+-fx-background-color:#ed7c31;
+-fx-effect: null; /* remove arrow shadow border blue color*/
+}
+
+#menu-bar-area {
+	-fx-background-color: green;
+}
+
+
+
+
+
+#tableViewEChart.table-view{
+ -fx-border-color: #4e82a7;
+
+}
+
+#tableViewEChart.table-view:focused{
+	-fx-border-color: #ed7c31;
+}
+
+#tableViewEChart.table-view .column-header-background .label{
+ -fx-text-fill: #4e82a7;
+}
+#tableViewEChart.table-view:focused .column-header-background .label{
+ -fx-text-fill: #ed7c31;
+}
+
+#tableViewEChart.table-view .column-header {
+ -fx-background-color: transparent;
+}
+#tableViewEChart.table-cell {
+ -fx-border-color: red;
+ -fx-text-fill: white;
+}
+
+#tableViewEChart.table-column{
+	-fx-alignment: center-left ;
+ -fx-border-color: red;
+ -fx-text-fill: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+/*******************************************************************************
+ *                                       *
+ * Button & ToggleButton                            *
+ *                                       *
+ ******************************************************************************/
+
+/* ====  DEFAULT  ========================================================= */
+
+.button:default {
+  -fx-base: -fx-default-button;
+}
+
+/* ====  WEB BUTTONS  ===================================================== */
+
+.web-view .form-select-button {
+  -fx-background-radius: 2, 2, 1, 0;
+  -fx-background-insets: 2 2 1 2, 2, 3, 4;
+}
+
+/* ====  PILL BUTTONS  ==================================================== */
+
+.button.left-pill,
+.toggle-button.left-pill {
+  -fx-background-radius: 3 0 0 3, 3 0 0 3, 2 0 0 2, 1 0 0 1;
+  -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+  -fx-padding: 0.333333em 0.666667em 0.333333em 0.75em; /* 4 8 4 9 */
+}
+
+.button.center-pill,
+.toggle-button.center-pill {
+  -fx-background-radius: 0;
+  -fx-background-insets: 0 0 -1 0, 0 0 0 0, 1 1 1 0, 2 2 2 1 ;
+}
+.button.right-pill,
+.toggle-button.right-pill {
+  -fx-background-radius: 0 3 3 0, 0 3 3 0, 0 2 2 0, 0 1 1 0;
+  -fx-background-insets: 0 0 -1 0, 0, 1 1 1 0, 2 2 2 1 ;
+}
+.button.left-pill:focused,
+.toggle-button.left-pill:focused {
+  -fx-background-insets: -0.2 0 -0.2 -0.2, 1, 2, -1.4 0 -1.4 -1.4, 2.6;
+  -fx-background-radius: 3 0 0 3, 2 0 0 2, 1 0 0 1, 4 0 0 4, 1 0 0 1;
+}
+.button.center-pill:focused,
+.toggle-button.center-pill:focused {
+  -fx-background-insets: -0.2 0 -0.2 -1, 1 1 1 0, 2 2 2 1, -1.4 0 -1.4 -1, 2.6 2.6 2.6 1.6;
+  -fx-background-radius: 0, 0, 0, 0, 0;
+}
+.button.right-pill:focused,
+.toggle-button.right-pill:focused {
+  -fx-background-insets: -0.2 -0.2 -0.2 -1, 1 1 1 0, 2 2 2 1, -1.4 -1.4 -1.4 -1, 2.6 2.6 2.6 1.6;
+  -fx-background-radius: 0 3 3 0, 0 2 2 0, 0 1 1 0, 0 4 4 0, 0 1 1 0;
+}
+.toggle-button:selected.left-pill:focused {
+  -fx-background-insets: -0.2 0 -0.2 -0.2, 1, -1.4 0 -1.4 -1.4, 2.6;
+  -fx-background-radius: 3 0 0 3, 2 0 0 2, 4 0 0 4, 0;
+}
+.toggle-button:selected.center-pill:focused {
+  -fx-background-insets: -0.2 0 -0.2 -1, 1 1 1 0, -1.4 0 -1.4 -1, 2.6 2.6 2.6 1.6;
+  -fx-background-radius: 0, 0, 0, 0;
+}
+.toggle-button:selected.right-pill:focused {
+  -fx-background-insets: -0.2 -0.2 -0.2 -1, 1 1 1 0, -1.4 -1.4 -1.4 -1, 2.6 2.6 2.6 1.6;
+  -fx-background-radius: 0 3 3 0, 0 2 2 0, 0 4 4 0, 0;
+}
+
+/* ====  SELECTED TOGGLE  ================================================= */
+
+.toggle-button:selected {
+    -fx-background-color:
+      -fx-shadow-highlight-color,
+      linear-gradient(to bottom, derive(-fx-outer-border, -20%), -fx-outer-border),
+      linear-gradient(to bottom,
+          derive(-fx-color, -22%) 0%,
+          derive(-fx-color, -13%) 20%,
+          derive(-fx-color, -11%) 50%);
+  -fx-background-insets: 0 0 -1 0, 0, 1;
+}
+.toggle-button:selected:focused {
+  -fx-background-color:
+    -fx-focus-color,
+    linear-gradient(to bottom,
+      derive(-fx-color, -22%) 0%,
+      derive(-fx-color, -13%) 20%,
+      derive(-fx-color, -11%) 50%),
+    -fx-faint-focus-color,
+    linear-gradient(to bottom,
+      derive(-fx-color, -22%) 0%,
+      derive(-fx-color, -13%) 20%,
+      derive(-fx-color, -11%) 50%);
+  -fx-background-insets: -0.2, 1, -1.4, 2.6;
+  -fx-background-radius: 3, 2, 4, 0;
+}
+
+
+
+
+
+
+.CalendarTimePickerSkin .timeLabel { 
+	-fx-font-size: 2.0em;
+	-fx-opacity: 0.8;
+	-fx-fill: -fx-text-fill;
+}
+.CalendarPickerControlSkin .weekend { 
+	-fx-text-fill: #00B0F0;
+}
+.CalendarTextFieldSkin_popup .accept-icon {
+  -fx-image: url("../icons/accept.png");
+}
+.CalendarTextFieldSkin_popup .close-icon {
+  -fx-image: url("../icons/cancel.png");
+}
+
+
+
+
+/* Signature Popup */
+
+.signatureVBox {
+	-fx-background-color: #D6DCE5;
+}
+.signatureCanvasAnchorPane {
+	-fx-background-color: #6f819b;
+}
+.canvasSignature{
+	-fx-background-color: #6F819B;
+}
+.signatureButtonReset.button {
+	-fx-background-color: #ED7D31;
+	-fx-text-fill:#000000;
+	-fx-font-size: 12pt;
+	-fx-border-color: #ED7D31;
+}
+.signatureButtonAccept.button {
+	-fx-background-color: #00ADEF;
+	-fx-text-fill:#000000;
+	-fx-font-size: 11pt;
+	-fx-border-color: #00ADEF;
+}
+.canvasSignature.canvas {
+  -fx-background-color: red ;
+  -fx-background-insets: 0, 20 ;
+  -fx-padding: 20 ;
+}
+.signatureMainAnchorPane{
+   -fx-border-color:#00B0F0;
+    -fx-border-width:2;
+}
+.signatureHBox {
+  -fx-background-color: #D6DCE5;
+}
+.signatureInsertLabel.label {
+  -fx-font-size: 28px;
+  -fx-font-family: "Arial Black";
+  -fx-text-fill: #000000;
+ }
+.signatureText.label{
+	-fx-text-fill: #000000;
+}
+
+.signatureComboBox.combo-box .cell{
+  -fx-text-fill: #000000;
+ -fx-background: #ffffff;
+}
+.signatureTextField.text-field{
+	-fx-background-color: #D6DCE5; 
+	-fx-border-color: transparent;
+	 -fx-text-fill: #000000;
+}
+
+ 
+
+/*Login Dialog */
+
+.logbookloginButton {
+	-fx-background-color: #5D6876;
+	-fx-text-fill: white;
+	-fx-wrap-text: true;
+	-fx-opacity: 1;
+	-fx-font-size: 13pt;	
+	-fx-border-color: black;
+	-fx-border-width: 1;
+	-fx-effect: dropshadow(three-pass-box, grey, 5, 0, 5, 5);
+	-fx-max-width: infinity;
+	-fx-max-height: infinity;
+}
+.logbookloginButton:focused{
+  -fx-background-color: #00ADEF;   
+ }
+
+
+#hBoxPassword{
+	-fx-background-color: #ADB9CA;
+	-fx-border-color: #ADB9CA;
+	-fx-max-height: 50;
+	-fx-max-width: 115;
+}
+
+#hBoxUsername{
+	-fx-background-color: #ADB9CA;
+	-fx-border-color: #ADB9CA;
+	-fx-max-height: 50;
+	-fx-max-width: 115;
+
+}
+#hBoxLogin{
+	-fx-background-color: #333F50;
+
+}
+#gridPaneLogin{
+	-fx-background-color: #D6DCE5;
+}
+#loginLabel{
+	-fx-text-fill: #ffffff;
+}
+.loginText.label{
+	-fx-text-fill: #000000;
+}
+
+
+
+/**********************************************Notices To Mariners******************************** */
+.changePrespectiveType.button{
+	-fx-background-color: #2E353F;
+	-fx-border-color:#4e82a7;
+	-fx-border-width:5.5;
+	-fx-text-fill: #4e82a7;
+	-fx-font-size: 14;
+	-fx-min-height: 50;
+	-fx-min-width: 200;
+	-fx-font-weight: bold; 
+	}
+
+.changePrespectiveTypeActive.button{
+ -fx-border-color: #ed7c31;
+ -fx-shape: "M 0.833 0.417 C 0.833 0.75 0.75 0.833 0.417 0.833 L 0 0.833 L 0 27.333 L 0 53.833 L 0.417 53.833 C 0.799 53.833 0.833 53.894 0.833 54.583 L 0.833 55.333 L 1.568 55.333 L 2.302 55.333 L 2.417 56.167 L 2.531 57 L 3.257 57 L 3.982 57 L 4.033 57.792 L 4.083 58.583 L 4.875 58.634 L 5.667 58.685 L 5.667 59.426 L 5.667 60.167 L 6.417 60.167 C 7.159 60.167 7.167 60.172 7.167 60.736 C 7.167 61.686 7.292 61.833 8.101 61.833 L 8.833 61.833 L 8.833 62.583 L 8.833 63.333 L 9.667 63.333 L 10.5 63.333 L 10.5 64.167 L 10.5 65 L 11.241 65 L 11.982 65 L 12.033 65.792 L 12.083 66.583 L 12.875 66.634 L 13.667 66.685 L 13.667 67.426 L 13.667 68.167 L 14.5 68.167 L 15.333 68.167 L 15.333 69 L 15.333 69.833 L 16.074 69.833 L 16.815 69.833 L 16.866 70.625 L 16.917 71.417 L 17.708 71.467 L 18.5 71.518 L 18.5 72.259 L 18.5 73 L 19.333 73 L 20.167 73 L 20.167 73.833 L 20.167 74.667 L 20.908 74.667 L 21.648 74.667 L 21.699 75.458 L 21.75 76.25 L 22.542 76.301 L 23.333 76.352 L 23.333 77.092 L 23.333 77.833 L 24.083 77.833 C 24.826 77.833 24.833 77.839 24.833 78.403 C 24.833 79.353 24.959 79.5 25.768 79.5 L 26.5 79.5 L 26.5 80.25 L 26.5 81 L 27.333 81 L 28.167 81 L 28.167 81.833 L 28.167 82.667 L 28.908 82.667 L 29.648 82.667 L 29.699 83.458 L 29.75 84.25 L 30.542 84.301 L 31.333 84.352 L 31.333 85.092 L 31.333 85.833 L 32.167 85.833 L 33 85.833 L 33 86.667 L 33 87.5 L 33.741 87.5 L 34.482 87.5 L 34.533 88.292 L 34.583 89.083 L 35.375 89.134 L 36.167 89.185 L 36.167 89.926 L 36.167 90.667 L 37 90.667 L 37.833 90.667 L 37.833 91.5 L 37.833 92.333 L 38.583 92.333 L 39.333 92.333 L 39.333 93.083 L 39.333 93.833 L 40.167 93.833 L 41 93.833 L 41 94.667 L 41 95.5 L 41.75 95.5 C 42.457 95.5 42.5 95.527 42.502 95.958 C 42.507 96.983 42.65 97.167 43.436 97.167 L 44.167 97.167 L 44.167 97.917 L 44.167 98.667 L 44.991 98.667 L 45.815 98.667 L 45.866 99.458 L 45.917 100.25 L 57.875 100.293 L 69.833 100.336 L 69.833 104.071 C 69.833 108.46 69.806 108.333 70.768 108.333 C 71.438 108.333 71.5 108.369 71.5 108.75 L 71.5 109.167 L 202.417 109.167 L 333.333 109.167 L 333.333 108.75 C 333.333 108.361 333.389 108.333 334.167 108.333 L 335 108.333 L 335 104.335 L 335 100.336 L 344.542 100.293 L 354.083 100.25 L 354.134 99.458 L 354.185 98.667 L 355.009 98.667 L 355.833 98.667 L 355.833 97.926 L 355.833 97.185 L 356.625 97.134 L 357.417 97.083 L 357.467 96.292 L 357.518 95.5 L 358.259 95.5 L 359 95.5 L 359 94.667 L 359 93.833 L 359.833 93.833 L 360.667 93.833 L 360.667 93.083 L 360.667 92.333 L 361.417 92.333 L 362.167 92.333 L 362.167 91.5 L 362.167 90.667 L 363 90.667 L 363.833 90.667 L 363.833 89.926 L 363.833 89.185 L 364.625 89.134 L 365.417 89.083 L 365.467 88.292 L 365.518 87.5 L 366.259 87.5 L 367 87.5 L 367 86.667 L 367 85.833 L 367.833 85.833 L 368.667 85.833 L 368.667 85.092 L 368.667 84.352 L 369.458 84.301 L 370.25 84.25 L 370.301 83.458 L 370.352 82.667 L 371.092 82.667 L 371.833 82.667 L 371.833 81.833 L 371.833 81 L 372.667 81 L 373.5 81 L 373.5 80.259 L 373.5 79.518 L 374.292 79.467 L 375.083 79.417 L 375.134 78.625 L 375.185 77.833 L 375.926 77.833 L 376.667 77.833 L 376.667 77.092 L 376.667 76.352 L 377.458 76.301 L 378.25 76.25 L 378.3 75.467 L 378.351 74.684 L 379.134 74.634 L 379.917 74.583 L 379.967 73.792 L 380.018 73 L 380.759 73 L 381.5 73 L 381.5 72.259 L 381.5 71.518 L 382.292 71.467 L 383.083 71.417 L 383.134 70.625 L 383.185 69.833 L 383.926 69.833 L 384.667 69.833 L 384.667 69 L 384.667 68.167 L 385.5 68.167 L 386.333 68.167 L 386.333 67.426 L 386.333 66.685 L 387.125 66.634 L 387.917 66.583 L 387.967 65.792 L 388.018 65 L 388.759 65 L 389.5 65 L 389.5 64.167 L 389.5 63.333 L 390.333 63.333 L 391.167 63.333 L 391.167 62.592 L 391.167 61.852 L 391.958 61.801 L 392.75 61.75 L 392.801 60.958 L 392.852 60.167 L 393.592 60.167 L 394.333 60.167 L 394.333 59.426 L 394.333 58.685 L 395.125 58.634 L 395.917 58.583 L 395.967 57.8 L 396.018 57.018 L 396.8 56.967 L 397.583 56.917 L 397.634 56.125 L 397.685 55.333 L 398.426 55.333 L 399.167 55.333 L 399.167 54.583 C 399.167 53.894 399.201 53.833 399.583 53.833 L 400 53.833 L 400 27.333 L 400 0.833 L 399.583 0.833 C 399.25 0.833 399.167 0.75 399.167 0.417 L 399.167 0 L 200 0 L 0.833 0 L 0.833 0.417 M 389.5 28.917 L 389.5 47.333 L 388.75 47.333 L 388 47.333 L 388 48.167 L 388 49 L 387.167 49 L 386.333 49 L 386.333 49.75 C 386.333 50.493 386.328 50.5 385.762 50.5 C 385.036 50.5 384.667 50.869 384.667 51.595 C 384.667 52.161 384.66 52.167 383.917 52.167 L 383.167 52.167 L 383.167 53 L 383.167 53.833 L 382.333 53.833 L 381.5 53.833 L 381.5 54.583 L 381.5 55.333 L 380.75 55.333 L 380 55.333 L 380 56.167 L 380 57 L 379.167 57 L 378.333 57 L 378.333 57.833 L 378.333 58.667 L 377.5 58.667 L 376.667 58.667 L 376.667 59.417 L 376.667 60.167 L 375.917 60.167 L 375.167 60.167 L 375.167 61 L 375.167 61.833 L 374.333 61.833 L 373.5 61.833 L 373.5 62.568 L 373.5 63.302 L 372.667 63.417 L 371.833 63.531 L 371.833 64.266 L 371.833 65 L 371.083 65 L 370.333 65 L 370.333 65.833 L 370.333 66.667 L 369.5 66.667 L 368.667 66.667 L 368.667 67.417 L 368.667 68.167 L 368.006 68.167 C 367.261 68.167 367 68.467 367 69.322 C 367 69.817 366.976 69.833 366.25 69.833 L 365.5 69.833 L 365.5 70.667 L 365.5 71.5 L 364.667 71.5 L 363.833 71.5 L 363.833 72.25 L 363.833 73 L 363.083 73 L 362.333 73 L 362.333 73.833 L 362.333 74.667 L 361.5 74.667 L 360.667 74.667 L 360.667 75.5 L 360.667 76.333 L 359.833 76.333 L 359 76.333 L 359 77.083 L 359 77.833 L 358.25 77.833 L 357.5 77.833 L 357.5 78.667 L 357.5 79.5 L 356.667 79.5 L 355.833 79.5 L 355.833 80.25 C 355.833 80.957 355.807 81 355.375 81.002 C 354.351 81.007 354.167 81.15 354.167 81.936 L 354.167 82.667 L 353.417 82.667 L 352.667 82.667 L 352.667 83.5 L 352.667 84.333 L 351.833 84.333 L 351 84.333 L 351 85.083 L 351 85.833 L 350.367 85.833 C 349.568 85.833 349.333 86.068 349.333 86.867 L 349.333 87.5 L 348.583 87.5 L 347.833 87.5 L 347.833 88.333 L 347.833 89.167 L 341.426 89.167 L 335.018 89.167 L 334.967 88.375 L 334.917 87.583 L 334.125 87.533 L 333.333 87.482 L 333.333 86.762 C 333.333 86.089 333.299 86.035 332.813 85.938 C 332.131 85.801 72.702 85.801 72.021 85.938 C 71.533 86.035 71.5 86.088 71.5 86.771 L 71.5 87.5 L 70.768 87.5 C 69.959 87.5 69.833 87.647 69.833 88.597 L 69.833 89.167 L 61 89.167 L 52.167 89.167 L 52.167 88.333 L 52.167 87.5 L 51.417 87.5 L 50.667 87.5 L 50.667 86.867 C 50.667 86.068 50.432 85.833 49.633 85.833 L 49 85.833 L 49 85.083 L 49 84.333 L 48.167 84.333 L 47.333 84.333 L 47.333 83.5 L 47.333 82.667 L 46.583 82.667 L 45.833 82.667 L 45.833 81.936 C 45.833 81.15 45.649 81.007 44.625 81.002 C 44.193 81 44.167 80.957 44.167 80.25 L 44.167 79.5 L 43.333 79.5 L 42.5 79.5 L 42.5 78.667 L 42.5 77.833 L 41.75 77.833 L 41 77.833 L 41 77.083 L 41 76.333 L 40.167 76.333 L 39.333 76.333 L 39.333 75.5 L 39.333 74.667 L 38.592 74.667 L 37.852 74.667 L 37.801 73.875 L 37.75 73.083 L 36.958 73.033 L 36.167 72.982 L 36.167 72.241 L 36.167 71.5 L 35.333 71.5 L 34.5 71.5 L 34.5 70.667 L 34.5 69.833 L 33.75 69.833 L 33 69.833 L 33 69.2 C 33 68.402 32.765 68.167 31.967 68.167 L 31.333 68.167 L 31.333 67.417 L 31.333 66.667 L 30.5 66.667 L 29.667 66.667 L 29.667 65.833 L 29.667 65 L 28.917 65 L 28.167 65 L 28.167 64.266 L 28.167 63.531 L 27.333 63.417 L 26.5 63.302 L 26.5 62.568 L 26.5 61.833 L 25.667 61.833 L 24.833 61.833 L 24.833 61 L 24.833 60.167 L 24.083 60.167 L 23.333 60.167 L 23.333 59.417 L 23.333 58.667 L 22.5 58.667 L 21.667 58.667 L 21.667 57.833 L 21.667 57 L 20.833 57 L 20 57 L 20 56.167 L 20 55.333 L 19.25 55.333 L 18.5 55.333 L 18.5 54.583 L 18.5 53.833 L 17.667 53.833 L 16.833 53.833 L 16.833 53 L 16.833 52.167 L 16.083 52.167 L 15.333 52.167 L 15.333 51.506 C 15.333 50.761 15.033 50.5 14.178 50.5 C 13.683 50.5 13.667 50.476 13.667 49.75 L 13.667 49 L 12.833 49 L 12 49 L 12 48.167 L 12 47.333 L 11.25 47.333 L 10.5 47.333 L 10.5 28.917 L 10.5 10.5 L 200 10.5 L 389.5 10.5 L 389.5 28.917 Z Z";
+ -fx-text-fill: #ed7c31;
+}
+
+.rightButtonsPUKHO.button{
+	-fx-background-color: #2E353F;
+	-fx-border-color:#4e82a7;
+	-fx-border-width:4;
+	-fx-text-fill: #4e82a7;
+	-fx-font-size: 14;
+	-fx-min-height: 50;
+	-fx-min-width: 200;
+	-fx-font-weight: bold;
+	}
+
+.rightButtonsPUKHOActive.button{
+ -fx-border-color: #ed7c31;
+ -fx-shape: "M0 0L10 0L10 7L0 7L-2 5L-2 2L0 0";
+ -fx-text-fill: #ed7c31;
+  -fx-background-color: rgba(237, 124, 49, 0.2);
+}
+
+.searchButtonPUKHO.button{
+	-fx-background-color: #2E353F;
+	-fx-border-color:#4e82a7;
+	-fx-border-width:4;
+	-fx-text-fill: #4e82a7;
+	-fx-font-size: 14;
+	-fx-min-height: 40;
+	-fx-min-width: 100;
+	-fx-font-weight: bold;
+	}
+
+.searchButtonPUKHOActive.button{
+ -fx-border-color: #ed7c31;
+ -fx-shape: "M0 0L10 0L10 7L0 7L-2 5L-2 2L0 0";
+ -fx-text-fill: #ed7c31;
+ -fx-background-color: rgba(237, 124, 49, 0.2);
+}
+
+.chartcheck-box .box {
+-fx-background-color: #ffffff;
+-fx-border-color: #00b7ff;
+-fx-border-width: 2;
+-fx-background-insets: 1.5;
+}
+.chartcheck-box:selected .mark {
+-fx-background-color: #000000;
+}
+.chartLabel {
+	-fx-text-fill: #000000;
+	-fx-font-family: "Arial";
+}
+
+/*******************************************************************************
+ *                                       *
+ * Logbook select tanker style                                 *
+ *                                       *
+ ******************************************************************************/
+.combo-box .arrow{
+	/* remove default arrow -fx-alignment: making transparent*/
+    -fx-background-color:transparent ;
+}
+.combo-box .arrow-button {
+	/* add shape to button as arrow*/
+    -fx-background-color: black;
+    -fx-shape: "M 0 0 L 2 0 L 1 1 L 0 0";
+    -fx-padding: 5px;
+    -fx-border-insets: 5px;
+    -fx-background-insets: 5px;
+}
+.logbookSelectTankerButton {
+	-fx-background-color: from rule;
+	-fx-text-fill:black ;
+	-fx-wrap-text: true;
+	-fx-opacity: 1;
+	-fx-font-size: 13pt;	
+	-fx-border-color: black transparent black black ;
+	-fx-border-width: 1 0 1 1;
+	-fx-max-width: infinity;
+	-fx-max-height: infinity;
+}
+
+.jfx-slider > .thumb {
+   -fx-background-insets: 0; 
+   -fx-background-color: transparent;
+}
+
+.jfx-slider >.track {
+	-fx-pref-width: 20px;
+	-fx-background-color: #D6DCE5;
+	-fx-border-color: #333F50;
+}
+.jfx-slider > .colored-track {
+   -fx-background-color: #333F50;
+}
+.jfx-slider > .animated-thumb {
+   -fx-background-color: #333F50;
+}
+.jfx-slider .slider-value {
+   -fx-text-fill: #ffffff;
+}
+.changeWidthSlider.jfx-slider >.track {
+	-fx-pref-width: 65px;
+	-fx-min-width: 65px;
+	-fx-border-color:
+	 transparent
+	 #333F50
+	 #333F50
+	 #333F50;
+}
+.vBoxSliderHolder{
+	-fx-background-color: #D6DCE5;
+	-fx-pref-width: 65px;
+	-fx-min-width: 65px;
+	-fx-border-color: #333F50;
+}
+.logbookSelectTankerButton:focused{
+  -fx-background-color: #ED7D31;   
+ }
+ #vBoxSelectTanker{
+ 	-fx-background-color: #D6DCE5;
+ }
+.logbookSelectTankerTriangle {
+  -fx-triangle-fill: #BDD7EE;
+  -fx-triangle-stroke: black;
+} 
+.mainGridPane {
+ -fx-background-color: #D6DCE5;
+}
+#ballastForePeakGridPane{
+	-fx-background-color: #B4C7E7;		
+}
+#ballastPortSideGridPane{
+	-fx-background-color: #B4C7E7;		
+}
+#ballastSbdSideGridPane{
+	-fx-background-color: #B4C7E7;		
+}
+#ballastAftPeakGridPane{
+	-fx-background-color: #9DC3E6;		
+}
+#cargoGridPane{
+	-fx-background-color: #F2F2F2;	
+}
+#slopGridPane{
+	-fx-background-color: #8497B0;	
+}
+#fuelOilGridPane{
+	-fx-background-color: #F6EFEA;	
+}
+#sludgeGridPane{
+	-fx-background-color: #F8CBAD;		
+}
+#oilBilgeGridPane{
+	-fx-background-color: #E5D399;	
+}
+
+
+.tankDetailsLabel {
+	-fx-text-fill: #000000;
+}
+.tankDetailsLabel:disabled {
+	-fx-text-fill: #000000;
+}
+
+/* Alert Warning Dialog */
+.dialog-pane {
+  -fx-border-color: #333F50;
+  -fx-background-color: #D6DCE5;
+}
+.dialog-pane .header-panel {
+	-fx-background-color: #D6DCE5;
+
+}
+.dialog-pane .header-panel .label {
+	-fx-text-fill: #000000;
+}
+.dialog-pane .content {
+	-fx-background-color: #D6DCE5;
+	-fx-text-fill: #000000;
+}
+.dialog-pane .container {
+	-fx-background-color: #D6DCE5;
+}
+.dialog-pane .container .button {
+	-fx-background-color: #5D6876;
+	-fx-text-fill: white;
+	-fx-wrap-text: true;
+	-fx-opacity: 1;
+	-fx-font-size: 13pt;	
+	-fx-border-color: black;
+	-fx-border-width: 1;
+	-fx-effect: dropshadow(three-pass-box, grey, 5, 0, 5, 5);
+	-fx-max-width: infinity;
+	-fx-max-height: infinity;
+}
+.dialog-pane .container .button:focused{
+  -fx-background-color: #00ADEF;   
+ }
+
+.closeDialogButton {
+  -fx-background-color: #00ADEF;
+  -fx-background-radius: 5px;
+  -fx-background-insets: 10px;
+}
+.closeDialogButton .jfx-svg-glyph {
+  -jfx-size: 24;
+}
+
+
+/**********************************************************BACKUP/RESTORE*********************************************/
+#backupProgressBar.progress-bar .track {
+-fx-background-color: #333F50;
+-fx-background-radius: 15;
+}
+#backupProgressBar.progress-bar .bar {
+-fx-background-color: #ED7D31;
+-fx-background-radius: 5;
+}
+#restoreProgressBar.progress-bar .track {
+-fx-background-color: #333F50;
+-fx-background-radius: 15;
+}
+#restoreProgressBarr.progress-bar .bar {
+-fx-background-color: #ED7D31;
+-fx-background-radius: 5;
+}
+#backupCancelButton{
+	-fx-background-color: #8497B0;
+}
+#restoreCancelButton{
+	-fx-background-color: #8497B0;
+}
+#backupBrowseButton{
+	-fx-background-color: #333F50;
+}
+#restoreBrowseButton{
+	-fx-background-color: #333F50;
+}
+
+/**********************************************************LOGBOOK 2 */
+/* 
+#logbook2PlaceOfLoadingHBox{
+	-fx-background-color: #333F50;
+}
+*/
+#logbook2CodeLetterBIdentityOfTanksHBox{
+	-fx-background-color: #333F50;
+	-fx-border-color: #333F50;
+}
+#logbook2CodeLetterBIdentityOfTanksCheckBoxHBox{
+	-fx-background-color: #333F50;
+	-fx-border-color: #333F50;
+}
+
+#crudeOilWashing{
+	-fx-font-size: 20px;
+  -fx-font-family: "Arial Black";
+  -fx-text-fill: #ffffff;
+  -fx-alignment: center-left ;
+  -fx-background-color: #333F50;
+  -fx-min-width:720px;
+  -fx-min-height:70px;
+  -fx-opacity: 1;
+}
+#logbook2CodeLetterD{
+	-fx-font-size: 25px;
+	-fx-font-family: "Arial";
+	-fx-alignment: center-left;
+	-fx-text-fill: White;
+	-fx-min-width:150px;
+	-fx-min-height:70px;
+	-fx-background-color: #ED7D31;
+}
+
+.notEmptiedLetterBCheckBox.check-box .box{
+  -fx-border-color: green;
+  -fx-border-width:2;
+  -fx-effect: dropshadow(three-pass-box, grey, 3, 0, 3, 3);
+}
+.emptiedLetterCCheckBox.check-box .box{
+  -fx-border-color: red;
+  -fx-border-width:2;
+  -fx-effect: dropshadow(three-pass-box, grey, 3, 0, 3, 3);
+}
+#logbook2InfoLetterO{
+	 -fx-background-color: #333F50;
+}
+#logbook2InfoLabel{
+	-fx-font-size: 18px;
+  -fx-font-family: "Arial Black";
+  -fx-text-fill: white;
+}
+#logbook2CloseButtonLetterO{
+	-fx-background-color: #333F50;
+	-fx-text-fill: #ffffff;
+} 
+#logbook2InfoAnchorPaneLetterO{
+   -fx-background-color: #D6DCE5;
+   -fx-border-color: #00ADEF;
+   -fx-border-width:2;
+   -fx-effect: dropshadow(three-pass-box, grey, 5, 0, 5, 5);
+   } 
+
+#mainLogbook2TabPane > .tab-header-area {
+  -fx-padding: 0.0px 0.0px 0.0px 58.0px;
+}
+
+#mainLogbook1TabPane > .tab-header-area {
+  -fx-padding: 0.0px 0.0px 0.0px 58.0px;
+}
+
+.logbook-title-arrow-region {
+	-fx-min-width: 45;
+	-fx-pref-width: 45;
+	-fx-max-width: 45;
+	-fx-max-height: 70;
+  -fx-background-insets: 0 0 -1 0, 0;
+  -fx-padding: 0.25em;
+  -fx-shape: "M0 -1.5 v3 l6 -1.5 z";
+  -fx-background-color: #ed7d31;
+}
+.logbook-arrow-region {
+	-fx-min-width: 30;
+	-fx-pref-width: 30;
+	-fx-max-width: 30;
+	-fx-max-height: 44;
+  -fx-padding: 0.25em;
+  -fx-shape: "M0 -1.5 v3 l6 -1.5 z";
+}
+.logbook-arrow-thick-region {
+	-fx-min-width: 30;
+	-fx-pref-width: 30;
+	-fx-max-width: 30;
+	-fx-max-height: 55;
+  -fx-padding: 0.25em;
+  -fx-shape: "M0 -1.5 v3 l6 -1.5 z";
+}
+.logbook-arrow-thick2-region {
+	-fx-min-width: 30;
+	-fx-pref-width: 30;
+	-fx-max-width: 30;
+	-fx-max-height: 70;
+  -fx-padding: 0.25em;
+  -fx-shape: "M0 -1.5 v3 l6 -1.5 z";
+}
+.logbook-arrow-thick3-region {
+	-fx-min-width: 30;
+	-fx-pref-width: 30;
+	-fx-max-width: 30;
+	-fx-max-height: 100;
+  -fx-padding: 0.25em;
+  -fx-shape: "M0 -1.5 v3 l6 -1.5 z";
+}
+.logbook-arrow-region-color-dark {
+	-fx-background-color: #333F50;
+}
+.logbook-arrow-region-color-blue {
+	-fx-background-color: #00adef;
+}
+.logbook-arrow-region-color-light-grey {
+	-fx-background-color: #adb9ca;
+}
+.logbook-arrow-region-color-light-blue {
+	-fx-background-color: #b3d9ff;
+}
+.logbook-arrow-region-color-grey {
+	-fx-background-color: #8497b0;
+}
+.logbook-arrow-region-color-orange {
+	-fx-background-color: #ed7d31;
+}
+.logbookColorBlueLabel{
+	-fx-background-color: #00ADEF;
+	-fx-border-color: #00ADEF;
+	-fx-max-height: 45;
+	-fx-min-width: 300;
+	-fx-padding: 0 0 0 10;
+}
+.logbookLightGreyLabel{
+	-fx-background-color:#ADB9CA;
+	-fx-border-color:#ADB9CA ;
+	-fx-max-height: 45;
+	-fx-min-width: 300;
+	-fx-padding: 0 0 0 10;
+}
+.logbookLightBlueLabel{
+	-fx-background-color:#b3d9ff;
+	-fx-border-color: #b3d9ff;
+	-fx-max-height: 45;
+	-fx-min-width: 300;
+	-fx-padding: 0 0 0 10;
+}
+
+.logbookDarkLabel{
+	-fx-background-color: #333F50;
+	-fx-border-color: #333F50;
+	-fx-max-height: 45;
+	-fx-min-width: 300;
+	-fx-padding: 0 0 0 10;
+}
+
+.logbookGreyLabel{
+	-fx-background-color: #8497b0;
+	-fx-border-color: #8497b0;
+	-fx-max-height: 45;
+	-fx-min-width: 300;
+	-fx-padding: 0 0 0 10;
+}	
+.logbookOrangeLabel{
+	-fx-background-color: #ed7d31;
+	-fx-border-color: #ed7d31;
+	-fx-max-height: 45;
+	-fx-min-width: 300;
+	-fx-padding: 0 0 0 10;
+}	
+
+.logbookThickDarkLabel{
+	-fx-background-color: #333F50;
+	-fx-border-color: #333F50;
+	-fx-max-height: 55;
+	-fx-min-width: 300;
+	-fx-padding: 0 0 0 10;
+}
+.logbookThickColorBlueLabel{
+	-fx-background-color: #00ADEF;
+	-fx-border-color: #00ADEF;
+	-fx-max-height: 55;
+	-fx-min-width: 300;
+	-fx-padding: 0 0 0 10;
+}
+.logbookThick2ColorBlueLabel{
+	-fx-background-color: #00ADEF;
+	-fx-border-color: #00ADEF;
+	-fx-max-height: 70;
+	-fx-min-width: 300;
+	-fx-padding: 0 0 0 10;
+}
+.logbookThickLightGreyLabel{
+	-fx-background-color: #ADB9CA;
+	-fx-border-color: #ADB9CA;
+	-fx-max-height: 55;
+	-fx-min-width: 300;
+	-fx-padding: 0 0 0 10;
+}
+.logbookThickGreyLabel{
+	-fx-background-color: #8497b0;
+	-fx-border-color: #8497b0;
+	-fx-max-height: 55;
+	-fx-min-width: 300;
+	-fx-padding: 0 0 0 10;
+}
+.logbookThick3GreyLabel{
+	-fx-background-color: #8497b0;
+	-fx-border-color: #8497b0;
+	-fx-max-height: 100;
+	-fx-min-width: 300;
+	-fx-padding: 0 0 0 10;
+}
+.logbookCodeLetterLabel {
+	-fx-text-fill: #ffffff;
+	-fx-font-family: "Arial";
+}
+.logbookOtherLabel{
+	-fx-text-fill: #000000;
+	-fx-font-family: "Arial";
+}
+
+
+.logbook-text-field, .logbook-date-picker .text-field, .logbook-LocalDateTimeTextFieldSkin .text-field {
+  -fx-background-color: #a9a9a9 , white;
+  -fx-background-insets: 0 0 0 0, 0 0 0 0, 0 0 0 0;
+	-fx-text-fill: black;
+	-fx-opacity: 1;
+  -fx-border-color: 
+    #00B0F0
+    #00B0F0
+    #00B0F0
+    #00B0F0;
+  -fx-border-width:2;
+  -fx-border-radius: 0;
+
+}
+.logbook-text-field:focused, .logbook-date-picker .text-field:focused, .logbook-LocalDateTimeTextFieldSkin .text-field:focused {
+  -fx-background-color: #a9a9a9 , white;
+  -fx-background-insets: 0 0 0 0, 0 0 0 0, 0 0 0 0;
+	-fx-text-fill: black;
+	-fx-opacity: 1;
+  -fx-border-color: 
+    #00B0F0
+    #00B0F0
+    #00B0F0
+    #00B0F0;
+  -fx-border-width:2;
+  -fx-border-radius: 0;
+}
+
+.logbookcheck-box .box {
+-fx-background-color: #ffffff;
+-fx-border-color: #00b7ff;
+-fx-border-width: 2;
+-fx-background-insets: 1.5;
+}
+.logbookcheck-box:selected .mark {
+-fx-background-color: #000000;
+}
+
+.logbook-code-letter-no-fields-hbox {
+	-fx-background-color: #333F50;
+	-fx-border-color: #333F50;
+	-fx-max-width: 280;
+	-fx-min-width: 280;
+}
+.logbookRegionYesNo{
+	-fx-padding: 0 0 0 30;
+}
+/*
+.logbookDarkLabelWithoutRegion{
+	-fx-background-color: #333F50;
+	-fx-border-color: #333F50;
+	-fx-max-height: 45;
+	-fx-min-width: 330;
+	-fx-max-width: 330;
+}
+*/
+#logbook2LightGreyLabelLetterA{
+	-fx-background-color:#ADB9CA;
+	-fx-border-color:#ADB9CA ;
+	-fx-max-height: 45;
+	-fx-min-width: 270;
+	-fx-max-width: 270;
+}
+.logbook2ShortLightGreyLabel {
+	-fx-background-color:#ADB9CA;
+	-fx-border-color:#ADB9CA ;
+	-fx-max-height: 45;
+	-fx-min-width: 150;
+	-fx-max-width: 150;
+}
+/***********************************************************smart load */
+
+.smartLoadHeadHBox{
+	-fx-background-color: #D6DCE5;
+	-fx-border-color: #ADB9CA;
+}
+.smartLoadLabelHBox{
+	-fx-border-color: #ADB9CA;
+}
+.smartLoadCargoHbox{
+	 -fx-background-color: transparent ;
+	 -fx-border-style: none none solid none;
+	  -fx-border-width: 0 0 7 0;
+	 -fx-border-insets: 0 0 0 -5;
+}
+.smartLoadATZHBox{
+	 -fx-background-color: #F6F8FC;
+	 -fx-border-style: solid solid solid solid;
+	 -fx-border-color: #ADB9CA #ADB9CA #06A5AE #ADB9CA;
+	 -fx-border-width: 1 1 5 1;
+}
+.smartLoadMDOHBox{
+	-fx-background-color: #F6F8FC;
+	-fx-border-style: solid solid solid solid;
+	 -fx-border-color: #ADB9CA #ADB9CA #069BFF #ADB9CA;
+	 -fx-border-width: 1 1 5 1;
+}
+.smartLoadDoubleFieldCargoTank{
+	-fx-background-color: #ffffff;
+	-fx-border-color: #ADB9CA;
+	-fx-text-fill: #000000;
+}
+#smartLoadPortConditionGridPane{
+	-fx-background-color: #D6DCE5;
+	-fx-border-color: #AFABAB;
+}
+.smartLoadPortSeaCondition{
+	-fx-text-fill: #D33A8A;
+}
+.smartLoadTextField{
+	-fx-background-color: #ffffff;
+	-fx-border-color: #AFABAB;
+	-fx-max-width: 130;
+}
+.smartLoadBlackTextTextField{
+	-fx-text-fill: #000000;
+}
+#smartLoadOfflineTab{
+	-fx-background-color: #C00000;
+	-fx-text-fill: #ECA300;
+}
+#hBoxBTZ{
+	-fx-background-color: #D32366;
+}
+#hBoxATZ{
+	-fx-background-color: #1E7B85;
+}
+#hBoxMDO{
+	-fx-background-color: #0099FF;
+}
+#hBoxTotalCargo{
+	-fx-background-color: #333F50;
+}
+.smartLoadredHBox{
+	-fx-background-color: #D32366;
+	-fx-max-height: 5;
+}
+#smartLoadConditionGridPane{
+	-fx-background-color: #D6DCE5;
+	-fx-border-color: #AFABAB;
+}
+.smartLoadTotalCargoTextField{
+	-fx-background-color: #D6DCE5;
+	-fx-border-color: #AFABAB;
+}
+.smartLoadTotalTextField{
+	-fx-background-color: #8497B0;
+	-fx-border-color: #AFABAB;
+}
+#mainSmartLoadTabPane > .tab-header-area {
+ -fx-padding: 0.0px 0.0px 0.0px 300.0px;
+}
+.tab-pane .tab-header-area .tab-header-background {
+	-fx-opacity: 0;
+}
+
+.smartLoadtab-pane .tab {
+	-fx-font-size:11pt;
+	-fx-opacity: 1;
+	-fx-pref-height: 50px;
+	-fx-text-fill: red;
+	-fx-background-color:#ADB9CA;
+	-fx-border-width: 0.8;
+	-fx-border-color: 
+		transparent 
+		transparent 
+		transparent 
+		transparent;
+}
+.smartLoadtab-pane .tab-label { 
+	-fx-alignment: CENTER;
+	-fx-text-fill: #CCDCE5;
+	-fx-font-size: 13px;
+	-fx-font-weight: bold;
+	-fx-font-size:13pt;
+}
+.smartLoadtab-pane .tab:selected {
+	-fx-background-color:#ED7D31;
+	-fx-text-fill: #000000;
+	-fx-border-color: 
+		transparent 
+		transparent 
+		transparent 
+		transparent;
+}
+.smartLoadtab-pane .tab:hover {
+	-fx-font-size: 11pt;
+    -fx-background-color:#ED7D31;
+	-fx-text-fill: #000000;
+	-fx-border-color: 
+		transparent 
+		transparent 
+		transparent 
+		transparent;
+}
+.smartLoadtab-pane > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label { 
+	-fx-alignment: CENTER;
+	-fx-text-fill: #ffffff;
+	-fx-font-size: 13px;
+	-fx-font-weight: bold;
+	-fx-font-size:13pt;
+}
+.smartLoadtab-pane > .tab-header-area > .headers-region > .tab:selected > .tab-container > .tab-label {
+	-fx-alignment: CENTER;
+	-fx-text-fill: #000000;
+	-fx-background-color:#ED7D31;
+}
+.smartLoadtab-pane > .tab-header-area > .headers-region > .tab:hover > .tab-container > .tab-label {
+	-fx-alignment: CENTER;
+	-fx-text-fill: #000000;
+	-fx-background-color:#ED7D31;
+}
+.editCargoLibraryButton{
+	-fx-min-width: 100;
+	-fx-background-color: #00A3AC;
+	-fx-border-color: #ffffff;
+	
+}
+
+.mainSmartLoadtab-pane .tab {
+	-fx-font-size:11pt;
+	-fx-text-fill: #ffffff;
+	-fx-opacity: 1;
+	-fx-pref-height: 50px;
+	-fx-background-color:#333F50;
+	-fx-border-width: 0.8;
+	-fx-border-color: 
+		transparent 
+		transparent 
+		transparent 
+		transparent;
+}
+.mainSmartLoadtab-pane .tab:selected {
+	-fx-background-color:#ED7D31;
+	-fx-text-fill: #000000;
+	-fx-border-color: 
+		transparent 
+		transparent 
+		transparent 
+		transparent;
+}
+.mainSmartLoadtab-pane .tab:hover {
+	-fx-font-size: 11pt;
+    -fx-background-color:#ED7D31;
+	-fx-text-fill: #000000;
+	-fx-border-color: 
+		transparent 
+		transparent 
+		transparent 
+		transparent;
+}
+.mainSmartLoadtab-pane > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label { 
+	-fx-alignment: CENTER;
+	-fx-text-fill: #ffffff;
+	-fx-font-size: 13px;
+	-fx-font-weight: bold;
+	-fx-font-size:13pt;
+}
+.mainSmartLoadtab-pane > .tab-header-area > .headers-region > .tab:selected > .tab-container > .tab-label {
+	-fx-alignment: CENTER;
+	-fx-text-fill: #000000;
+	-fx-background-color:#ED7D31;
+}
+.mainSmartLoadtab-pane > .tab-header-area > .headers-region > .tab:hover > .tab-container > .tab-label {
+	-fx-alignment: CENTER;
+	-fx-text-fill: #000000;
+	-fx-background-color:#ED7D31;
+}
+.editCargoLibraryHBox{
+	-fx-background-color: #5A6F8C;
+	-fx-border-color: #ffffff;
+	-fx-text-fill: #ffffff;
+	-fx-font-weight: bold;
+	
+}
+#editCargoLibraryDeleteButton{
+	-fx-background-color: #ED7D31;
+	-fx-border-color: #ffffff;
+	-fx-text-fill: #ffffff;
+	-fx-font-weight: bold;
+	-fx-min-width: 100;
+}
+
+#editCargoLibraryTableView.table-view .column-header,
+#editCargoLibraryTableView.table-view .column-header-background .filler {
+ -fx-background-color: #8497B0;
+}
+#editCargoLibraryTableView.table-view .column-header .label {
+ -fx-text-fill: #000000;
+}
+#editCargoLibraryTableView.table-view {
+	-fx-background-color: #D6DCE5;
+	
+}
+#editCargoLibraryTableView .table-column {
+ -fx-alignment: center-left ;
+ -fx-border-color: #ffffff;
+ -fx-text-fill: #000000;
+}
+
+.stowagePlanTableView.table-view .column-header,
+.editCargoLibraryTableView.table-view .column-header-background .filler {
+ -fx-background-color: #8497B0;
+}
+.stowagePlanTableView.table-view .column-header .label {
+ -fx-text-fill: #000000;
+}
+.stowagePlanTableView.table-view {
+	-fx-background-color: #D6DCE5;
+	
+}
+.stowagePlanTableView .table-column {
+ -fx-alignment: center-left ;
+ -fx-border-color: #ffffff;
+ -fx-text-fill: #000000;
+}
+.cargoTableView.table-view {
+	-fx-border-color:white;
+	-fx-background-color: white;
+}
+
+.cargoTableView.table-view .column-header {
+  -fx-border-width: 0 2 0 2;
+  -fx-border-color: white;
+  -fx-background-color: #D6DCE5;
+}
+
+.cargoTableView.table-view .column-header .label {
+    -fx-text-fill: #000000;
+    -fx-font-weight: normal;
+    -fx-font-size: 14px;
+    -fx-padding: 7px  7px 7px 7px;
+}
+
+.cargoTableView.table-view .table-cell{
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-border-color:white;
+}
+.cargoTableView .table-row-cell {
+	-fx-background-color: white;
+	-fx-cell-size: 35px;
+	-fx-padding: -3 0 -3 0;
+}
+.cargoTableView .table-row-cell:selected {
+	-fx-background-color: #e86b11;
+}
+.ballastTableView.table-view {
+	-fx-border-color:#8b9db5;
+	-fx-background-color: white;
+}
+.ballastTableView.table-view .column-header {
+  -fx-border-width: 0  1 0 1;
+  -fx-border-color: #8b9db5;
+  -fx-background-color: #D6DCE5;
+}
+
+.ballastTableView.table-view .column-header .label {
+    -fx-text-fill: #000000;
+    -fx-font-weight: normal;
+    -fx-font-size: 14px;
+    -fx-padding: 7px  7px 7px 7px;
+}
+
+.ballastTableView.table-view .table-cell{
+    -fx-text-fill: #000000;
+    -fx-font-size: 12px;
+    -fx-alignment: center-left;
+    -fx-border-color:#8b9db5;  
+}
+
+.ballastTableView .table-row-cell {
+	-fx-background-color: white;
+	-fx-cell-size: 35px;
+}
+.ballastTableView .table-row-cell:selected {
+	-fx-background-color: rgba(232, 107, 17, 0.8);
+}
+/* remove empty row
+.table-row-cell:empty {
+    -fx-background-color: white;
+}
+ 
+.table-row-cell:empty .table-cell {
+    -fx-border-width: 0px;
+}
+.list-cell:empty {
+    -fx-background-color: white;
+}
+*/
+
+.smartload .clipped-container {
+	-fx-background-color: white;
+}
+
+.smartload .actually-not-editable {
+	-fx-opacity: 0.4;
+}
+.spreadsheetCellHeader {
+	-fx-text-fill: #000000;
+    -fx-border-width: 1 1 1 1;
+    -fx-border-color: #8b9db5;
+    -fx-background-color: #D6DCE5;
+    -fx-text-alignment: center;
+      -fx-padding: 0px 0px 0px 10px;
+}
+.spreadsheetCellHeader:hover {
+	-fx-background-color: rgba(232, 107, 17, 0.6);
+}
+.spreadsheetCellHeader:selected   {
+	-fx-background-color: rgba(232, 107, 17, 0.85);
+}
+.spreadsheetCellTotal {
+	-fx-text-fill: #000000;
+    -fx-border-width: 1 1 1 1;
+    -fx-border-color: #8b9db5;
+    -fx-background-color: #eff2f5;
+    -fx-alignment: center-right;
+}
+.spreadsheetCellTotal:hover {
+	-fx-background-color: rgba(232, 107, 17, 0.6);
+}
+.spreadsheetCellTotal:selected   {
+	-fx-background-color: rgba(232, 107, 17, 0.85);
+}
+.spreadsheet-cell.spreadsheetCellTotal{
+   
+}
+.spreadsheetCellBody {
+	-fx-wrap-text: true;
+	-fx-text-fill: #000000;
+    -fx-border-width: 1 1 1 1;
+    -fx-border-color: #8b9db5;
+    -fx-background-color: white;
+    -fx-background-size: 0;
+    -fx-text-alignment: center;
+    -fx-padding: 0px 0px 0px 10px;
+    /* -fx-alignment: center ; */ 
+}
+.spreadsheetCellBody:hover {
+	-fx-background-color: rgba(0, 153, 255, 0.4);
+}
+.spreadsheetCellBody:selected   {
+	-fx-background-color: rgba(0, 153, 255, 0.75);
+}
+.spreadsheetCellFooter {
+	-fx-text-fill: #0099FF;
+	-fx-font-weight: bold;
+    -fx-border-width: 1 1 1 1;
+    -fx-border-color: #333F50;
+    -fx-background-color: #333F50;
+    -fx-text-alignment: center
+}
+.smartloadStowageLabel{
+	-fx-font-size: 13px;
+	-fx-font-weight: bold;
+	-fx-text-fill: #333F50;
+}
+.smartload-text-field, .smartload-date-picker .text-field, .smartload-LocalDateTimeTextFieldSkin .text-field {
+ -fx-background-color: #a9a9a9 , white;
+ -fx-background-insets: 0 0 0 0, 0 0 0 0, 0 0 0 0;
+	-fx-text-fill: black;
+	-fx-opacity: 1;
+	-fx-font-size: 13px;
+ /*-fx-border-color: 
+  #00B0F0
+  #00B0F0
+  #00B0F0
+  #00B0F0;
+ -fx-border-width:2;
+ -fx-border-radius: 0;*/
+
+}
+.smartload-text-field:focused, .smartload-date-picker .text-field:focused, .smartload-LocalDateTimeTextFieldSkin .text-field:focused {
+ -fx-background-color: #a9a9a9 , white;
+ -fx-background-insets: 0 0 0 0, 0 0 0 0, 0 0 0 0;
+	-fx-text-fill: black;
+	-fx-opacity: 1;
+	-fx-font-size: 13px;
+ /*-fx-border-color: 
+  #00B0F0
+  #00B0F0
+  #00B0F0
+  #00B0F0;
+ -fx-border-width:2;
+ -fx-border-radius: 0;*/
+}
+#shipViewForePeak{
+    -fx-background-color: #D6DCE5;
+	-fx-border-style: solid solid solid solid;
+	-fx-border-color: #ADB9CA #ADB9CA #ADB9CA #ADB9CA;
+	-fx-border-width: 3 3 3 3;
+    -fx-background-insets: 0 0 -1 0, 0;
+    -fx-padding: 0.25em;
+    -fx-shape: "M 0 -3.5 v 7 l 4 -3.5 z"; 
+}
+#shipViewAfterPeak{
+    -fx-background-color: #D6DCE5;
+	-fx-border-style: solid solid solid solid;
+	-fx-border-color: #ADB9CA #ADB9CA #ADB9CA #ADB9CA;
+	-fx-border-width: 3 3 3 3;
+    -fx-background-insets: 0 0 -1 0, 0;
+    -fx-padding: 0.25em;
+    -fx-shape: "M 1 0 C 0 0 0 5 1 5"; 
+}
+#shipViewCenter{
+    -fx-background-color: #D6DCE5;
+	-fx-border-style: solid solid solid solid;
+	-fx-border-color: #ADB9CA #ADB9CA #ADB9CA #ADB9CA;
+	-fx-border-width: 3 3 3 3;
+}
+.smartStowageShipView{
+	 -fx-border-color: #ADB9CA #ADB9CA #ADB9CA #ADB9CA;
+	 -fx-border-style: solid solid solid solid;
+	 -fx-border-width: 2 2 2 2;	 
+}
+

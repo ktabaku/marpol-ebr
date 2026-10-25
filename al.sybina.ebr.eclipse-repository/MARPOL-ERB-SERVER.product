@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="MARPOL-ERB-SERVER" uid="MARPOL-ERB-SERVER" id="al.sybina.ebr.rcp.product" application="org.eclipse.fx.ui.workbench.fx.main-thread-application" version="1.0.0" useFeatures="true" includeLaunchers="true">
+
+   <aboutInfo>
+      <image path="/al.sybina.ebr.rcp/icons/ebr256.png"/>
+      <text>
+         MARPOL-ERB-SERVER
+      </text>
+   </aboutInfo>
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <programArgs>-clean
+-clearPersistedState
+      </programArgs>
+      <programArgsMac>-vm ../Eclipse/jre/bin/java
+      </programArgsMac>
+      <vmArgs>-Dfile.encoding=UTF-8 -Dosgi.requiredJavaVersion=1.8 -Xms512m -Xmx1024m -Dprism.maxvram=512m -Dorg.osgi.framework.bundle.parent=ext -Dosgi.framework.extensions=org.eclipse.fx.osgi -Defxclipse.osgi.hook.debug=true
+      </vmArgs>
+   </launcherArgs>
+
+   <windowImages i16="/al.sybina.ebr.rcp/icons/ebr16.png" i32="/al.sybina.ebr.rcp/icons/ebr32.png" i48="/al.sybina.ebr.rcp/icons/ebr48.png" i64="/al.sybina.ebr.rcp/icons/ebr64.png" i128="/al.sybina.ebr.rcp/icons/ebr128.png" i256="/al.sybina.ebr.rcp/icons/ebr256.png"/>
+
+   <splash
+      location="org.eclipse.e4.tools.resources"
+      startupProgressRect="5,350,295,15"
+      startupMessageRect="5,365,295,20"
+      startupForegroundColor="0000FF" />
+   <launcher name="MARPOL-ERB-SERVER">
+      <win useIco="true">
+         <ico path="/al.sybina.ebr.rcp/icons/eLogBooks.ico"/>
+         <bmp/>
+      </win>
+   </launcher>
+
+   <intro introId="al.sybina.ebr.rcp.intro1"/>
+
+   <vm>
+      <windows include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8</windows>
+   </vm>
+
+   <plugins>
+   </plugins>
+
+   <features>
+      <feature id="org.eclipse.ecf.core.ssl.feature"/>
+      <feature id="org.eclipse.ecf.filetransfer.feature"/>
+      <feature id="org.eclipse.ecf.filetransfer.httpclient4.feature"/>
+      <feature id="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature"/>
+      <feature id="org.eclipse.ecf.filetransfer.ssl.feature"/>
+      <feature id="org.eclipse.equinox.executable"/>
+      <feature id="org.eclipse.ecf.core.feature"/>
+      <feature id="org.eclipse.persistence.jpa"/>
+      <feature id="org.eclipse.fx.runtime.feature"/>
+      <feature id="org.eclipse.fx.runtime.e4fx.feature"/>
+      <feature id="org.eclipse.fx.runtime.e4fx.p2.feature"/>
+      <feature id="org.eclipse.emf.edit"/>
+      <feature id="org.eclipse.emf.codegen"/>
+      <feature id="org.eclipse.xtext.xbase.lib"/>
+      <feature id="org.eclipse.equinox.p2.core.feature"/>
+      <feature id="al.sybina.ebr.rcp.feature" version="2.0.0.qualifier"/>
+      <feature id="al.sybina.ebr.logbook.feature" version="1.0.0.qualifier"/>
+      <feature id="al.sybina.ebr.server.feature" version="1.0.0.qualifier"/>
+   </features>
+
+   <configurations>
+      <plugin id="al.sybina.ebr.jasperreports" autoStart="true" startLevel="5" />
+      <plugin id="al.sybina.ebr.logbook.commons" autoStart="true" startLevel="5" />
+      <plugin id="al.sybina.ebr.logbook.domain" autoStart="true" startLevel="5" />
+      <plugin id="al.sybina.ebr.logbook.ui" autoStart="true" startLevel="5" />
+      <plugin id="al.sybina.ebr.login" autoStart="false" startLevel="5" />
+      <plugin id="al.sybina.ebr.s63" autoStart="true" startLevel="0" />
+      <plugin id="al.sybina.ebr.server" autoStart="true" startLevel="4" />
+      <plugin id="al.sybina.ebr.rcp" autoStart="false" startLevel="6" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.e4.tools.resources" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.osgi" autoStart="true" startLevel="-1" />
+      <property name="osgi.instance.area.default" value="@user.home/MARPOL-ERB-workspace" />
+   </configurations>
+
+   <preferencesInfo>
+      <targetfile overwrite="false"/>
+   </preferencesInfo>
+
+   <cssInfo>
+      <file path="/org.eclipse.fx.runtime.swt/target/classes/org/eclipse/swt/internal/swt.css"/>
+   </cssInfo>
+
+</product>

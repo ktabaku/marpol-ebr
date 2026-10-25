@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="ASCII"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_kRdLcL-ZEeGFAvs8os6Opw" elementId="al.sybina.ebr.rcp.application">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_3wev8L-ZEeGFAvs8os6Opw" elementId="IDEWindow" label="MARPOL ERB" iconURI="platform:/plugin/org.eclipse.e4.tools.resources/icons/ibr/rcp/eLogBooks32.png" x="100" y="100" width="800" height="600">
+    <persistedState key="efx.window.root.fxml" value="platform:/plugin/al.sybina.ebr.rcp/al/sybina/ebr/rcp/ApplicationWindow.fxml"/>
+    <persistedState key="efx.window.stagestyle" value="DECORATED"/>
+    <persistedState key="efx-center-on-screen" value="true"/>
+    <persistedState key="efx.window.scene.3d" value="true"/>
+    <persistedState key="efx.window.fullscreen" value="false"/>
+    <tags>topLevel</tags>
+    <tags>shellMaximized</tags>
+    <children xsi:type="basic:PartSashContainer" xmi:id="_3JENcBFIEea6MI3gS0bG4w" elementId="al.sybina.ebr.rcp.partsashcontainer.0" selectedElement="_JajEUL-iEeGIRPhGyuFE7Q" horizontal="true">
+      <children xsi:type="advanced:PerspectiveStack" xmi:id="_JajEUL-iEeGIRPhGyuFE7Q" elementId="org.eclipse.ui.ide.perspectivestack" selectedElement="_EkT4cJ7EEeqXaK1WgHVo3w">
+        <children xsi:type="advanced:Perspective" xmi:id="_EkT4cJ7EEeqXaK1WgHVo3w" elementId="al.sybina.ebr.perspectives.home" selectedElement="_fL4M8J7EEeqXaK1WgHVo3w" label="home perspective" iconURI="platform:/plugin/org.eclipse.e4.tools.resources/icons/ibr/rcp/home_64.png">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_fL4M8J7EEeqXaK1WgHVo3w" elementId="al.sybina.ebr.rcp.partsashcontainer.1" selectedElement="_kjP6QJ7EEeqXaK1WgHVo3w" horizontal="true">
+            <children xsi:type="basic:Part" xmi:id="_kjP6QJ7EEeqXaK1WgHVo3w" elementId="al.sybina.ebr.shared.views.home" contributionURI="bundleclass://al.sybina.ebr.rcp/al.sybina.ebr.rcp.views.LogbookHome" label="home" iconURI="platform:/plugin/org.eclipse.e4.tools.resources/icons/ibr/rcp/home_32.png" tooltip="this windows shows the known perspectives and allow the user to navigate among them." closeable="true"/>
+          </children>
+        </children>
+      </children>
+    </children>
+    <variables>routeTreeViewController</variables>
+    <mainMenu xmi:id="_TbH8MMZXEeGbkqRLZ7osPQ" elementId="org.eclipse.ui.main.menu">
+      <children xsi:type="menu:Menu" xmi:id="_ZgLCUMZsEeGbkqRLZ7osPQ" elementId="file" label="_File">
+        <tags>menuContribution:menu</tags>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_iEOuEMZsEeGbkqRLZ7osPQ" elementId="org.eclipse.ui.file.restartWorkbench" label="Restart" command="_IU7OYMZYEeGbkqRLZ7osPQ"/>
+        <children xsi:type="menu:MenuSeparator" xmi:id="_cAdi4MZuEeGbkqRLZ7osPQ" elementId="com.example.e4.rcp.todo.menuseparator.0"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_dkEDoMZuEeGbkqRLZ7osPQ" elementId="org.eclipse.file.exit" label="Exit" iconURI="platform:/plugin/org.eclipse.e4.tools.resources/icons/ibr/rcp/exit_16.png" command="_F8KnQMZYEeGbkqRLZ7osPQ">
+          <persistedState key="IIdentifier" value="al.sybina.ebr.rcp/org.eclipse.file.exit"/>
+        </children>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_Z8qxEMZsEeGbkqRLZ7osPQ" elementId="al.sybina.ebr.rcp.menu.perspectives" label="Perspectives">
+        <children xsi:type="menu:MenuSeparator" xmi:id="_yh2HAAi-Eeach-hvFjBG3A" elementId="al.sybina.ebr.rcp.menu.perspectives.separator1"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_2kfdEAi-Eeach-hvFjBG3A" elementId="org.eclipse.ui.window.resetPerspective" toBeRendered="false" visible="false" label="Restore the Perspective" command="_Hy0BMBOqEeanX51lujrUoQ"/>
+        <children xsi:type="menu:MenuSeparator" xmi:id="_iuAeAAjCEeach-hvFjBG3A" elementId="al.sybina.ebr.rcp.menu.perspectives.separator2"/>
+        <children xsi:type="menu:Menu" xmi:id="__zxRkBOqEeanX51lujrUoQ" elementId="org.eclipse.ui.perspectives.showPerspective" label="Show Perspective" tooltip="Select a perspective from the available perspectives" mnemonics="&amp;P">
+          <children xsi:type="menu:HandledMenuItem" xmi:id="_t4gnkAjCEeach-hvFjBG3A" elementId="org.eclipse.ui.perspectives.showPerspective.mainP" label="Main Perspective" iconURI="platform:/plugin/org.eclipse.e4.tools.resources/icons/ibr/rcp/home_16.png" tooltip="Open the main perspective" mnemonics="&amp;P" command="_W75ZkA37EeK2jbXfW93tpw">
+            <parameters xmi:id="_SaM60BEyEeaPVpK8l6GK7A" elementId="al.sybina.ebr.rcp.parameter.0" name="org.eclipse.ui.perspectives.showPerspective.perspectiveId" value="al.sybina.ebr.perspectives.home"/>
+          </children>
+        </children>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_UQ8gMBAKEeO5vsQ2T1hWpw" elementId="window" label="Window">
+        <children xsi:type="menu:Menu" xmi:id="_dd1GgBAKEeO5vsQ2T1hWpw" elementId="al.sybina.ebr.rcp.menu.views" toBeRendered="false" visible="false" label="Views">
+          <tags>menuContribution:menu</tags>
+          <children xsi:type="menu:HandledMenuItem" xmi:id="_AoTzQBOzEeanX51lujrUoQ" elementId="al.sybina.ebr.rcp.handledmenuitem.homeview" label="Home View" tooltip="Show home view" command="_Cg_9wBO0EeanX51lujrUoQ">
+            <parameters xmi:id="_NS9ZkBO2EeanX51lujrUoQ" elementId="al.sybina.ebr.rcp.parameter.1" name="org.eclipse.ui.views.showView.viewId" value="al.sybina.ebr.views.home"/>
+          </children>
+        </children>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="__K92oGtUEeSlAc3VvFo52g" elementId="al.sybina.ebr.rcp.commandShowFullScreen" toBeRendered="false" visible="false" label="Full screen" mnemonics="F" command="_n9YOkBAKEeO5vsQ2T1hWpw">
+          <persistedState key="IIdentifier" value="al.sybina.ebr.rcp/al.sybina.ebr.rcp.commandShowFullScreen"/>
+        </children>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_CGpkoGtVEeSlAc3VvFo52g" elementId="org.eclipse.ui.window.preferences" label="Preferences" command="_5uqkEBN0EeanX51lujrUoQ"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_0zmAADoTEeeHSfx10FybqA" elementId="org.eclipse.ui.perspectives.showPerspective" toBeRendered="false" visible="false" label="Show Perspective" tooltip="Select a perspective from the available perspectives" mnemonics="&amp;P" command="_W75ZkA37EeK2jbXfW93tpw"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_DuKW4NJGEeGRQsAWu_XMKQ" elementId="al.sybina.ebr.rcp.menu.theme" label="Theme">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_OhvOMNJGEeGRQsAWu_XMKQ" elementId="com.example.e4.rcp.todo.handledmenuitem.9" label="Light Theme" command="_QmLyMNJGEeGRQsAWu_XMKQ">
+          <parameters xmi:id="_RbPzIFK4EeaXHtU70xlRtA" elementId="al.sybina.ebr.rcp.parameter.2" name="themeId" value="theme.light"/>
+        </children>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_Uu6jUFK4EeaXHtU70xlRtA" elementId="al.sybina.ebr.rcp.handledmenuitem.intellijdrakula" label="Default Theme" command="_QmLyMNJGEeGRQsAWu_XMKQ">
+          <parameters xmi:id="_b4VdEFK4EeaXHtU70xlRtA" elementId="al.sybina.ebr.rcp.parameter.3" name="themeId" value="theme.default"/>
+        </children>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_ZVecQPGwEeqKt4dEngyF7w" elementId="al.sybina.ebr.rcp.handledmenuitem.moderntheme" label="Modern Theme" command="_QmLyMNJGEeGRQsAWu_XMKQ">
+          <parameters xmi:id="_hBfswPGwEeqKt4dEngyF7w" elementId="al.sybina.ebr.rcp.parameter.4" name="themeId" value="theme.modern"/>
+        </children>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_brJrkAzKEeKhVv5pZDR7bA" elementId="help" label="_Help">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_dMhXsAzKEeKhVv5pZDR7bA" elementId="org.eclipse.ui.help.quickStartAction" toBeRendered="false" visible="false" label="Welcome" command="_MlAjgMZYEeGbkqRLZ7osPQ"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_lTspsAjJEeach-hvFjBG3A" elementId="org.eclipse.ui.help.displayHelp" label="Help" command="_ZIxwMPenEeGaHLRm1KH-aQ"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_j_48AA9fEeOcRapkQEuH9Q" elementId="org.eclipse.ui.help.aboutAction" label="About" iconURI="platform:/plugin/org.eclipse.e4.tools.resources/icons/ibr/rcp/logo16.gif" command="_P3uRcMZYEeGbkqRLZ7osPQ"/>
+        <children xsi:type="menu:MenuSeparator" xmi:id="_8yX6oAjJEeach-hvFjBG3A" elementId="al.sybina.ebr.rcp.menuSeparatorHelp" toBeRendered="false" visible="false"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_LjHLEAjKEeach-hvFjBG3A" elementId="org.eclipse.ui.window.showKeyAssist" toBeRendered="false" visible="false" label="Show key assist" command="_vGK5kA1pEeKkaoNsQKzVcw"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_j10WMFA1Eea-hd_bJcmhAQ" elementId="al.sybina.ebr.rcp.handledmenuitem.update" label="Check for system updates" command="_WAdv8FA1Eea-hd_bJcmhAQ"/>
+      </children>
+    </mainMenu>
+    <sharedElements xsi:type="basic:Part" xmi:id="_2HQY4AxrEeajle3G9iDuNA" elementId="org.eclipse.ui.internal.introview" label="Welcome" iconURI="platform:/plugin/org.eclipse.ui/icons/full/eview16/defaultview_misc.png">
+      <tags>View</tags>
+      <tags>categoryTag:General</tags>
+    </sharedElements>
+    <sharedElements xsi:type="advanced:Area" xmi:id="_TTNVsAxsEeajle3G9iDuNA" elementId="org.eclipse.ui.editorss">
+      <children xsi:type="basic:PartStack" xmi:id="_ZVExgAxsEeajle3G9iDuNA" elementId="org.eclipse.e4.primaryDataStack">
+        <tags>org.eclipse.e4.primaryDataStack</tags>
+        <tags>EditorStack</tags>
+      </children>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_0Aiw4A5xEeK9y8PCk5W1FQ" elementId="al.sybina.ebr.shared.views.home" contributionURI="bundleclass://al.sybina.ebr.rcp/al.sybina.ebr.rcp.views.LogbookHomeView" label="home" iconURI="platform:/plugin/org.eclipse.e4.tools.resources/icons/ibr/rcp/home_32.png" tooltip="this windows shows the known perspectives and allow the user to navigate among them." closeable="true">
+      <tags>View</tags>
+      <tags>categoryTag:Other</tags>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_iwP6oBghEeadbLr8qWBqCg" elementId="al.sybina.ebr.rcp.shared.part.logView" contributionURI="bundleclass://hu.zsdoma.e4.logstream.ui/hu.zsdoma.e4.logstream.ui.view.LogStreamView" label="Log View" closeable="true">
+      <toolbar xmi:id="_oXsrUBghEeadbLr8qWBqCg" elementId="al.sybina.ebr.rcp.toolbar.1"/>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_efApEICIEeinI_Zl4RVYIw" elementId="al.sybina.ebr.shared.views.charts" label="Charts View Hack"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_RlLlAICKEeinI_Zl4RVYIw" elementId="al.sybina.ebr.echart.ui.part.EChartView" label="EChart View Hack"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_jYYg4ICKEeinI_Zl4RVYIw" elementId="al.sybina.ebr.eeumrv.ui.part.VoyageObservedDataView" label="eEU-MRV Voyage Observed Data View Hack"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_ouQZYICKEeinI_Zl4RVYIw" elementId="al.sybina.ebr.eeumrv.ui.part.ObservedDataView" label="eEU-MRV Observed Data View Hack"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_yw8mUICKEeinI_Zl4RVYIw" elementId="al.sybina.ebr.eeumrv.ui.part.TotalObservedDataView" label="eEU-MRV Total Observed Data View Hack"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_366JwICKEeinI_Zl4RVYIw" elementId="al.sybina.ebr.eeumrv.ui.part.ManualEntryConsumptionView" label="eEU-MRV Manual Entry Consumption View Hack"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_9O82QICKEeinI_Zl4RVYIw" elementId="al.sybina.ebr.eeumrv.ui.part.ManualEntryConsumption2View" label="eEU-MRV Manual Entry Consumption 2 View Hack"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_Dp3EMICLEeinI_Zl4RVYIw" elementId="al.sybina.ebr.eeumrv.ui.part.DataForYearView" label="eEu-MRV Data For Year View Hack"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_IWr_sICLEeinI_Zl4RVYIw" elementId="al.sybina.ebr.eeumrv.ui.part.AirEmissionDataView" label="eEu-MRV Air Emission Data View Hack"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_Q-NPIICLEeinI_Zl4RVYIw" elementId="al.sybina.ebr.nav.ui.part.NavtexView" label="Navtex View Hack"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_baOiEICLEeinI_Zl4RVYIw" elementId="al.sybina.ebr.shared.views.serialComm" label="serial comms Hack"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_e-prEICLEeinI_Zl4RVYIw" elementId="al.sybina.ebr.shared.views.serialCommSettings" label="comm settings Hack"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_mYu3AICLEeinI_Zl4RVYIw" elementId="al.sybina.ebr.plugin.ais.shared.views.aisView" label="AIS View Hack"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_tSK0AICLEeinI_Zl4RVYIw" elementId="al.sybina.ebr.shared.views.s63management" label="ENC Updates Hack"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_1mO78ICLEeinI_Zl4RVYIw" elementId="al.sybina.ebr.plugin.nws.shared.views.WarningView" label="Navigation Warning System View Hack"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_77qM8ICLEeinI_Zl4RVYIw" elementId="org.eclipse.ui.shared.views.AllMarkersView" label="Markers Hack"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_F3tmYICMEeinI_Zl4RVYIw" elementId="al.sybina.ebr.plugin.polar.shared.views.speedsPolarView" label="Speeds Polar View Hack"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_MFWNUICMEeinI_Zl4RVYIw" elementId="al.sybina.ebr.plugin.router.shared.views.RouterView" label="Router View Hack"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_TZtLwICMEeinI_Zl4RVYIw" elementId="al.sybina.ebr.plugin.waypoints.ui.shared.part.routesimulationview" label="RouteSimulationView Hack"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_YlvLwICMEeinI_Zl4RVYIw" elementId="al.sybina.ebr.plugin.waypoints.ui.shared.part.routetreeview" label="RouteTreeView Hack"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_fNF6QICMEeinI_Zl4RVYIw" elementId="al.sybina.ebr.plugin.weather.shared.views.weather" label="Weather View Hack"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_jyshgICOEeinI_Zl4RVYIw" elementId="al.sybina.ebr.plugin.gpsviewer.shared.views.GPSView" label="GPS View Hack"/>
+    <trimBars xmi:id="_O6v78NXpEeODCZCgwFhKTQ" elementId="org.eclipse.ui.main.toolbar"/>
+    <trimBars xmi:id="_LroX8Ax6Eeajle3G9iDuNA" elementId="org.eclipse.ui.trim.status" side="Bottom"/>
+    <trimBars xmi:id="_2F_20Ax6Eeajle3G9iDuNA" elementId="org.eclipse.ui.trim.vertical1" side="Left"/>
+    <trimBars xmi:id="_6ZfsUAx6Eeajle3G9iDuNA" elementId="org.eclipse.ui.trim.vertical2" side="Right">
+      <children xsi:type="menu:ToolBar" xmi:id="_noKQYAitEeach-hvFjBG3A" elementId="al.sybina.ebr.toolbar.rcp" toBeRendered="false" visible="false">
+        <tags>fillspace</tags>
+        <tags>Container:HBox</tags>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_wu-IQAjLEeach-hvFjBG3A" elementId="org.eclipse.ui.perspectives.toolbar.home" iconURI="platform:/plugin/org.eclipse.e4.tools.resources/icons/ibr/rcp/home_64.png" command="_W75ZkA37EeK2jbXfW93tpw">
+          <persistedState key="IIdentifier" value="al.sybina.ebr.rcp/org.eclipse.ui.perspectives.showPerspective"/>
+          <parameters xmi:id="_sarzIAjMEeach-hvFjBG3A" elementId="org.eclipse.ui.perspectives.showPerspective.perspectiveId" name="org.eclipse.ui.perspectives.showPerspective.perspectiveId" value="al.sybina.ebr.perspectives.home"/>
+        </children>
+      </children>
+    </trimBars>
+  </children>
+  <handlers xmi:id="_V35JgMZrEeGbkqRLZ7osPQ" elementId="al.sybina.ebr.rcp.handlers.saveall" contributionURI="bundleclass://al.sybina.ebr.rcp/al.sybina.ebr.rcp.handlers.SaveAllHandler" command="_vTZDkMZXEeGbkqRLZ7osPQ"/>
+  <handlers xmi:id="_rB5CEMZrEeGbkqRLZ7osPQ" elementId="al.sybina.ebr.rcp.handlers.exit" contributionURI="bundleclass://al.sybina.ebr.rcp/al.sybina.ebr.rcp.handlers.ExitHandler" command="_F8KnQMZYEeGbkqRLZ7osPQ"/>
+  <handlers xmi:id="_tQuRIMZrEeGbkqRLZ7osPQ" elementId="al.sybina.ebr.rcp.handlers.restart" contributionURI="bundleclass://al.sybina.ebr.rcp/al.sybina.ebr.rcp.handlers.RestartHandler" command="_IU7OYMZYEeGbkqRLZ7osPQ"/>
+  <handlers xmi:id="_vaZTYMZrEeGbkqRLZ7osPQ" elementId="al.sybina.ebr.rcp.handlers.welcome" contributionURI="bundleclass://al.sybina.ebr.rcp/al.sybina.ebr.rcp.handlers.WelcomeHandler" command="_MlAjgMZYEeGbkqRLZ7osPQ"/>
+  <handlers xmi:id="_163WwMZrEeGbkqRLZ7osPQ" elementId="al.sybina.ebr.rcp.handlers.about" contributionURI="bundleclass://al.sybina.ebr.rcp/al.sybina.ebr.rcp.handlers.AboutHandler" command="_P3uRcMZYEeGbkqRLZ7osPQ"/>
+  <handlers xmi:id="_TC33ENJGEeGRQsAWu_XMKQ" elementId="al.sybina.ebr.rcp.handlers.styling" contributionURI="bundleclass://al.sybina.ebr.rcp/al.sybina.ebr.rcp.handlers.SwitchThemeHandler" command="_QmLyMNJGEeGRQsAWu_XMKQ"/>
+  <handlers xmi:id="_cb9YMPenEeGaHLRm1KH-aQ" elementId="al.sybina.ebr.rcp.handlers.displayHelp" contributionURI="bundleclass://al.sybina.ebr.rcp/al.sybina.ebr.rcp.handlers.DisplayHelpHandler" command="_ZIxwMPenEeGaHLRm1KH-aQ"/>
+  <handlers xmi:id="_wUQdUA1pEeKkaoNsQKzVcw" elementId="al.sybina.ebr.rcp.handlers.showKeyAssist" contributionURI="bundleclass://al.sybina.ebr.rcp/al.sybina.ebr.rcp.handlers.ShowKeyAssistHandler" command="_vGK5kA1pEeKkaoNsQKzVcw"/>
+  <handlers xmi:id="_kDBA0A37EeK2jbXfW93tpw" elementId="al.sybina.ebr.rcp.handler.switchperspective" contributionURI="bundleclass://al.sybina.ebr.rcp/al.sybina.ebr.rcp.handlers.PerspectiveSwitchHandler" command="_W75ZkA37EeK2jbXfW93tpw"/>
+  <handlers xmi:id="_sipJgBAKEeO5vsQ2T1hWpw" elementId="al.sybina.ebr.rcp.handler.ShowFullScreen" contributionURI="bundleclass://al.sybina.ebr.rcp/al.sybina.ebr.rcp.handlers.FullScreenHandler" command="_n9YOkBAKEeO5vsQ2T1hWpw"/>
+  <handlers xmi:id="_E0Bu8BN1EeanX51lujrUoQ" elementId="al.sybina.ebr.rcp.handler.E4PreferencesHandler" contributionURI="bundleclass://com.opcoach.e4.preferences/com.opcoach.e4.preferences.handlers.E4PreferencesHandler" command="_5uqkEBN0EeanX51lujrUoQ"/>
+  <handlers xmi:id="_8Kf6QBOpEeanX51lujrUoQ" elementId="al.sybina.ebr.rcp.handler.restorePerspective" contributionURI="bundleclass://al.sybina.ebr.rcp/al.sybina.ebr.rcp.handlers.RestorePerspectiveHandler" command="_Hy0BMBOqEeanX51lujrUoQ"/>
+  <handlers xmi:id="_Mcc6QBO0EeanX51lujrUoQ" elementId="al.sybina.ebr.rcp.handler.showView" contributionURI="bundleclass://al.sybina.ebr.rcp/al.sybina.ebr.rcp.handlers.ShowViewHandler" command="_Cg_9wBO0EeanX51lujrUoQ"/>
+  <handlers xmi:id="_TEnC0FA1Eea-hd_bJcmhAQ" elementId="al.sybina.ebr.rcp.handler.update" contributionURI="bundleclass://al.sybina.ebr.rcp/al.sybina.ebr.rcp.handlers.UpdateHandler" command="_WAdv8FA1Eea-hd_bJcmhAQ"/>
+  <bindingTables xmi:id="_kbPZsAzjEeSTbO6ywNUwEA" elementId="com.example.e4.rcp.todo.bindingtable.0" bindingContext="_2jk_wMZvEeGbkqRLZ7osPQ">
+    <bindings xmi:id="_l08XkAzjEeSTbO6ywNUwEA" elementId="com.example.e4.rcp.todo.keybinding.0" keySequence="M1+S" command="_vTZDkMZXEeGbkqRLZ7osPQ"/>
+  </bindingTables>
+  <rootContext xmi:id="_2jk_wMZvEeGbkqRLZ7osPQ" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="Windows and Dialogs" description="Windows and Dialogs">
+    <children xmi:id="_SMGo8BI3EeSz0MOyJTR0RQ" elementId="org.eclipse.ui.contexts.window" name="In Windows" description="A window is open">
+      <children xmi:id="_RSXNYAxuEeajle3G9iDuNA" elementId="org.eclipse.e4.ui.contexts.views" name="%bindingcontext.name.bindingView"/>
+      <children xmi:id="_UfqP0AxuEeajle3G9iDuNA" elementId="org.eclipse.ui.console.ConsoleView" name="In Console View" description="In Console View"/>
+      <children xmi:id="_Y8Y50AxuEeajle3G9iDuNA" elementId="org.eclipse.ui.textEditorScope" name="Editing Text" description="Editing Text Context"/>
+    </children>
+    <children xmi:id="_S1yfIBI3EeSz0MOyJTR0RQ" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs" description="A dialog is open"/>
+  </rootContext>
+  <rootContext xmi:id="_rym-gBI2EeSz0MOyJTR0RQ" elementId="org.eclipse.ui.contexts.workbenchMenu" name="Workbench Menu" description="When no Workbench windows are active"/>
+  <rootContext xmi:id="_-_6JsAxtEeajle3G9iDuNA" elementId="org.eclipse.ui.contexts.actionSet" name="Action Set" description="Parent context for action sets"/>
+  <descriptors xmi:id="_CR1k0AzIEeKhVv5pZDR7bA" elementId="al.sybina.ebr.views.home" label="home" iconURI="platform:/plugin/org.eclipse.e4.tools.resources/icons/ibr/rcp/home_32.png" tooltip="This windows shows the known perspectives and allow the user to navigate among them." allowMultiple="true" category="Other" closeable="true" contributionURI="bundleclass://al.sybina.ebr.rcp/al.sybina.ebr.rcp.views.LogbookHomeView">
+    <tags>View</tags>
+    <tags>categoryTag:Other</tags>
+  </descriptors>
+  <commands xmi:id="_vTZDkMZXEeGbkqRLZ7osPQ" elementId="org.eclipse.ui.file.saveAll" commandName="Save"/>
+  <commands xmi:id="_n9YOkBAKEeO5vsQ2T1hWpw" elementId="al.sybina.ebr.rcp.commandShowFullScreen" commandName="Full Screen" description="set the active shell in full screen mode"/>
+  <commands xmi:id="_F8KnQMZYEeGbkqRLZ7osPQ" elementId="org.eclipse.ui.file.exit" commandName="Exit" description="Exit the application" category="_K1YqwAi8Eeach-hvFjBG3A"/>
+  <commands xmi:id="_IU7OYMZYEeGbkqRLZ7osPQ" elementId="org.eclipse.ui.file.restartWorkbench" commandName="Restart" description="Restart the workbench" category="_K1YqwAi8Eeach-hvFjBG3A">
+    <parameters xmi:id="_UG3H8OANEeqJ5fFNW3F3Hw" elementId="al.sybina.ebr.rcp.commandparameter.restartmessage" name="Restart Message"/>
+  </commands>
+  <commands xmi:id="_QmLyMNJGEeGRQsAWu_XMKQ" elementId="al.sybina.ebr.rcp.command.switchtheme" commandName="Switch Theme">
+    <parameters xmi:id="_q-GXwFK3EeaXHtU70xlRtA" elementId="themeId" name="Theme Id"/>
+  </commands>
+  <commands xmi:id="_MlAjgMZYEeGbkqRLZ7osPQ" elementId="org.eclipse.ui.help.quickStartAction" commandName="Welcome"/>
+  <commands xmi:id="_P3uRcMZYEeGbkqRLZ7osPQ" elementId="org.eclipse.ui.help.aboutAction" commandName="About" category="_YrOt0AxtEeajle3G9iDuNA"/>
+  <commands xmi:id="_ZIxwMPenEeGaHLRm1KH-aQ" elementId="org.eclipse.ui.help.displayHelp" commandName="Display Help"/>
+  <commands xmi:id="_vGK5kA1pEeKkaoNsQKzVcw" elementId="org.eclipse.ui.window.showKeyAssist" commandName="Show Key Assist"/>
+  <commands xmi:id="_W75ZkA37EeK2jbXfW93tpw" elementId="al.sybina.ebr.rcp.command.switchperspective" commandName="Switch Perspective" category="_1bxo4Ai7Eeach-hvFjBG3A">
+    <parameters xmi:id="_-pujoLmQEeOGGb8l8_qEMg" elementId="org.eclipse.ui.perspectives.showPerspective.perspectiveId" name="perspective_id_parameter" typeId="" optional="false"/>
+  </commands>
+  <commands xmi:id="_5uqkEBN0EeanX51lujrUoQ" elementId="org.eclipse.ui.window.preferences" commandName="Opcoach preferences"/>
+  <commands xmi:id="_Hy0BMBOqEeanX51lujrUoQ" elementId="al.sybina.ebr.rcp.command.restorePerspective" commandName="Restore Perspective" category="_1bxo4Ai7Eeach-hvFjBG3A"/>
+  <commands xmi:id="_Cg_9wBO0EeanX51lujrUoQ" elementId="al.sybina.ebr.rcp.command.showView" commandName="Show View" category="_ED2aIAxtEeajle3G9iDuNA">
+    <parameters xmi:id="_IA5fgBO1EeanX51lujrUoQ" elementId="org.eclipse.ui.views.showView.viewId" name="view_id_parameter"/>
+  </commands>
+  <commands xmi:id="_WAdv8FA1Eea-hd_bJcmhAQ" elementId="al.sybina.ebr.rcp.command.update" commandName="Update" category="_YrOt0AxtEeajle3G9iDuNA"/>
+  <addons xmi:id="_kRdLcb-ZEeGFAvs8os6Opw" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_kRdLcr-ZEeGFAvs8os6Opw" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_c3RRkKDUEeKOb431BOI1yA" elementId="org.eclipse.e4.ui.workbench.handler.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <addons xmi:id="_kRdLdL-ZEeGFAvs8os6Opw" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_kRdLdb-ZEeGFAvs8os6Opw" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_rphcED65EeSPDP4SyCxE4g" elementId="al.sybina.ebr.rcp.addon.1" contributionURI="bundleclass://al.sybina.ebr.rcp/al.sybina.ebr.rcp.addons.WindowCloseListenerAddon"/>
+  <addons xmi:id="_rJ_vQGrgEeaDjLVqErjsGw" elementId="DnD Addon" contributionURI="bundleclass://org.eclipse.fx.ui.workbench.renderers.base/org.eclipse.fx.ui.workbench.renderers.base.addons.DnDAddon"/>
+  <addons xmi:id="_KpRVUE2uEeSJFpjHPXZFWg" elementId="al.sybina.ebr.rcp.addon.0" contributionURI="bundleclass://al.sybina.ebr.rcp/al.sybina.ebr.rcp.addons.E4PerspectiveResetAddon"/>
+  <addons xmi:id="_Cs-gYAiUEeach-hvFjBG3A" elementId="MinMax Addon" contributionURI="bundleclass://org.eclipse.fx.ui.workbench.renderers.base/org.eclipse.fx.ui.workbench.renderers.base.addons.MinMaxAddon"/>
+  <addons xmi:id="_WKKvICggEeaHLOjfAuCYeQ" elementId="org.eclipse.fx.ui.keybindings.e4.BindingServiceAddon" contributionURI="bundleclass://org.eclipse.fx.ui.keybindings.e4/org.eclipse.fx.ui.keybindings.e4.BindingServiceAddon"/>
+  <addons xmi:id="_qosBwCggEeaHLOjfAuCYeQ" elementId="org.eclipse.fx.ui.keybindings.e4.BindingProcessingAddon" contributionURI="bundleclass://org.eclipse.fx.ui.keybindings.e4/org.eclipse.fx.ui.keybindings.e4.BindingProcessingAddon"/>
+  <addons xmi:id="_tI47sFBDEea-hd_bJcmhAQ" elementId="Cleanup Addon" contributionURI="bundleclass://org.eclipse.fx.ui.workbench.renderers.base/org.eclipse.fx.ui.workbench.renderers.base.addons.CleanUpAddon"/>
+  <categories xmi:id="_1bxo4Ai7Eeach-hvFjBG3A" elementId="org.eclipse.ui.category.perspectives" name="Perspectives" description="Commands for opening perspectives"/>
+  <categories xmi:id="_K1YqwAi8Eeach-hvFjBG3A" elementId="org.eclipse.ui.category.file" name="File"/>
+  <categories xmi:id="_ED2aIAxtEeajle3G9iDuNA" elementId="org.eclipse.ui.category.views" name="Views" description="Commands for opening views"/>
+  <categories xmi:id="_KlIV0AxtEeajle3G9iDuNA" elementId="org.eclipse.ui.category.navigate" name="Navigate"/>
+  <categories xmi:id="_O5BM4AxtEeajle3G9iDuNA" elementId="org.eclipse.ui.category.edit" name="Edit"/>
+  <categories xmi:id="_SJ5u0AxtEeajle3G9iDuNA" elementId="org.eclipse.ui.category.textEditor" name="Text Editing" description="Text Editing Commands"/>
+  <categories xmi:id="_U6EJUAxtEeajle3G9iDuNA" elementId="org.eclipse.ui.category.window" name="Window"/>
+  <categories xmi:id="_YrOt0AxtEeajle3G9iDuNA" elementId="org.eclipse.ui.category.help" name="Help"/>
+</application:Application>

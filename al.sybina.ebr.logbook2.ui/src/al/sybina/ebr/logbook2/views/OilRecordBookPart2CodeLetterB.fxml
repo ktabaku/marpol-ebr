@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXChipView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import jfxtras.scene.control.ImageViewButton?>
+<?import jidefx.scene.control.field.DoubleField?>
+
+<TabPane id="mainLogbook2TabPane" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="al.sybina.ebr.logbook2.views.OilRecordBookPart2CodeLetterBController">
+   <tabs>
+      <Tab id="coloreTesto" closable="false" text="B">
+         <content>
+            <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true;">
+               <content>
+                  <AnchorPane fx:id="codeLetterContentAnchorPane">
+                     <children>
+                        <VBox styleClass="logbookBodyVBox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <GridPane styleClass="codeLetterTitleGridPane">
+                                 <columnConstraints>
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                    <ColumnConstraints hgrow="SOMETIMES" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label id="ballastingOrCleaningOfoilFuelTanks" fx:id="internalTransferOfOilCargoDuringVoyage" text="INTERNAL TRANSFER OF OIL CARGO DURING VOYAGE" GridPane.columnIndex="1" GridPane.halignment="LEFT">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageViewButton fx:id="imageViewButtonInfoLetterB" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#letterB" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                    </ImageViewButton>
+                                    <HBox alignment="CENTER_LEFT" styleClass="logbookhBoxCodeLetter">
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                       <children>
+                                          <Label fx:id="codeLetterB" styleClass="codeletterLabel" text="Code Letter B">
+                                             <padding>
+                                                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="System Bold Italic" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Region styleClass="logbook-title-arrow-region" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </GridPane>
+                              <VBox spacing="20.0" styleClass="logbookVBox">
+                                 <children>
+                                    <GridPane id="gridPaneA" fx:id="gridPaneA2" vgap="10.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="330.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                                          <ColumnConstraints hgrow="NEVER" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+                                          <ColumnConstraints hgrow="ALWAYS" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <JFXChipView fx:id="fromTanksJFXChipView" disable="true" styleClass="logbookjfx-chip-view" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                                          <JFXChipView fx:id="toTanksJFXChipView" disable="true" styleClass="logbookjfx-chip-view" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                                          <HBox alignment="CENTER_LEFT" styleClass="logbookDarkLabel" GridPane.columnSpan="2">
+                                             <children>
+                                                <CheckBox fx:id="codeletterBIdentityOfTanksCheckBox" mnemonicParsing="false" styleClass="logbookcheck-box" />
+                                                <HBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <Label styleClass="logbookCodeLetterLabel" text="4. Identity of tank(s)" />
+                                                   </children>
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <ImageViewButton fx:id="fromTanksImageViewButton" disable="true" onMouseClicked="#openSelectFromTanks" styleClass="image-view-button" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                          <ImageViewButton fx:id="toTanksImageViewButton" disable="true" onMouseClicked="#openSelectToTanks" styleClass="image-view-button" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                          <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <children>
+                                                <HBox id="logbook2CodeLetterBFromTanksHBox" alignment="CENTER_LEFT" styleClass="logbookLightGreyLabel" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <CheckBox fx:id="codeLetterBFromTanksCheckBox" disable="true" mnemonicParsing="false" styleClass="logbookcheck-box" />
+                                                      <HBox alignment="CENTER_LEFT" styleClass="logbook-label-hbox" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label styleClass="logbookOtherLabel" text=".1 from tank(s):" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <Region>
+                                                   <styleClass>
+                                                      <String fx:value="logbook-arrow-region" />
+                                                      <String fx:value="logbook-arrow-region-color-light-grey" />
+                                                   </styleClass>
+                                                </Region>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <children>
+                                                <HBox id="logbook2CodeLetterBToTanksHBox" alignment="CENTER_LEFT" styleClass="logbookColorBlueLabel" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <CheckBox fx:id="codeLetterBToTanksCheckBox" disable="true" mnemonicParsing="false" styleClass="logbookcheck-box" />
+                                                      <HBox alignment="CENTER_LEFT" styleClass="logbook-label-hbox" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label styleClass="logbookOtherLabel" text=".2 to tank(s):" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <Region>
+                                                   <styleClass>
+                                                      <String fx:value="logbook-arrow-region" />
+                                                      <String fx:value="logbook-arrow-region-color-blue" />
+                                                   </styleClass>
+                                                </Region>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </GridPane>
+                                    <GridPane id="gridPaneA" fx:id="gridPaneA11">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="330.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="NEVER" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="330.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="NEVER" />
+                                          <ColumnConstraints hgrow="ALWAYS" minWidth="20.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <DoubleField fx:id="quantityTransferedDoubleField" disable="true" styleClass="logbook-text-field" GridPane.columnIndex="3" />
+                                          <DoubleField fx:id="totalQuantityOfTankDoubleField" disable="true" styleClass="logbook-text-field" GridPane.columnIndex="8" />
+                                          <Label minWidth="-Infinity" styleClass="logbookOtherLabel" text="MC" GridPane.columnIndex="4" GridPane.halignment="LEFT">
+                                             <padding>
+                                                <Insets left="5.0" right="10.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label styleClass="logbookOtherLabel" text="MC" GridPane.columnIndex="9" GridPane.halignment="LEFT">
+                                             <padding>
+                                                <Insets left="5.0" right="10.0" />
+                                             </padding>
+                                          </Label>
+                                          <HBox alignment="CENTER_LEFT" GridPane.columnIndex="6">
+                                             <children>
+                                                <HBox id="logbook2CodeLetterBQuantityTransferedHBox" alignment="CENTER_LEFT" maxHeight="45.0">
+                                                   <children>
+                                                      <Label styleClass="logbookOtherLabel" text="Total Quantity Of Tank(s)" />
+                                                   </children>
+                                                   <styleClass>
+                                                      <String fx:value="logbookOrangeLabel" />
+                                                      <String fx:value="logbook-label-hbox" />
+                                                   </styleClass>
+                                                </HBox>
+                                                <Region>
+                                                   <styleClass>
+                                                      <String fx:value="logbook-arrow-region" />
+                                                      <String fx:value="logbook-arrow-region-color-orange" />
+                                                   </styleClass>
+                                                </Region>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" styleClass="logbookOrangeLabel" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <HBox alignment="CENTER_LEFT" styleClass="logbook-label-hbox" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <Label styleClass="logbookOtherLabel" text="Quantity Transfered" />
+                                                         </children>
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <Region>
+                                                   <styleClass>
+                                                      <String fx:value="logbook-arrow-region" />
+                                                      <String fx:value="logbook-arrow-region-color-orange" />
+                                                   </styleClass>
+                                                </Region>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </GridPane>
+                                    <GridPane id="gridPaneA" fx:id="gridPaneA1" vgap="10.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="330.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="170.0" prefWidth="170.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="14.0" minWidth="14.0" prefWidth="14.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="330.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="NEVER" />
+                                          <ColumnConstraints hgrow="ALWAYS" minWidth="20.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <DoubleField fx:id="quantityRetainedOnBoardDoubleField" disable="true" styleClass="logbook-text-field" GridPane.columnIndex="7" />
+                                          <HBox alignment="CENTER_LEFT" GridPane.columnIndex="3">
+                                             <children>
+                                                <CheckBox fx:id="emptiedLetterBCheckBox" disable="true" mnemonicParsing="false">
+                                                   <styleClass>
+                                                      <String fx:value="logbookcheck-box" />
+                                                      <String fx:value="notEmptiedLetterBCheckBox" />
+                                                      <String fx:value="logbook-round-check-box" />
+                                                   </styleClass>
+                                                </CheckBox>
+                                                <Label id="Yes" fx:id="Yes" styleClass="logbookYesLabel" text="YES">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Region styleClass="logbookRegionYesNo">
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                </Region>
+                                                <CheckBox fx:id="notEmptiedLetterBCheckBox" disable="true" mnemonicParsing="false">
+                                                   <styleClass>
+                                                      <String fx:value="logbookcheck-box" />
+                                                      <String fx:value="emptiedLetterCCheckBox" />
+                                                      <String fx:value="logbook-round-check-box" />
+                                                   </styleClass>
+                                                </CheckBox>
+                                                <Label id="NOT" fx:id="NOT" styleClass="logbookNoLabel" text="NO">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" GridPane.columnSpan="2">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" maxHeight="45.0" styleClass="logbookDarkLabel">
+                                                   <children>
+                                                      <CheckBox fx:id="codeLetterBWasTheTanksCheckBox" disable="true" mnemonicParsing="false" styleClass="logbookcheck-box" />
+                                                      <HBox alignment="CENTER_LEFT" styleClass="logbook-label-hbox">
+                                                         <children>
+                                                            <Label styleClass="logbookCodeLetterLabel" text="5. Was (were) the tank(s) in 4.1 emptied? " />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <Region>
+                                                   <styleClass>
+                                                      <String fx:value="logbook-arrow-region" />
+                                                      <String fx:value="logbook-arrow-region-color-dark" />
+                                                   </styleClass>
+                                                </Region>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="5">
+                                             <children>
+                                                <HBox id="logbook2CodeLetterB5aHBox" alignment="CENTER_LEFT" maxHeight="45.0">
+                                                   <children>
+                                                      <Label styleClass="logbookOtherLabel" text="If not, state the quantity retained on board" />
+                                                   </children>
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <styleClass>
+                                                      <String fx:value="logbookLightGreyLabel" />
+                                                      <String fx:value="logbook-label-hbox" />
+                                                   </styleClass>
+                                                </HBox>
+                                                <Region>
+                                                   <styleClass>
+                                                      <String fx:value="logbook-arrow-region" />
+                                                      <String fx:value="logbook-arrow-region-color-light-grey" />
+                                                   </styleClass>
+                                                </Region>
+                                             </children>
+                                          </HBox>
+                                          <Label styleClass="logbookOtherLabel" text="MC" GridPane.columnIndex="8" GridPane.halignment="LEFT">
+                                             <padding>
+                                                <Insets left="5.0" right="10.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>

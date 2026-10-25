@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 2010, 2016 Sybina. All rights reserved. -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<version>1.0.0-SNAPSHOT</version>
+	<groupId>al.sybina.ebr</groupId>
+	<artifactId>parent</artifactId>
+	<packaging>pom</packaging>
+	<name>MARPOL-ERB-SERVER Parent</name>
+
+	<properties>
+		<tycho-version>0.25.0</tycho-version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<eclipse-repository-url>http://download.eclipse.org/releases/oxygen/201804111000</eclipse-repository-url>
+		
+		<maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.fork>true</maven.compiler.fork>
+        <maven.compiler.verbose>true</maven.compiler.verbose>
+        <maven.compiler.meminitial>2048m</maven.compiler.meminitial>
+        <maven.compiler.maxmem>2048m</maven.compiler.maxmem>
+	</properties>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<target>
+						<artifact>
+							<groupId>al.sybina.ebr</groupId>
+							<artifactId>al.sybina.ebr.management.fx</artifactId>
+							<version>1.0.0-SNAPSHOT</version>
+						</artifact>
+					</target>
+      				<filters>
+	      				<filter>
+				            <type>eclipse-plugin</type>
+				            <id>org.eclipse.e4.ui.workbench.swt</id>
+            				<id>org.eclipse.e4.ui.workbench.renderers.swt</id>
+            				<id>org.eclipse.e4.ui.workbench.addons.swt</id>
+            				<id>org.eclipse.e4.ui.workbench3</id>
+				            <removeAll />
+				         </filter>
+			        </filters>
+					<environments>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+					</environments>
+					<dependency-resolution>
+						<optionalDependencies>ignore</optionalDependencies>
+					</dependency-resolution>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+              	<groupId>org.eclipse.tycho</groupId>
+              	<artifactId>tycho-compiler-plugin</artifactId>
+              	<version>${tycho-version}</version>
+	            <configuration>
+	                <compilerArgument>-warn:none</compilerArgument>     
+	                <compilerArgument>-err:none</compilerArgument>      
+	            
+			        <encoding>UTF-8</encoding>
+			        <extraClasspathElements>
+			          <extraClasspathElement>
+			            <groupId>com.oracle</groupId>
+			            <artifactId>javafx</artifactId>
+			            <version>8.0.0-SNAPSHOT</version>
+			            <systemPath>${java.home}/lib/jfxswt.jar</systemPath>
+			            <scope>system</scope>
+			          </extraClasspathElement>
+			        </extraClasspathElements> 
+			   </configuration>
+	        </plugin>
+		</plugins>
+	</build>
+	<modules>
+		<module>al.sybina.ebr.managment.fx</module>
+		<module>al.sybina.ebr.eclipse-repository</module>
+		<module>al.sybina.ebr.library.S57Library</module>
+		<module>al.sybina.ebr.plugin.core</module>
+		<module>al.sybina.ebr.rcp</module>
+		<module>al.sybina.ebr.rcp.feature</module>
+		<module>org.apache.commons.compress</module>
+		<module>org.osgeo.proj4j</module>
+		<module>org.eclipse.e4.tools.resources</module>
+		<module>com.opcoach.e4.preferences</module>
+		<module>al.sybina.ebr.login</module>
+		<module>al.sybina.ebr.log4j.configuration</module>
+		<module>al.sybina.ebr.s63</module>
+		<module>al.sybina.ebr.libs</module>
+		<module>al.sybina.ebr.commons.utils</module>
+		<module>al.sybina.ebr.commons.domain</module>
+		<module>al.sybina.ebr.jasperreports</module>
+		<module>al.sybina.ebr.javafx.controls</module>
+		<module>al.sybina.ebr.server</module>
+		<module>al.sybina.ebr.server.feature</module>
+		<module>al.sybina.ebr.logbook.core</module>
+		<module>al.sybina.ebr.logbook.domain</module>
+		<module>al.sybina.ebr.logbook.commons</module>
+		<module>al.sybina.ebr.logbook.feature</module>
+		<module>al.sybina.ebr.logbook.ui</module>
+		<module>al.sybina.ebr.logbook2.ui</module>
+	</modules>
+
+<!-- 	<repositories> -->
+<!-- 		<repository> -->
+<!-- 			<id>update</id> -->
+<!-- 			<url>${eclipse-repository-url}</url> -->
+<!-- 			<layout>p2</layout> -->
+<!-- 		</repository> -->
+<!-- 	</repositories> -->
+
+</project>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 2010, 2016 Sybina. All rights reserved. -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<artifactId>parent</artifactId>
+		<groupId>al.sybina.ebr</groupId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>al.sybina.ebr.eclipse-repository</artifactId>
+	<packaging>eclipse-repository</packaging>
+	<name>MARPOL-ERB-SERVER Product</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>al.sybina.ebr</groupId>
+			<artifactId>al.sybina.ebr.rcp</artifactId>
+			<version>1.0.0</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+	<properties>
+		<ebr.version>1.0.0</ebr.version>
+		<!-- name of the downloads made by the dist profile -->
+		<dist.name>MARPOL-eRB-${ebr.version}</dist.name>
+		<!-- Liberica JRE 8 Full (with JavaFX) bundled by the dist profile -->
+		<jre.release>8u513+5</jre.release>
+		<jre.url>https://github.com/bell-sw/Liberica/releases/download/${jre.release}/bellsoft-jre${jre.release}</jre.url>
+		<jre.dir>${project.build.directory}/jre</jre.dir>
+		<!-- top folder inside the JRE archives (with .jre appended on macOS) -->
+		<jre.folder>jre8u513-full</jre.folder>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-p2-director-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<formats>
+						<win32>zip</win32>
+						<linux>tar.gz</linux>
+						<macosx>tar.gz</macosx>
+					</formats>
+<!-- For specific product modify
+/al.sybina.ebr.rcp/splash.bmp (for eclipse run) /org.eclipse.e4.tools.resources/splash.bmp for production run, /al.sybina.ebr.rcp/plugin.xml (specify correct Application.e4xmi),
+/org.eclipse.e4.tools.resources/OSGI-INF/resources.properties (specify correct IMG_IBR_VERTICAL_LOGO for About Dialog)  -->
+					<products>
+						<product>
+							<id>MARPOL-ERB-SERVER</id>
+							<attachId>1</attachId>
+						</product>
+					</products>
+				</configuration>
+				<executions>
+					<execution>
+						<id>materialize-products</id>
+						<goals>
+							<goal>materialize-products</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>archive-products</id>
+						<goals>
+							<goal>archive-products</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<!--
+		  mvn clean verify -P dist
+		  Downloads ready to run: the product of each platform with a bundled Java runtime, plus a
+		  Windows installer, in target/dist.
+		-->
+		<profile>
+			<id>dist</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>com.googlecode.maven-download-plugin</groupId>
+						<artifactId>download-maven-plugin</artifactId>
+						<version>1.6.8</version>
+						<executions>
+							<execution>
+								<id>jre-windows</id>
+								<phase>prepare-package</phase>
+								<goals>
+									<goal>wget</goal>
+								</goals>
+								<configuration>
+									<url>${jre.url}-windows-amd64-full.zip</url>
+									<sha1>7c3bfa513f3ad0001babcf8954566aa27bb79502</sha1>
+									<unpack>true</unpack>
+									<outputDirectory>${jre.dir}/windows</outputDirectory>
+								</configuration>
+							</execution>
+							<execution>
+								<id>jre-linux</id>
+								<phase>prepare-package</phase>
+								<goals>
+									<goal>wget</goal>
+								</goals>
+								<!-- not unpacked: the archive holds symbolic links that Windows cannot create -->
+								<configuration>
+									<url>${jre.url}-linux-amd64-full.tar.gz</url>
+									<sha1>dc1c6b8869b4be2f2a23d432948f1e7cc6aa97e0</sha1>
+									<outputDirectory>${jre.dir}/linux</outputDirectory>
+									<outputFileName>jre.tar.gz</outputFileName>
+								</configuration>
+							</execution>
+							<execution>
+								<id>jre-macos</id>
+								<phase>prepare-package</phase>
+								<goals>
+									<goal>wget</goal>
+								</goals>
+								<configuration>
+									<url>${jre.url}-macos-amd64-full.tar.gz</url>
+									<sha1>d9d03236bee413716cadfd331a6e0f56c3ab931a</sha1>
+									<outputDirectory>${jre.dir}/macos</outputDirectory>
+									<outputFileName>jre.tar.gz</outputFileName>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<artifactId>maven-assembly-plugin</artifactId>
+						<version>3.6.0</version>
+						<configuration>
+							<finalName>${dist.name}</finalName>
+							<outputDirectory>${project.build.directory}/dist</outputDirectory>
+							<appendAssemblyId>true</appendAssemblyId>
+							<attach>false</attach>
+							<tarLongFileMode>posix</tarLongFileMode>
+						</configuration>
+						<executions>
+							<execution>
+								<id>dist-archives</id>
+								<phase>package</phase>
+								<goals>
+									<goal>single</goal>
+								</goals>
+								<configuration>
+									<descriptors>
+										<descriptor>src/assembly/windows-x64.xml</descriptor>
+									</descriptors>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<!--
+					  Linux and macOS downloads, written by src/dist/java/.../DistArchive.java. The build
+					  may run on Windows, whose file system has no executable bits or symbolic links, so the
+					  launcher is marked executable there and the JRE entries are copied straight from the
+					  downloaded archives with their own modes and links.
+					-->
+					<plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>3.1.0</version>
+						<dependencies>
+							<dependency>
+								<groupId>org.apache.commons</groupId>
+								<artifactId>commons-compress</artifactId>
+								<version>1.23.0</version>
+							</dependency>
+						</dependencies>
+						<executions>
+							<execution>
+								<id>dist-unix-archives</id>
+								<phase>package</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<target>
+										<property name="products" value="${project.build.directory}/products/MARPOL-ERB-SERVER"/>
+										<property name="out" value="${project.build.directory}/dist/${dist.name}"/>
+										<property name="tool" value="${project.build.directory}/dist-tool"/>
+										<mkdir dir="${tool}"/>
+										<javac srcdir="${project.basedir}/src/dist/java" destdir="${tool}" classpathref="maven.plugin.classpath"
+											source="1.8" target="1.8" encoding="UTF-8" includeantruntime="false"/>
+
+										<java classname="al.sybina.ebr.dist.DistArchive" fork="true" failonerror="true">
+											<classpath>
+												<pathelement location="${tool}"/>
+												<path refid="maven.plugin.classpath"/>
+											</classpath>
+											<arg value="${out}-linux-x64.tar.gz"/>
+											<arg line="--dir"/><arg file="${products}/linux/gtk/x86_64"/><arg value="MARPOL-eRB"/><arg value="MARPOL-ERB-SERVER"/>
+											<arg line="--file"/><arg file="${project.basedir}/../LICENSE"/><arg value="MARPOL-eRB/LICENSE"/>
+											<arg line="--tar"/><arg file="${jre.dir}/linux/jre.tar.gz"/><arg value="${jre.folder}/"/><arg value="MARPOL-eRB/jre/"/>
+										</java>
+
+										<java classname="al.sybina.ebr.dist.DistArchive" fork="true" failonerror="true">
+											<classpath>
+												<pathelement location="${tool}"/>
+												<path refid="maven.plugin.classpath"/>
+											</classpath>
+											<arg value="${out}-macos-x64.tar.gz"/>
+											<arg line="--dir"/><arg file="${products}/macosx/cocoa/x86_64/Eclipse.app"/><arg value="MARPOL-eRB.app"/><arg value="Contents/MacOS/"/>
+											<arg line="--file"/><arg file="${project.basedir}/../LICENSE"/><arg value="LICENSE"/>
+											<arg line="--tar"/><arg file="${jre.dir}/macos/jre.tar.gz"/><arg value="./${jre.folder}.jre/"/><arg value="MARPOL-eRB.app/Contents/Eclipse/jre/"/>
+										</java>
+									</target>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.digitalmediaserver</groupId>
+						<artifactId>nsis-maven-plugin</artifactId>
+						<version>1.0.0</version>
+						<configuration>
+							<makensisExecutable>${project.basedir}/nsis/nsis-3.03-strlen_8192/makensis.exe</makensisExecutable>
+							<makensisExecutableLinux>${project.basedir}/nsis/nsis-3.03-strlen_8192/makensisLinux</makensisExecutableLinux>
+							<makensisExecutableMacOS>${project.basedir}/nsis/nsis-3.03-strlen_8192/makensisMacOS</makensisExecutableMacOS>
+							<environmentVariables>
+								<softwareVersion>${ebr.version}</softwareVersion>
+								<sourceFullPath>\\?\${project.build.directory}\products\MARPOL-ERB-SERVER\win32\win32\x86_64</sourceFullPath>
+								<jreFullPath>\\?\${project.build.directory}\jre\windows\${jre.folder}</jreFullPath>
+								<outputFilePath>${project.build.directory}\dist\${dist.name}-windows-x64-setup.exe</outputFilePath>
+							</environmentVariables>
+						</configuration>
+						<executions>
+							<execution>
+								<id>build-windows-installer</id>
+								<phase>package</phase>
+								<configuration>
+									<scriptFile>${project.basedir}/nsis/setupMARPOL-ERB-SERVER.nsi</scriptFile>
+									<verbosityLevel>2</verbosityLevel>
+									<outputFile>${project.build.directory}/dist/${dist.name}-windows-x64-setup.exe</outputFile>
+								</configuration>
+								<goals>
+									<goal>make</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>

@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: proj4j plugin for eclipse
+Bundle-SymbolicName: org.osgeo.proj4j;singleton:=true
+Bundle-Version: 1.0.1
+Bundle-Vendor: osgeo.org
+Export-Package: org.osgeo.proj4j,
+ org.osgeo.proj4j.cmd,
+ org.osgeo.proj4j.datum,
+ org.osgeo.proj4j.io,
+ org.osgeo.proj4j.parser,
+ org.osgeo.proj4j.proj,
+ org.osgeo.proj4j.units,
+ org.osgeo.proj4j.util
+Bundle-ClassPath: .
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

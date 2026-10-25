@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="al.sybina.ebr.logbook.feature"
+      label="Logbook Feature"
+      version="1.0.0.qualifier">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <requires>
+      <import plugin="org.eclipse.osgi"/>
+      <import plugin="org.eclipse.persistence.jpa" version="2.5.1" match="greaterOrEqual"/>
+      <import plugin="javax.persistence" version="2.1.0" match="greaterOrEqual"/>
+      <import plugin="javax.transaction-api" version="1.2.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.e4.core.services" version="1.1.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.osgi.services" version="3.3.100" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.equinox.ds" version="1.4.300" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.e4.core.contexts" version="1.3.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.e4.core.di" version="1.3.0" match="greaterOrEqual"/>
+      <import plugin="javax.inject" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="al.sybina.ebr.logbook.domain" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="al.sybina.ebr.commons.utils" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.persistence.core"/>
+      <import plugin="org.eclipse.fx.core" version="3.3.0" match="greaterOrEqual"/>
+      <import plugin="org.apache.commons.beanutils" version="1.9.3" match="greaterOrEqual"/>
+      <import plugin="org.apache.commons.collections" version="3.2.2" match="greaterOrEqual"/>
+      <import plugin="org.apache.commons.logging" version="1.1.1" match="greaterOrEqual"/>
+      <import plugin="org.apache.servicemix.bundles.derby" version="10.14.2" match="greaterOrEqual"/>
+      <import plugin="org.apache.commons.compress" version="1.3.1" match="greaterOrEqual"/>
+      <import plugin="org.quartz-scheduler.quartz" version="2.2.0" match="greaterOrEqual"/>
+      <import plugin="org.quartz-scheduler.quartz-jobs" version="2.2.0" match="greaterOrEqual"/>
+      <import plugin="c3p0" version="0.9.1" match="greaterOrEqual"/>
+      <import plugin="org.apache.servicemix.bundles.dbunit" version="2.7.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.apache.commons.lang" version="2.6.0" match="greaterOrEqual"/>
+      <import plugin="al.sybina.ebr.commons.domain" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.apache.servicemix.bundles.derbynet" version="10.14.2" match="greaterOrEqual"/>
+      <import plugin="com.goldmansachs.reladomo" version="17.1.4" match="greaterOrEqual"/>
+      <import plugin="com.goldmansachs.reladomo.serial" version="17.1.4" match="greaterOrEqual"/>
+      <import plugin="slf4j.api" version="1.7.21" match="greaterOrEqual"/>
+      <import plugin="joda-time" version="2.9.4" match="greaterOrEqual"/>
+      <import plugin="com.goldmansachs.gs-collections" version="5.1.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.collections.eclipse-collections" version="7.1.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.collections.eclipse-collections-api" version="7.1.1" match="greaterOrEqual"/>
+      <import plugin="al.sybina.ebr.logbook.core" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.e4.ui.model.workbench" version="1.1.100.v20150407-1430" match="greaterOrEqual"/>
+      <import plugin="com.opcoach.e4.preferences"/>
+      <import plugin="org.eclipse.equinox.preferences"/>
+      <import plugin="org.eclipse.e4.tools.resources" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.fx.core.di"/>
+      <import plugin="org.eclipse.fx.ui.services"/>
+      <import plugin="org.eclipse.e4.core.di.annotations"/>
+      <import plugin="org.eclipse.e4.ui.workbench"/>
+      <import plugin="org.eclipse.e4.core.commands"/>
+      <import plugin="org.eclipse.core.commands"/>
+      <import plugin="al.sybina.ebr.rcp"/>
+      <import plugin="org.eclipse.osgi.services" version="3.6.0" match="greaterOrEqual"/>
+      <import plugin="net.tascalate.javaflow.api" version="2.2.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.fx.ui.di"/>
+      <import plugin="org.eclipse.fx.ui.controls"/>
+      <import plugin="com.google.gson"/>
+      <import plugin="slf4j.api" version="1.7.26" match="greaterOrEqual"/>
+      <import plugin="com.google.guava"/>
+      <import plugin="org.apache.commons.validator" version="1.6.0" match="greaterOrEqual"/>
+      <import plugin="org.apache.xerces"/>
+      <import plugin="org.apache.log4j"/>
+      <import plugin="org.eclipse.emf.ecore.xmi" version="2.13.0" match="greaterOrEqual"/>
+      <import plugin="org.apache.commons.codec" version="1.9.0" match="greaterOrEqual"/>
+      <import plugin="slf4j.api" version="1.7.2" match="greaterOrEqual"/>
+      <import plugin="jcl.over.slf4j" version="1.7.2" match="greaterOrEqual"/>
+      <import plugin="jul.to.slf4j" version="1.7.2" match="greaterOrEqual"/>
+      <import plugin="al.sybina.ebr.libs" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="al.sybina.ebr.core" version="2.0.0" match="greaterOrEqual"/>
+      <import plugin="com.lowagie.itext" version="2.1.7" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.equinox.registry"/>
+      <import plugin="org.eclipse.osgi.services" version="3.3.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.runtime" version="3.7.0" match="greaterOrEqual"/>
+      <import plugin="org.osgeo.proj4j" version="0.1.0" match="greaterOrEqual"/>
+      <import plugin="al.sybina.ebr.library.S57Library" version="2.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.core.runtime" version="3.5.0" match="compatible"/>
+      <import plugin="org.eclipse.emf.ecore" version="2.13.0" match="compatible"/>
+      <import plugin="org.hamcrest.core" version="1.3.0" match="greaterOrEqual"/>
+      <import plugin="com.opcoach.e4.preferences" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.e4.core.di.extensions"/>
+      <import plugin="org.eclipse.core.jobs"/>
+      <import plugin="org.eclipse.core.runtime" version="3.13.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.e4.ui.di"/>
+      <import plugin="org.eclipse.e4.ui.model.workbench" version="2.0.1.v20170713-1800" match="greaterOrEqual"/>
+      <import plugin="org.apache.shiro.core" version="1.5.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.fx.ui.panes"/>
+      <import plugin="al.sybina.ebr.login" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.e4.core.di" version="1.6.100" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.equinox.common"/>
+      <import plugin="org.eclipse.ecf" version="3.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ecf.provider" version="4.7.500" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ecf.identity" version="3.8.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.osgi" version="3.12.100" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.equinox.event"/>
+      <import plugin="javax.persistence" version="2.1.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.persistence.core" version="2.6.4" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.persistence.jpa" version="2.6.4" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.persistence.jpa.jpql" version="2.6.4" match="greaterOrEqual"/>
+      <import plugin="com.google.guava" version="21.0.0" match="greaterOrEqual"/>
+      <import plugin="antlr" version="2.7.7" match="greaterOrEqual"/>
+      <import plugin="concurrent" version="1.3.4" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="javax.transaction-api"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.glassfish.main.javax.transaction"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="javax.enterprise.cdi-api"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="javax.el"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="javax.el-api"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="javax.interceptor-api"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="al.sybina.ebr.logbook.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="al.sybina.ebr.logbook.domain"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="al.sybina.ebr.logbook.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="al.sybina.ebr.commons.domain"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="al.sybina.ebr.commons.utils"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.sf.jasperreports.engine"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.commons.logging"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.commons.beanutils"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.commons.collections"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.tascalate.javaflow.api"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.lowagie.itext"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.sf.jasperreports.fonts"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.jpedal.OpenViewerFX"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="al.sybina.ebr.libs"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.commons.validator"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.commons.digester"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="al.sybina.ebr.jasperreports"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="javax.media.jai_imageio"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="al.sybina.ebr.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.xsd"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="slf4j.api"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="slf4j.log4j12"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="jcl.over.slf4j"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="jul.to.slf4j"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="al.sybina.ebr.library.S57Library"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.junit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.hamcrest.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="al.sybina.ebr.s63"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="al.sybina.ebr.log4j.configuration"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.fx.core.log4j"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="al.sybina.ebr.javafx.controls"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.servicemix.bundles.derbynet"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.servicemix.bundles.derby"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.goldmansachs.gs-collections"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.goldmansachs.reladomo"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.goldmansachs.reladomo.serial"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.goldmansachs.gs-collections-api"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.collections.eclipse-collections"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.collections.eclipse-collections-api"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="joda-time"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="al.sybina.ebr.login"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.shiro.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.quartz-scheduler.quartz"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.quartz-scheduler.quartz-jobs"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="c3p0"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="al.sybina.ebr.logbook2.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="al.sybina.ebr.logbook.commons"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.servicemix.bundles.dbunit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="at.bestsolution.fx.test.e4.junit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="at.bestsolution.fx.test.junit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="at.bestsolution.fx.test.rcontrol"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ecf.sharedobject"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ecf.remoteservice.eventadmin"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ecf.provider"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ecf"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.antlr.runtime"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="antlr"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.antlr"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="colt"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="concurrent"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.poi"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="controlsfx"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="javax.measure.unit-api"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.commons.io"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

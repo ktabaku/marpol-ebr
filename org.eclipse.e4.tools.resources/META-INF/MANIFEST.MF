@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: E4 Resources
+Bundle-SymbolicName: org.eclipse.e4.tools.resources
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: eclipse.org
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Service-Component: OSGI-INF/messagefactoryservice.xml,
+ OSGI-INF/translationsupplier.xml,
+ OSGI-INF/resourceprovider.xml
+Require-Bundle: org.eclipse.fx.core,
+ org.eclipse.osgi,
+ org.eclipse.equinox.registry,
+ org.eclipse.e4.core.contexts,
+ org.eclipse.e4.core.di;bundle-version="1.6.100",
+ javax.inject,
+ org.eclipse.e4.core.services
+Export-Package: org.eclipse.e4.tools.resources,
+ org.eclipse.e4.tools.services
+Bundle-ActivationPolicy: lazy

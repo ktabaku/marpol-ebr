@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmi:id="__7o1EFyUEeqvrpdS_JEu_g">
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_BHm48FyVEeqvrpdS_JEu_g" featurename="sharedElements" parentElementId="IDEWindow">
+    <elements xsi:type="basic:Part" xmi:id="_hjG68FyVEeqvrpdS_JEu_g" elementId="al.sybina.ebr.login.part.manageUsers" contributionURI="bundleclass://al.sybina.ebr.login/al.sybina.ebr.login.views.ManageUsersView" label="Users"/>
+  </fragments>
+</fragment:ModelFragments>

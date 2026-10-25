@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import jfxtras.scene.control.ImageViewButton?>
+
+<TabPane id="mainLogbook2TabPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="al.sybina.ebr.logbook2.views.OilRecordBookPart2CodeLetterOController">
+	<Tab id="coloreTesto" closable="false" text="O">
+		<content>
+			<ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true;">
+				<content>
+									<AnchorPane prefHeight="312.0" prefWidth="1202.0">
+										<children>
+                     <VBox styleClass="logbookBodyVBox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <children>
+											<GridPane styleClass="codeLetterTitleGridPane">
+												<columnConstraints>
+													<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+													<ColumnConstraints hgrow="SOMETIMES" />
+                                 <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" />
+												</columnConstraints>
+												<rowConstraints>
+													<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+												</rowConstraints>
+												<children>
+                                 <HBox alignment="CENTER_LEFT">
+                                    <GridPane.margin>
+                                       <Insets />
+                                    </GridPane.margin>
+                                    <children>
+													<Label fx:id="codeletter" styleClass="codeletterLabel" text="Code Letter O">
+														<padding>
+															<Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+														</padding>
+														<font>
+															<Font name="System Bold Italic" size="13.0" />
+														</font>
+													</Label>
+                                       <Region styleClass="logbook-title-arrow-region" />
+                                    </children>
+                                 </HBox>
+													<Label id="ballastingOrCleaningOfoilFuelTanks" fx:id="ballastingOrCleaningOfoilFuelTanks" text="ADDITIONAL OPERATIONAL PROCEDURES AND GENERAL REMARKS" GridPane.columnIndex="1" GridPane.halignment="LEFT">
+														<font>
+															<Font size="22.0" />
+														</font>
+													</Label>
+													<ImageViewButton fx:id="infoLetterAImageViewButton" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#letterA" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+												</children>
+											</GridPane>
+                           <VBox fx:id="mainVBox" prefHeight="184.0" prefWidth="1175.0" spacing="20.0">
+                              <children>
+											<VBox styleClass="logbookVBox">
+                                    <children>
+													<GridPane vgap="15.0">
+														<columnConstraints>
+															<ColumnConstraints hgrow="SOMETIMES" minWidth="360.0" />
+															<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+															<ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="447.0" minWidth="100.0" prefWidth="270.0" />
+                                             <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="774.0" minWidth="50.0" prefWidth="604.0" />
+														</columnConstraints>
+														<rowConstraints>
+															<RowConstraints minHeight="80.0" vgrow="ALWAYS" />
+														</rowConstraints>
+														<children>
+                                             <ComboBox fx:id="logbook2LetterOComboBox" disable="true" GridPane.columnIndex="2" GridPane.halignment="LEFT">
+                                                <styleClass>
+                                                   <String fx:value="logbookcombo-box" />
+                                                   <String fx:value="logbook-text-field" />
+                                                </styleClass>
+                                             </ComboBox>
+                                             <ImageViewButton fx:id="helpLetterOImageViewButton" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#showBalloon" GridPane.columnIndex="3" GridPane.halignment="LEFT">
+                                                <GridPane.margin>
+                                                   <Insets left="8.0" />
+                                                </GridPane.margin>
+                                             </ImageViewButton>
+                                             <HBox alignment="CENTER_LEFT">
+                                                <children>
+                                                   <HBox id="logbook2LetterOSelectOperationHBox" alignment="CENTER_LEFT" styleClass="logbookDarkLabel">
+                                                      <children>
+                        															<CheckBox fx:id="selectOperationCheckBox" mnemonicParsing="false" styleClass="logbookcheck-box" />
+                                                         <HBox alignment="CENTER_LEFT" styleClass="logbook-label-hbox">
+                                                            <children>
+                              															<Label alignment="CENTER" styleClass="logbookCodeLetterLabel" text="Select operation" />
+                                                            </children>
+                                                         </HBox>
+                                                      </children>
+                                                   </HBox>
+                                                   <Region>
+                                                      <styleClass>
+                                                         <String fx:value="logbook-arrow-region" />
+                                                         <String fx:value="logbook-arrow-region-color-dark" />
+                                                      </styleClass>
+                                                   </Region>
+                                                </children>
+                                             </HBox>
+														</children>
+													</GridPane>
+                                    </children>
+											</VBox>
+                                 <VBox fx:id="case234VBox" styleClass="logbookVBox">
+                                    <children>
+                                       <HBox alignment="CENTER_LEFT">
+                                          <children>
+                                             <GridPane prefHeight="80.0" prefWidth="1164.0" vgap="15.0">
+                                                <columnConstraints>
+                                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="360.0" />
+                                                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+                                                   <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="858.0" minWidth="57.0" prefWidth="58.0" />
+                                                   <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="858.0" minWidth="100.0" prefWidth="615.0" />
+                                                </columnConstraints>
+                                                <rowConstraints>
+                                                   <RowConstraints minHeight="80.0" vgrow="ALWAYS" />
+                                                </rowConstraints>
+                                                <children>
+                                                   <Label styleClass="logbookOtherLabel" text="Remarks" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+                                                   <TextField fx:id="remarksTextField" styleClass="logbook-text-field" GridPane.columnIndex="3" />
+                                                   <HBox alignment="CENTER_LEFT">
+                                                      <children>
+                                                         <HBox id="logbook2LetterODischargeHBox" alignment="CENTER_LEFT" styleClass="logbookOrangeLabel">
+                                                            <children>
+                                                               <HBox alignment="CENTER_LEFT" styleClass="logbook-label-hbox">
+                                                                  <children>
+                                                                     <Label fx:id="operationTypeLabel" alignment="CENTER" styleClass="logbookCodeLetterLabel" text="   Pre-discharge pressure" />
+                                                                  </children>
+                                                               </HBox>
+                                                            </children>
+                                                         </HBox>
+                                                         <Region>
+                                                            <styleClass>
+                                                               <String fx:value="logbook-arrow-region" />
+                                                               <String fx:value="logbook-arrow-region-color-orange" />
+                                                            </styleClass>
+                                                         </Region>
+                                                      </children>
+                                                   </HBox>
+                                                </children>
+                                             </GridPane>
+                                          </children>
+                                       </HBox>
+                                    </children>
+                                 </VBox>
+                                 <VBox fx:id="case1VBox" styleClass="logbookVBox">
+                                    <children>
+                                       <HBox alignment="CENTER_LEFT">
+                                          <children>
+                                             <GridPane prefHeight="80.0" prefWidth="1179.0" vgap="15.0">
+                                                <columnConstraints>
+                                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="360.0" />
+                                                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+                                                   <ColumnConstraints halignment="CENTER" hgrow="NEVER" minWidth="-Infinity" />
+                                                   <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="100.0" />
+                                                   <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="100.0" />
+                                                </columnConstraints>
+                                                <rowConstraints>
+                                                   <RowConstraints minHeight="80.0" vgrow="ALWAYS" />
+                                                   <RowConstraints minHeight="80.0" prefHeight="30.0" vgrow="ALWAYS" />
+                                                </rowConstraints>
+                                                <children>
+                                                   <Label styleClass="logbookOtherLabel" text="Select missed operation code letter" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                                      <padding>
+                                                         <Insets right="5.0" />
+                                                      </padding>
+                                                   </Label>
+                                                   <ComboBox fx:id="logbook2LetterOEntryPertainingToAnEarlierMissedOperationalComboBox" disable="true" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                                      <styleClass>
+                                                         <String fx:value="logbookcombo-box" />
+                                                         <String fx:value="logbook-text-field" />
+                                                      </styleClass>
+                                                   </ComboBox>
+                                                   <DatePicker id="showData" fx:id="compileDateCodeLetterO" promptText="Select date" styleClass="logbook-LocalDateTimeTextFieldSkin" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                                   <ImageViewButton fx:id="helpLetterOImageViewButton1" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#showBalloon1" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                      <GridPane.margin>
+                                                         <Insets right="100.0" />
+                                                      </GridPane.margin>
+                                                   </ImageViewButton>
+                                                   <Label fx:id="data" text="DATE( of original operation )    " textFill="#000000" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                      <font>
+                                                         <Font name="System Bold" size="12.0" />
+                                                      </font>
+                                                      <padding>
+                                                         <Insets right="5.0" />
+                                                      </padding>
+                                                   </Label>
+                                                   <HBox alignment="CENTER_LEFT">
+                                                      <children>
+                                                         <HBox id="logbook2LetterOSelectMissedHBox" alignment="CENTER_LEFT" styleClass="logbookOrangeLabel">
+                                                            <children>
+                                                               <HBox alignment="CENTER_LEFT" styleClass="logbook-label-hbox">
+                                                                  <children>
+                                                                     <Label fx:id="operationTypeLabel11" alignment="CENTER" styleClass="logbookCodeLetterLabel" text="  Entry pertaining to an earlier missed operational" />
+                                                                  </children>
+                                                               </HBox>
+                                                            </children>
+                                                         </HBox>
+                                                         <Region>
+                                                            <styleClass>
+                                                               <String fx:value="logbook-arrow-region" />
+                                                               <String fx:value="logbook-arrow-region-color-orange" />
+                                                            </styleClass>
+                                                         </Region>
+                                                      </children>
+                                                   </HBox>
+                                                   <Button id="signatureButton" fx:id="signatureMissedCodeLetterButton" mnemonicParsing="false" onAction="#openSignatureMissedCodeLetter" styleClass="logbookEndButton" text="SIGN" GridPane.columnIndex="4" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
+                                                      <font>
+                                                         <Font size="19.0" />
+                                                      </font>
+                                                   </Button>
+                                                </children>
+                                             </GridPane>
+                                          </children>
+                                       </HBox>
+                                    </children>
+                                 </VBox>
+                              </children>
+                           </VBox>
+                           <AnchorPane fx:id="missedCodeLetterCodeLetterContentAnchorPane">
+                              <padding>
+                                 <Insets top="50.0" />
+                              </padding>
+                           </AnchorPane>
+                        </children>
+                     </VBox>
+										</children>
+									</AnchorPane>
+				</content>
+			</ScrollPane>
+		</content>
+	</Tab>
+</TabPane>

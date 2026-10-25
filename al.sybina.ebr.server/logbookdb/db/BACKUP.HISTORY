@@ -1,0 +1,15 @@
+Wed Jul 08 18:59:08 CEST 2020:Backup started for database located at C:\runtime-MARPOL-ERB.product\logbookdb\db to C:\Users\ktabaku\Documents\marpol-erb-standard-20200708-185908\db.
+Wed Jul 08 18:59:09 CEST 2020:Backup of data segment to C:\Users\ktabaku\Documents\marpol-erb-standard-20200708-185908\db\seg0 completed. 
+Wed Jul 08 18:59:09 CEST 2020:Copied log directory from C:\runtime-MARPOL-ERB.product\logbookdb\db\log to C:\Users\ktabaku\Documents\marpol-erb-standard-20200708-185908\db\log
+Wed Jul 08 18:59:09 CEST 2020:Backup completed, log instant at (3,272208) 
+
+Tue Feb 23 15:12:00 CET 2021:Backup started for database located at C:\runtime-MARPOL-ERB-SERVER.product\logbookdb\db to C:\runtime-MARPOL-ERB-SERVER.product\backup\marpol-erb-standard-20210223-151200\db.
+Tue Feb 23 15:12:01 CET 2021:Backup of data segment to C:\runtime-MARPOL-ERB-SERVER.product\backup\marpol-erb-standard-20210223-151200\db\seg0 completed. 
+Tue Feb 23 15:12:01 CET 2021:Copied log directory from C:\runtime-MARPOL-ERB-SERVER.product\logbookdb\db\log to C:\runtime-MARPOL-ERB-SERVER.product\backup\marpol-erb-standard-20210223-151200\db\log
+Tue Feb 23 15:12:01 CET 2021:Backup completed, log instant at (3,667744) 
+
+Wed Feb 24 00:00:00 CET 2021:Backup started for database located at C:\runtime-MARPOL-ERB-SERVER.product\logbookdb\db to C:\runtime-MARPOL-ERB-SERVER.product\backup\marpol-erb-standard-20210224-000000\db.
+Wed Feb 24 00:00:01 CET 2021:Backup of data segment to C:\runtime-MARPOL-ERB-SERVER.product\backup\marpol-erb-standard-20210224-000000\db\seg0 completed. 
+Wed Feb 24 00:00:01 CET 2021:Copied log directory from C:\runtime-MARPOL-ERB-SERVER.product\logbookdb\db\log to C:\runtime-MARPOL-ERB-SERVER.product\backup\marpol-erb-standard-20210224-000000\db\log
+Wed Feb 24 00:00:01 CET 2021:Backup completed, log instant at (3,723288) 
+

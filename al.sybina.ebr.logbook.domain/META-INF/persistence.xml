@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	xmlns="http://java.sun.com/xml/ns/persistence"
+	version="2.0">
+	
+	<persistence-unit name="al.sybina.ebr.logbook.e4jpa" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.Boiler</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.ChiefEngineerOrder</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.CounterEngine</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.Decklog</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.DecklogBellBook</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.DecklogBellBookEngTelegraph</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.DecklogChrono</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.DecklogCompass</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.DecklogEcdis</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.DecklogFirepatrol</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.DecklogFirepatrolCheck</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.DecklogFirepatrolCheckItem</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.DecklogRadar</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.DecklogRouteMeteo</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.DecklogShipPosition</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.DecklogUms</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.DieselGenerator</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.Enginelog</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.EnginelogExaustGasTemp</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.EnginelogJackCoolingWater</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.EnginelogPistonCoolingTemp</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.EnginelogScavangeAirTemp</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.GmdssAnnex</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.GmdssSecB</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.GmdssSecC</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.IgsGasGenerator</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.MasterNightOrder</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.PermanentChiefEngineerOrder</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.PermanentNightOrder</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.Refrigerant</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.Vhf</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.operationLog.GarbageCategory</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.operationLog.GarbageLog</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.operationLog.MarpleLogSettings</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.operationLog.OilLog</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.operationLog.DraftOilLog</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.operationLog.Tank</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.otherLog.AlcoholTest</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.otherLog.DrugTest</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.otherLog.OzoneA</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.otherLog.OzoneB</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.otherLog.Visitor</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.restHours.CrewForRestHours</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.restHours.Manouvring</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.restHours.RestData</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.restHours.RestDay</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.restHours.RestHour</class>
+		
+		<class>com.oceanpro.core.entity.oceanManager.generalSettings.ShipInfo</class>
+		<class>com.oceanpro.core.entity.oceanManager.logbook.Bunker</class>
+		<class>com.oceanpro.core.entity.oceanManager.portDocuments.Rank</class>
+		<class>com.oceanpro.core.entity.oceanManager.portDocuments.CertificateType</class>
+		<class>com.oceanpro.core.entity.oceanManager.office.Ship</class>
+		<class>com.oceanpro.core.entity.oceanManager.voyage.Bunkering</class>
+		<class>com.oceanpro.core.entity.oceanManager.voyage.MachineriesBunkerStatus</class>
+		<class>com.oceanpro.core.entity.oceanManager.voyage.NoonPosition</class>
+		<class>com.oceanpro.core.entity.oceanManager.voyage.NoonPositionDieselGenerator</class>
+		<class>com.oceanpro.core.entity.oceanManager.voyage.RoutePoint</class>
+		<class>com.oceanpro.core.entity.oceanManager.voyage.ShipPerformanceInstance</class>
+		<class>com.oceanpro.core.entity.oceanManager.voyage.ShipPerformanceMatrix</class>
+		<class>com.oceanpro.core.entity.oceanManager.voyage.VoyageConsuptionManualEntry</class>
+		<class>com.oceanpro.core.entity.oceanManager.voyage.VoyagePath</class>
+		<class>com.oceanpro.core.entity.oceanManager.voyage.VoyagePlan</class>
+		<class>com.oceanpro.core.entity.oceanManager.voyage.VoyageSettings</class>
+		<class>com.oceanpro.core.entity.oceanManager.voyage.WayPoint</class>
+		<class>com.oceanpro.core.security.entities.User</class>
+		<class>com.oceanpro.core.security.entities.Role</class>
+		
+		<properties>
+<!-- 			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver" /> -->
+<!-- 			<property name="javax.persistence.jdbc.url" value="jdbc:h2:h2db/database" /> -->
+<!-- 			<property name="javax.persistence.jdbc.user" value="sa" /> -->
+<!-- 			<property name="javax.persistence.jdbc.password" value="" /> -->
+			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver" />
+<!-- 			<property name="javax.persistence.jdbc.url" value="jdbc:derby:C:/databases/db;create=true" /> -->
+
+			<property name="eclipselink.target-database" value="org.eclipse.persistence.platform.database.DerbyPlatform"/>
+			<property name="eclipselink.ddl-generation" value="create-or-extend-tables" /> <!-- value="create-or-extend-tables" />  -->
+			<property name="eclipselink.ddl-generation.output-mode"	value="database" />
+            <property name="eclipselink.logging.level" value="INFO" />
+		</properties>
+	</persistence-unit>
+</persistence>

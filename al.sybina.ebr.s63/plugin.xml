@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+<!--
+  <extension
+         point="com.opcoach.e4.preferences.e4PreferencePages">
+      <page
+            name="S63 Settings"
+            class="al.sybina.ebr.s63.preferences.S63PreferencePage"
+            id="al.sybina.ebr.s63.s63SettingsPage">
+      </page>
+   </extension>
+-->
+   <extension
+         point="com.opcoach.e4.preferences.e4PreferencePages">
+      <page
+            name="Install Permit"
+            class="al.sybina.ebr.s63.preferences.InstallPermitPreferencePage"
+            id="al.sybina.ebr.s63.InstallPermitSettingsPage">
+      </page>
+   </extension>
+   <extension
+         id="al.sybina.ebr.s63.fragment"
+         point="org.eclipse.e4.workbench.model">
+      <fragment
+            uri="fragment.e4xmi">
+      </fragment>
+   </extension>
+
+</plugin>

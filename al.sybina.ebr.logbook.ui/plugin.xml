@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+
+	<extension
+         point="com.opcoach.e4.preferences.e4PreferencePages">
+      <page
+            name="eemrv"
+            class="al.sybina.ebr.logbook.preferences.LogbookPreferencePage"
+            id="al.sybina.ebr.eemrv.preferences.PreferencePage">
+      </page>
+   	</extension>
+   	<extension
+         id="al.sybina.ebr.logbook.ui.fragment"
+         point="org.eclipse.e4.workbench.model">
+      <fragment
+            uri="fragment.e4xmi">
+      </fragment>
+   	</extension>
+
+</plugin>

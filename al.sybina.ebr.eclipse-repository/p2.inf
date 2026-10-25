@@ -1,0 +1,4 @@
+instructions.configure=org.eclipse.equinox.p2.touchpoint.natives.remove(path:${installFolder}/eclipsec.exe);\
+						org.eclipse.equinox.p2.touchpoint.natives.remove(path:${installFolder}/launcher.exe);\
+						addRepository(type:0,location:http${#58}//www.sybina.al${#58}9000/updates/1.0.x);\
+						addRepository(type:1,location:http${#58}//www.sybina.al${#58}9000/updates/1.0.x/);

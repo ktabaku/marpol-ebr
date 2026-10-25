@@ -1,0 +1,55 @@
+/**
+ * CVS markups
+ * last update by : $Author: crosay $ 
+ * $Date: 2008-05-28 18:10:47 $ 
+ * $Header: /media/disk/capcodeCVSbackup/capcode.basics/src/capcode/data/TrueWind.refines-spec,v 1.2 2008-05-28 18:10:47 crosay Exp $
+ * $Log: not supported by cvs2svn $
+ * $Revision: 1.2 $ 
+ * $State: Exp $ 
+ */
+package al.sybina.ebr.data;
+
+//@ refine "TrueWind.java";
+
+import capcode.common.Debug;
+
+
+public class TrueWind extends Wind {
+
+    // CLASS SPECIFICATIONS
+
+    /*@
+      @ 
+      @*/
+
+    // METHODS AND CONSTRUCTORS
+
+    /*@
+      @ 
+      @*/
+    public TrueWind(Speed boatSpeed, Wind relativeWind);
+
+    /*@
+      @ 
+      @*/
+    public void compute();
+
+    /*@
+      @ 
+      @*/
+    public void reverseComputation();
+
+    /*@
+      @ 
+      @*/
+    public void modifyRelativeWindValues(double d, double s);
+
+    /*@
+      @ 
+      @*/
+    public void forceToDirectionAndSpeed(double d, double s);
+
+    // FIELDS
+
+}
+

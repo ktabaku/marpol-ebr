@@ -1,0 +1,2 @@
+alter table OCEAN_LOGBOOK_OPERATION_OIL_LOG add constraint OCEAN_LOGBOOK_OPERATION_OIL_LOG_PK primary key (ID, THRU_Z, OUT_Z);
+

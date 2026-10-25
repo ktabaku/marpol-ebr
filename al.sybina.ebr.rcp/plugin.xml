@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.fx.ui.workbench.fx.main-thread-application"
+            name="MARPOL-ERB-SERVER">
+         <property
+               name="windowImages"
+               value="icons/ebr16.png,icons/ebr32.png,icons/ebr48.png,icons/ebr64.png,icons/ebr128.png,icons/ebr256.png">
+         </property>
+         <property
+               name="aboutText"
+               value="MARPOL-ERB-SERVER">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/ebr256.png">
+         </property>
+         <property
+               name="lifeCycleURI"
+               value="bundleclass://al.sybina.ebr.rcp/al.sybina.ebr.rcp.lifecycle.LifeCycleManager">
+         </property>
+         <property
+               name="applicationXMI"
+               value="al.sybina.ebr.rcp/ApplicationMarpolERB.e4xmi">
+         </property>
+         <property name="cssTheme" value="theme.default" />
+         <property
+               name="appName"
+               value="MARPOL-ERB-SERVER">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="0000FF">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="5,365,295,20">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="5,350,295,15">
+         </property>
+         <property
+               name="applicationCSS"
+               value="/org.eclipse.fx.runtime.swt/target/classes/org/eclipse/swt/internal/swt.css">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+         
+      </product>
+   </extension>
+   
+   <extension point="org.eclipse.core.expressions.propertyTesters">
+   		<propertyTester
+        	class="al.sybina.ebr.rcp.propertytesters.ActiveViewPropertyTester"
+        	id="activeViewPropertyTester"
+        	namespace="al.sybina.ebr.views"
+        	properties="partId"
+        	type="org.eclipse.e4.ui.model.application.ui.MUIElement"/>
+	</extension>
+<!--
+	<extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="al.sybina.ebr.rcp.preferences.LocationsInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="com.opcoach.e4.preferences.e4PreferencePages">
+      <page
+            class="al.sybina.ebr.rcp.preferences.LocationsPreferencePage"
+            id="al.sybina.ebr.preferences.location"
+            name="Location Preferences">
+      </page>
+   </extension>
+-->   	
+</plugin>

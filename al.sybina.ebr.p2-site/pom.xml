@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>al.sybina.ebr</groupId>
+    <artifactId>al.sybina.ebr.p2-site</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.fork>true</maven.compiler.fork>
+        <maven.compiler.verbose>true</maven.compiler.verbose>
+        <maven.compiler.meminitial>2048m</maven.compiler.meminitial>
+        <maven.compiler.maxmem>2048m</maven.compiler.maxmem>
+    </properties>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.reficio</groupId>
+                <artifactId>p2-maven-plugin</artifactId>
+                <version>1.4.0</version>
+                <executions>
+                    <execution>
+                        <id>default-cli</id>
+                        <!-- QUICK-START EXAMPLE -->
+                        <!--
+                        This is the default quick-start configuration.
+
+                        Expected behavior:
+                          - specified dependencies will be fetched
+                          - transitive dependencies will be fetched (no default exclusions)
+                          - jars containing source source code will NOT be fetched
+                          - jars that are NOT OSGi bundles will be "bundled" using bnd tool,
+                            if you specify instructions for these jars they will be APPLIED
+                          - jars that are OSGi bundles will be simply included
+                            if you specify instructions for these jars they will be IGNORED (see <override> option)
+                          - p2 site will be generated
+
+                        How the instructions works:
+                          - instructions are applied only to the root artifact that you specify!
+                          - instructions are not applied to the TRANSITIVE dependencies!
+                          - transitive dependencies are never overridden (see <override> option)
+                          - transitive dependencies are bundled using the default instructions:
+                              <instructions>
+                                  <Import-Package>*;resolution:=optional</Import-Package>
+                                  <Export-Package>*</Export-Package>
+                              </instructions>
+                          - other instructions, such as, Bundle-SymbolicName, Bundle-Name, Bundle-Version, etc.
+                            are calculated according to the following rules:
+                            http://felix.apache.org/site/apache-felix-maven-bundle-plugin-bnd.html
+                          - if you specify any instructions they will be applied only if
+                            the jar is not already an OSGi bundle - otherwise you have to use the override
+                            option - please see the /examples/override/pom.xml example
+
+                        The following definition of an artifact:
+                            <artifact>
+                                <id>commons-io:commons-io:2.1</id>
+                            </artifact>
+
+                        is an equivalent of the following definition:
+                            <artifact>
+                                <id>commons-io:commons-io:2.1</id>
+                                <transitive>true</transitive>
+                                <source>false</source>
+                                <override>false</override>
+                                <instructions>
+                                    <Import-Package>*;resolution:=optional</Import-Package>
+                                    <Export-Package>*</Export-Package>
+                                </instructions>
+                                <excludes/>
+                            </artifact>
+
+                        To run the example please invoke: 
+                        mvn p2:site
+                        mvn jetty:run
+                        -->
+                        <configuration>
+                            <artifacts>
+                            	<artifact><id>gov.nist.math:jama:1.0.3</id></artifact>
+                            	<artifact><id>com.linuxense:javadbf:0.4.0</id></artifact>
+                                <artifact><id>javax.transaction:javax.transaction-api:1.2</id></artifact>
+                                <artifact><id>org.glassfish.main:javax.transaction:4.0-b33</id></artifact>
+                                <artifact><id>javax.enterprise:cdi-api:2.0-EDR2</id></artifact>
+                                <artifact><id>colt:colt:1.2.0</id></artifact>
+                                <artifact><id>dom4j:dom4j:1.6.1</id></artifact>
+                                <artifact><id>org.antlr:antlr:3.2</id></artifact>
+                                <artifact><id>org.slf4j:jcl-over-slf4j:1.7.2</id></artifact>
+                                <artifact><id>org.slf4j:jul-to-slf4j:1.7.2</id></artifact>
+                                <artifact><id>org.slf4j:slf4j-log4j12:1.7.2</id></artifact>
+                                <artifact><id>io.vertx:vertx-core:2.1.6</id></artifact>
+                                <artifact><id>io.vertx:vertx-platform:2.1.6</id></artifact>
+                                <artifact><id>org.apache.commons:commons-collections4:4.2</id></artifact>
+                                <artifact><id>org.apache.commons:commons-math:2.2</id></artifact>
+                                <artifact><id>commons-validator:commons-validator:1.6</id></artifact>
+                                <artifact><id>org.apache.servicemix.bundles:org.apache.servicemix.bundles.derby:10.14.2.0_2</id></artifact>
+                                <artifact><id>org.apache.servicemix.bundles:org.apache.servicemix.bundles.derbynet:10.14.2.0_1</id>
+                                    <override>true</override>
+	                                <instructions>
+	                                    <Import-Package>org.apache.derby.shared.common.sanity;resolution:=optional,*</Import-Package>
+	                                </instructions>
+                                </artifact>
+                                <artifact><id>org.apache.derby:derbyclient:10.14.2.0</id></artifact>
+                                <artifact>
+                                	<id>org.eclipse.collections:eclipse-collections:7.1.1</id>
+                                	<transitive>true</transitive>
+	                                <source>false</source>
+	                                <override>true</override>
+	                                <instructions>
+	                                    <Import-Package>sun.misc;resolution:=optional,*</Import-Package>
+	                                </instructions>
+	                                <excludes/>
+                                </artifact>
+                                <artifact>
+	                                <id>com.goldmansachs.reladomo:reladomo:17.1.4</id>
+	                                <transitive>true</transitive>
+	                                <source>false</source>
+	                                <override>false</override>
+	                                <instructions>
+	                                    <Import-Package>org.apache.derby.jdbc;resolution:=optional,
+	                                    				sun.misc;resolution:=optional,
+	                                    				*</Import-Package>
+	                                    <!-- Reladomo loads the connection manager and the domain classes named in
+	                                         LogBookRuntimeConfiguration.xml with its own class loader. A dynamic import
+	                                         wires these packages of al.sybina.ebr.logbook.domain when they are first
+	                                         used; an optional import stays unwired whenever Reladomo is resolved before
+	                                         that bundle, and Reladomo then cannot start. -->
+	                                    <DynamicImport-Package>al.sybina.ebr.logbook.domain.reladomo,
+	                                    				al.sybina.ebr.logbook.domain.reladomo.gen</DynamicImport-Package>
+	                                </instructions>
+	                                <excludes/>
+	                            </artifact>
+                                <artifact><id>com.goldmansachs.reladomo:reladomo-serial:17.1.4</id></artifact>
+                                <artifact><id>com.goldmansachs:gs-collections:5.1.0</id></artifact>
+                                <artifact><id>net.sf.jasperreports:jasperreports:6.7.1</id></artifact>
+                                <artifact><id>net.tascalate.javaflow:net.tascalate.javaflow.api:2.2.1</id></artifact>
+                                <artifact><id>org.jpedal:OpenViewerFX:7.12.28</id></artifact>
+                                <artifact>
+	                                <id>net.sf.jasperreports:jasperreports-fonts:6.0.0</id>
+	                                <transitive>true</transitive>
+	                                <source>false</source>
+	                                <override>false</override>
+	                                <instructions>
+	                                    <Import-Package>*;resolution:=optional</Import-Package>
+	                                    <Export-Package>*</Export-Package>
+	                                    <Fragment-Host>net.sf.jasperreports.engine</Fragment-Host>
+	                                </instructions>
+	                                <excludes/>
+	                            </artifact>
+	                            <artifact><id>org.apache.shiro:shiro-core:1.5.1</id></artifact>
+	                            <artifact>
+	                            	<id>org.quartz-scheduler:quartz:2.2.0</id>
+	                                <transitive>true</transitive>
+	                                <source>false</source>
+	                                <override>true</override>
+	                                <instructions>
+	                                    <Import-Package>al.sybina.ebr.logbook.core.services;resolution:=optional,
+															com.mchange.v2.c3p0,commonj.work;resolution:=optional,
+															javax.ejb;resolution:=optional,
+															javax.jms;resolution:=optional,
+															javax.mail;resolution:=optional,
+															javax.mail.internet;resolution:=optional,
+															javax.servlet;resolution:=optional,
+															javax.servlet.http;resolution:=optional,
+															javax.sql;resolution:=optional,
+															javax.transaction;resolution:=optional,
+															oracle.sql;resolution:=optional,
+															org.jboss.logging;resolution:=optional,
+															org.jboss.naming;resolution:=optional,
+															org.jboss.system;resolution:=optional,
+															org.quartz.jobs;resolution:=optional,
+															org.terracotta.toolkit;resolution:=optional,
+															org.terracotta.toolkit.atomic;resolution:=optional,
+															org.terracotta.toolkit.builder;resolution:=optional,
+															org.terracotta.toolkit.cluster;resolution:=optional,
+															org.terracotta.toolkit.collections;resolution:=optional,
+															org.terracotta.toolkit.concurrent.locks;resolution:=optional,
+															org.terracotta.toolkit.config;resolution:=optional,
+															org.terracotta.toolkit.internal;resolution:=optional,
+															org.terracotta.toolkit.internal.concurrent.locks;resolution:=optional,
+															org.terracotta.toolkit.search;resolution:=optional,
+															org.terracotta.toolkit.search.attribute;resolution:=optional,
+															org.terracotta.toolkit.store;resolution:=optional,
+															weblogic.jdbc.jts;resolution:=optional,
+															weblogic.jdbc.vendor.oracle;resolution:=optional,
+	                                    				*</Import-Package>
+	                                </instructions>
+	                            </artifact>
+	                            <artifact><id>org.quartz-scheduler:quartz-jobs:2.2.0</id></artifact>
+	                            <artifact>
+	                                <id>c3p0:c3p0:0.9.1.1</id>
+	                                <transitive>true</transitive>
+	                                <source>false</source>
+	                                <override>false</override>
+	                                <instructions>
+	                                    <Import-Package>org.apache.derby.jdbc;resolution:=optional,
+	                                    				*</Import-Package>
+	                                </instructions>
+	                                <excludes/>
+	                            </artifact>
+	                            <artifact><id>org.apache.servicemix.bundles:org.apache.servicemix.bundles.dbunit:2.7.0_1</id></artifact>
+	                            <artifact><id>at.bestsolution.fx.test:at.bestsolution.fx.test.rcontrol:0.0.1</id></artifact>
+								<artifact><id>at.bestsolution.fx.test:at.bestsolution.fx.test.junit:0.0.1</id></artifact>
+								<artifact><id>at.bestsolution.fx.test:at.bestsolution.fx.test.e4.junit:0.0.1</id></artifact>
+								
+								<artifact><id>io.datafx:datafx:8.0.1</id></artifact>
+								<artifact><id>io.datafx:core:8.0.1</id></artifact>
+								<artifact><id>io.datafx:flow:8.0.1</id></artifact>
+								<artifact><id>de.jensd:fontawesomefx:8.9</id></artifact>
+								<artifact><id>org.jfree:fxgraphics2d:1.8</id></artifact>
+								<artifact><id>org.jfree:jfreechart:1.5.1</id></artifact>
+								<artifact><id>org.jfree:org.jfree.chart.fx:2.0.java8</id></artifact>
+								<artifact><id>org.jfxtras:jfxtras-common:8.0-r5</id></artifact>
+								<artifact><id>org.jfxtras:jfxtras-controls:8.0-r5</id></artifact>
+								<artifact><id>org.jfxtras:jfxtras-fxml:8.0-r5</id></artifact>
+								<artifact><id>com.miglayout:miglayout-javafx:4.2</id></artifact>
+								<artifact><id>com.miglayout:miglayout-core:4.2</id></artifact>
+								<artifact><id>eu.mihosoft.jfx.scaledfx:scaledfx:0.4</id></artifact>
+								<artifact><id>com.jfoenix:jfoenix:8.0.10</id></artifact>
+								<artifact><id>org.controlsfx:controlsfx:8.40.18</id>
+									<override>true</override>
+	                                <instructions>
+	                                    <Import-Package>*;resolution:=optional</Import-Package>
+	                                </instructions>
+								</artifact>
+<!-- 								<artifact><id>xml-apis:xml-apis:1.3.04</id> -->
+<!-- 									<instructions> -->
+<!-- 										<_noee>true</_noee> -->
+<!-- 									</instructions> -->
+<!-- 								</artifact> -->
+
+								<artifact><id>com.github.afester.javafx:FranzXaver:0.1</id>
+									<transitive>true</transitive>
+	                                <source>false</source>
+	                                <override>false</override>
+	                                <instructions>
+	                                	<Require-Bundle>
+											org.apache.batik.constants, org.apache.batik.util
+										</Require-Bundle>
+	                                    <Import-Package>!org.apache.batik.util,
+	                                    org.apache.batik.bridge;resolution:=optional,
+	                                    com.sun.javafx.css.converters;resolution:=optional,
+	                                    com.sun.javafx.scene.control.behavior;resolution:=optional,
+	                                    com.sun.javafx.scene.control.skin;resolution:=optional,
+	                                    javafx.beans;resolution:=optional,
+	                                    javafx.beans.property;resolution:=optional,
+	                                    javafx.beans.value;resolution:=optional,
+	                                    javafx.collections;resolution:=optional,
+	                                    javafx.css;resolution:=optional,
+	                                    javafx.event;resolution:=optional,
+	                                    javafx.geometry;resolution:=optional,
+	                                    javafx.scene;resolution:=optional,
+	                                    javafx.scene.control;resolution:=optional,
+	                                    javafx.scene.control.cell;resolution:=optional,
+	                                    javafx.scene.effect;resolution:=optional,
+	                                    javafx.scene.image;resolution:=optional,
+	                                    javafx.scene.input;resolution:=optional,
+	                                    javafx.scene.layout;resolution:=optional,
+	                                    javafx.scene.paint;resolution:=optional,
+	                                    javafx.scene.shape;resolution:=optional,
+	                                    javafx.scene.text;resolution:=optional,
+	                                    javafx.scene.transform;resolution:=optional,
+	                                    javafx.util;resolution:=optional,
+	                                    org.apache.logging.log4j;resolution:=optional,
+	                                    *</Import-Package>
+	                                </instructions>
+	                                <excludes/>
+								</artifact>
+								<artifact><id>org.apache.logging.log4j:log4j-to-slf4j:2.13.3</id></artifact>
+								<artifact><id>javax.measure:unit-api:2.0</id><source>true</source></artifact>
+								<artifact><id>tech.units:indriya:2.0.4</id><source>true</source></artifact>
+								<artifact><id>tech.uom.lib:uom-lib-common:2.0.1</id><source>true</source>
+									<override>true</override>
+									<instructions>
+	                                    <Import-Package>*;resolution:=optional</Import-Package>
+	                                    <Export-Package>*</Export-Package>
+	                                </instructions>
+								</artifact>
+								<artifact><id>si.uom:si-units:2.0.1</id><source>true</source>
+									<override>true</override>
+									<instructions>
+										<Export-Package>si.uom,si.uom.quantity.impl</Export-Package>
+									</instructions>
+								</artifact>
+								<artifact><id>si.uom:si-quantity:2.0.1</id><source>true</source>
+									<override>true</override>
+									<instructions>
+	                                    <Import-Package>javax.measure;version="[2.0,3)"</Import-Package>
+	                                    <Export-Package>si.uom.quantity;uses:="javax.measure";version="2.0.1"</Export-Package>
+	                                </instructions>
+									<instructionsProperties>
+									    <property>
+									        <name>-noee</name>
+									        <value>true</value>
+									    </property>
+									</instructionsProperties>
+								</artifact>
+								<artifact><id>systems.uom:systems-quantity:2.0.2</id><source>true</source>
+									<override>true</override>
+									<instructionsProperties>
+									    <property>
+									        <name>-noee</name>
+									        <value>true</value>
+									    </property>
+									</instructionsProperties>
+								</artifact>
+								<artifact><id>systems.uom:systems-common:2.0.2</id><source>true</source>
+									<override>true</override>
+									<instructionsProperties>
+									    <property>
+									        <name>-noee</name>
+									        <value>true</value>
+									    </property>
+									</instructionsProperties>
+								</artifact>
+								<artifact><id>systems.uom:systems-ucum:2.0.2</id><source>true</source></artifact>
+								<artifact><id>systems.uom:systems-unicode:2.0.2</id><source>true</source></artifact>
+                            </artifacts>
+                            
+                            <p2>
+                                	<artifact><id>javax.annotation:1.3.5.v20200504-1837</id></artifact>
+									<artifact><id>org.apache.xalan:2.7.1.v201005080400</id></artifact>
+									<artifact><id>org.apache.commons.io:2.6.0.v20190123-2029</id></artifact>
+									<artifact><id>org.apache.xmlgraphics:2.4.0.v20200622-2037</id></artifact>
+									<artifact><id>org.apache.batik.anim:1.9.1.v20190730-1743</id></artifact>
+									<artifact><id>org.apache.batik.bridge:1.9.1.v20190730-1743</id></artifact>
+									<artifact><id>org.apache.batik.constants:1.9.1.v20180227-1645</id></artifact>
+									<artifact><id>org.apache.batik.css:1.9.1.v20181015-1528</id></artifact>
+									<artifact><id>org.apache.batik.dom:1.9.1.v20190730-1743</id></artifact>
+									<artifact><id>org.apache.batik.dom.svg:1.9.1.v20190730-1743</id></artifact>
+									<artifact><id>org.apache.batik.extension:1.9.1.v20190730-1743</id></artifact>
+									<artifact><id>org.apache.batik.ext.awt:1.9.1.v20190730-1743</id></artifact>
+									<artifact><id>org.apache.batik.gvt:1.9.1.v20190730-1743</id></artifact>
+									<artifact><id>org.apache.batik.i18n:1.9.1.v20180227-1645</id></artifact>
+									<artifact><id>org.apache.batik.parser:1.9.1.v20190730-1743</id></artifact>
+									<artifact><id>org.apache.batik.script:1.9.1.v20190730-1743</id></artifact>
+									<artifact><id>org.apache.batik.util:1.9.1.v20180703-1553</id></artifact>
+									<artifact><id>org.apache.batik.xml:1.9.1.v20190730-1743</id></artifact>
+							</p2>
+                        </configuration>
+
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>8.1.5.v20120716</version>
+                <configuration>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
+                    <webAppSourceDirectory>${basedir}/target/repository/</webAppSourceDirectory>
+                    <webApp>
+                        <contextPath>/site</contextPath>
+                    </webApp>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+    <pluginRepositories>
+
+        <pluginRepository>
+	        <id>glassfish</id>
+	        <url>https://maven.java.net/</url>
+	        <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+        	<id>reficio</id>
+        	<url>http://repo.reficio.org/maven/</url>
+        </pluginRepository>
+
+    </pluginRepositories>
+    <repositories>
+        <repository>
+            <id>OrbitR20191115185527</id>
+            <url>https://download.eclipse.org/tools/orbit/downloads/drops/R20191115185527/repository</url>
+            <layout>p2</layout>
+        </repository>
+        
+        <repository>
+            <id>OrbitR20200831200620</id>
+            <url>https://download.eclipse.org/tools/orbit/downloads/drops2/R20200831200620/repository</url>
+            <layout>p2</layout>
+        </repository>
+        <repository>
+            <id>eclipse</id>
+            <url>http://download.eclipse.org/releases/oxygen/201804111000</url>
+            <layout>p2</layout>
+        </repository>
+
+
+	</repositories>
+
+</project>
+
+
+

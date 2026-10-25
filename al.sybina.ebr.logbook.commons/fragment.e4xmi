@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_JgAS4KEwEeaBuMVwP1ynmA">
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_3Etw4Lw9EeqX6NiQ93JjzA" featurename="children" parentElementId="file" positionInList="first">
+    <elements xsi:type="menu:HandledMenuItem" xmi:id="_wrCckLw-EeqX6NiQ93JjzA" elementId="al.sybina.ebr.logbook.commons.handledmenuitem.databackup" label="Data Backup/Restore" command="_T63AULw_EeqX6NiQ93JjzA"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_4joJcLw-EeqX6NiQ93JjzA" featurename="commands" parentElementId="al.sybina.ebr.rcp.application" positionInList="0">
+    <elements xsi:type="commands:Command" xmi:id="_T63AULw_EeqX6NiQ93JjzA" elementId="al.sybina.ebr.logbook.commons.command.databackup" commandName="Data Backup"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_qPFQULw_EeqX6NiQ93JjzA" featurename="handlers" parentElementId="al.sybina.ebr.rcp.application">
+    <elements xsi:type="commands:Handler" xmi:id="_r3UZcLw_EeqX6NiQ93JjzA" elementId="al.sybina.ebr.logbook.commons.handler.0" contributionURI="bundleclass://al.sybina.ebr.logbook.commons/al.sybina.ebr.logbook.commons.handlers.DataBackupHandler" command="_T63AULw_EeqX6NiQ93JjzA"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_KrI_kCtoEeufBO2Bs6oJdw" featurename="sharedElements" parentElementId="IDEWindow">
+    <elements xsi:type="basic:Part" xmi:id="_Sgi1kCtoEeufBO2Bs6oJdw" elementId="al.sybina.ebr.logbook.commons.part.audit" contributionURI="bundleclass://al.sybina.ebr.logbook.commons/al.sybina.ebr.logbook.views.audit.AuditView" label="Audit Logging"/>
+  </fragments>
+</fragment:ModelFragments>

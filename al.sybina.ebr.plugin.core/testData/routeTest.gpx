@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx creator="capcode - http://sourceforge.net/projects/capcode/" name="tracks/lemmer stavoren.cctrk" version="1.1">
+<time>2011-08-06T09:59:18Z</time>
+<bounds maxlat="52.878680555555555" maxlon="5.694969314768122" minlat="52.81872027777778" minlon="5.320202222222222"/>
+<rte>
+<name>lemmer-starv</name>
+<rtept lat="52.835028413942986" lon="5.694969314768122">
+<elev>0.0</elev>
+<name>lemmer</name>
+<sym>diamond</sym>
+</rtept>
+<rtept lat="52.83356740381178" lon="5.6802751926890185">
+<elev>0.0</elev>
+<name>point8</name>
+<sym>diamond</sym>
+</rtept>
+<rtept lat="52.83346114660313" lon="5.66439676823339">
+<elev>0.0</elev>
+<name>point9</name>
+<sym>diamond</sym>
+</rtept>
+<rtept lat="52.81914555555556" lon="5.596856944444444">
+<elev>0.0</elev>
+<name>point2</name>
+<sym>diamond</sym>
+</rtept>
+<rtept lat="52.81872027777778" lon="5.5466774999999995">
+<elev>0.0</elev>
+<name>point3</name>
+<sym>diamond</sym>
+</rtept>
+<rtept lat="52.81945777777778" lon="5.350788055555555">
+<elev>0.0</elev>
+<name>point4</name>
+<sym>diamond</sym>
+</rtept>
+<rtept lat="52.836172777777776" lon="5.320202222222222">
+<elev>0.0</elev>
+<name>point5</name>
+<sym>diamond</sym>
+</rtept>
+<rtept lat="52.87324972222222" lon="5.346993333333334">
+<elev>0.0</elev>
+<name>point6</name>
+<sym>diamond</sym>
+</rtept>
+<rtept lat="52.87555" lon="5.358951944444445">
+<elev>0.0</elev>
+<name>point7</name>
+<sym>diamond</sym>
+</rtept>
+<rtept lat="52.878680555555555" lon="5.361826388888889">
+<elev>0.0</elev>
+<name>stavoren</name>
+<sym>diamond</sym>
+</rtept>
+</rte>
+</gpx>

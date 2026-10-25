@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="feature_export" name="build">
+	<target name="feature_export">
+		<pde.exportFeatures destination="D:\IBRRepo\update" exportSource="false" exportType="directory" features="al.sybina.ebr.feature.3D" qualifier="201203021048" useJARFormat="true"/>
+	</target>
+</project>

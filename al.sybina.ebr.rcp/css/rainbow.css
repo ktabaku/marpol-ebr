@@ -1,0 +1,25 @@
+Shell {
+	swt-background-mode: default;  
+	background-image: url('./texture.gif');
+}
+
+.MTrimBar {
+  background-color: #e3efff #c1d5ef;
+  color: white;
+  font: Verdana 8px;
+}
+
+.MPartStack {
+	font-size: 22px;
+	color:orange;
+}	
+
+.MPart:selected {
+   visible:gone;
+   background-color:black;
+}
+
+.MPartStack {
+border-visible:false;
+}
+

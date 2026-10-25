@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import jfxtras.scene.control.LocalDateTextField?>
+<?import jidefx.scene.control.field.DoubleField?>
+
+<AnchorPane id="coloreTesto" fx:id="anchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="al.sybina.ebr.logbook.views.marpoldetail.MarpolDetailController">
+   <children>
+      <ScrollPane focusTraversable="false" style="-fx-fit-to-width: true; -fx-fit-to-height: true;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <VBox>
+               <children>
+                  <SplitPane dividerPositions="0.554601226993865" orientation="VERTICAL" VBox.vgrow="ALWAYS">
+                     <items>
+                        <AnchorPane>
+                           <children>
+                              <TabPane id="tabPane1" fx:id="tabPane1" minHeight="350.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <tabs>
+                                    <Tab closable="false" text="Identification Of Cargo Tanks">
+                                       <content>
+                                          <ScrollPane fitToHeight="true" fitToWidth="true">
+                                             <content>
+                                                <AnchorPane>
+                                                   <children>
+                                                      <VBox styleClass="logbookVBox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <HBox fillHeight="false" VBox.vgrow="NEVER">
+                                                               <children>
+                                                                  <Label id="cargoTanks" fx:id="cargoTanks" alignment="CENTER" minHeight="20.0" minWidth="180.0" text="Cargo Tanks" />
+                                                                  <Region maxWidth="1.7976931348623157E308" prefWidth="1297.0" HBox.hgrow="ALWAYS" />
+                                                                  <ImageView fx:id="imageViewUser" fitHeight="30.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="10.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                            <GridPane hgap="30.0" VBox.vgrow="ALWAYS">
+                                                              <columnConstraints>
+                                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                              </columnConstraints>
+                                                              <rowConstraints>
+                                                                <RowConstraints vgrow="NEVER" />
+                                                                <RowConstraints vgrow="ALWAYS" />
+                                                              </rowConstraints>
+                                                               <children>
+                                                                  <Button id="addTanksPortSide" fx:id="cargoTanksPortSideButton" mnemonicParsing="false" onAction="#addCargoTankPortSide" styleClass="logbookAddTankMarpolDetail" text="Add Tanks Port Side" />
+                                                                  <Button id="addTanksCenter" fx:id="cargoTanksCenterButton" mnemonicParsing="false" onAction="#addCargoTankCenter" styleClass="logbookAddTankMarpolDetail" text="Add Tanks Center" GridPane.columnIndex="1" />
+                                                                  <Button id="addTanksSbdSide" fx:id="cargoTanksSbdSideButton" mnemonicParsing="false" onAction="#addCargoTankSbdSide" styleClass="logbookAddTankMarpolDetail" text="Add Tanks Sbd Side" GridPane.columnIndex="2" />
+                                                                  <GridPane fx:id="cargoTanksPortSideGridPane" hgap="15.0" vgap="10.0" GridPane.rowIndex="1">
+                                                                    <columnConstraints>
+                                                                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                      <RowConstraints fillHeight="false" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                                                                    </rowConstraints>
+                                                                     <children>
+                                                                        <Label styleClass="logbookOtherLabel" text="Identifier" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Volume (m3)" GridPane.columnIndex="2" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Actual Volume (m3)" GridPane.columnIndex="1" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                                  <GridPane fx:id="cargoTanksCenterGridPane" hgap="15.0" vgap="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints fillHeight="false" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Label styleClass="logbookOtherLabel" text="Identifier" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Volume (m3)" GridPane.columnIndex="2" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Actual Volume (m3)" GridPane.columnIndex="1" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                                  <GridPane fx:id="cargoTanksSbdSideGridPane" hgap="15.0" vgap="10.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints fillHeight="false" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Label styleClass="logbookOtherLabel" text="Identifier" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Volume (m3)" GridPane.columnIndex="2" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Actual Volume (m3)" GridPane.columnIndex="1" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </GridPane>
+                                                            <HBox alignment="CENTER_RIGHT">
+                                                               <children>
+                                                                  <Label id="totalVolumeofCargoTanks" fx:id="totalVolumeofCargoTanks" styleClass="logbookMarpolDetailTotalVolumeOfTanks" text="Total Volume of Cargo Tanks">
+                                                                     <font>
+                                                                        <Font size="18.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <DoubleField fx:id="totalVolumeofCargoTanksField" editable="false" minHeight="30.0" minWidth="150.0" prefWidth="150.0" spinnersVisible="false" styleClass="logbook-text-field" />
+                                                                  <Label fx:id="cm" styleClass="logbookOtherLabel" text="M3" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                   </padding>
+                                                </AnchorPane>
+                                             </content>
+                                          </ScrollPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab text="Identification Of Slop Tanks">
+                                       <content>
+                                          <ScrollPane fitToHeight="true" fitToWidth="true">
+                                             <content>
+                                                <AnchorPane>
+                                                   <children>
+                                                      <VBox styleClass="logbookVBox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <HBox>
+                                                               <children>
+                                                                  <Label id="cargoTanks" fx:id="cargoTanks1" alignment="CENTER" minHeight="20.0" minWidth="180.0" text="Slop Tanks" />
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets bottom="10.0" />
+                                                               </padding>
+                                                            </HBox>
+                                                            <GridPane hgap="30.0" VBox.vgrow="ALWAYS">
+                                                               <columnConstraints>
+                                                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                               </columnConstraints>
+                                                               <rowConstraints>
+                                                                  <RowConstraints vgrow="SOMETIMES" />
+                                                                  <RowConstraints vgrow="ALWAYS" />
+                                                               </rowConstraints>
+                                                               <children>
+                                                                  <Button id="addTanksPortSide" fx:id="slopTanksPortSideButton" mnemonicParsing="false" onAction="#addSlopTanksPortSide" styleClass="logbookAddTankMarpolDetail" text="Add Tanks Port Side" />
+                                                                  <Button id="addTanksCenter" fx:id="slopTanksCenterButton" mnemonicParsing="false" onAction="#addSlopTanksCenter" styleClass="logbookAddTankMarpolDetail" text="Add Tanks Center" GridPane.columnIndex="1" />
+                                                                  <Button id="addTanksSbdSide" fx:id="slopTanksSbdSideButton" mnemonicParsing="false" onAction="#addSlopTanksSbdSide" styleClass="logbookAddTankMarpolDetail" text="Add Tanks Sbd Side" GridPane.columnIndex="2" />
+                                                                  <GridPane fx:id="slopTanksPortSideGridPane" hgap="15.0" vgap="10.0" GridPane.rowIndex="1">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints fillHeight="false" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Label styleClass="logbookOtherLabel" text="Identifier" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Volume (m3)" GridPane.columnIndex="2" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Actual Volume (m3)" GridPane.columnIndex="1" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                                  <GridPane fx:id="slopTanksCenterGridPane" hgap="15.0" layoutX="10.0" layoutY="40.0" vgap="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints fillHeight="false" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Label styleClass="logbookOtherLabel" text="Identifier" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Volume (m3)" GridPane.columnIndex="2" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Actual Volume (m3)" GridPane.columnIndex="1" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                                  <GridPane fx:id="slopTanksSbdSideGridPane" hgap="15.0" layoutX="499.0" layoutY="40.0" vgap="10.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints fillHeight="false" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Label styleClass="logbookOtherLabel" text="Identifier" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Volume (m3)" GridPane.columnIndex="2" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Actual Volume (m3)" GridPane.columnIndex="1" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </GridPane>
+                                                            <HBox alignment="CENTER_RIGHT">
+                                                               <children>
+                                                                  <Label id="totalVolumeofCargoTanks" fx:id="totalVolumeofCargoTanks1" styleClass="logbookMarpolDetailTotalVolumeOfTanks" text="Total Volume of Slops Tanks">
+                                                                     <font>
+                                                                        <Font size="18.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <DoubleField fx:id="totalVolumeofSlopTanksField" editable="false" minWidth="150.0" prefWidth="150.0" spinnersVisible="false" styleClass="logbook-text-field" />
+                                                                  <Label fx:id="cm1" styleClass="logbookOtherLabel" text="M3" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                   </padding>
+                                                </AnchorPane>
+                                             </content>
+                                          </ScrollPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab text="Identification Of Ballast Tanks">
+                                       <content>
+                                          <ScrollPane fitToHeight="true" fitToWidth="true">
+                                             <content>
+                                                <AnchorPane>
+                                                   <children>
+                                                      <VBox styleClass="logbookVBox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <HBox VBox.vgrow="NEVER">
+                                                               <children>
+                                                                  <Label id="cargoTanks" fx:id="cargoTanks2" alignment="CENTER" minHeight="20.0" minWidth="180.0" text="Ballast Tanks" />
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets bottom="10.0" />
+                                                               </padding>
+                                                            </HBox>
+                                                            <GridPane hgap="30.0" VBox.vgrow="ALWAYS">
+                                                               <columnConstraints>
+                                                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                               </columnConstraints>
+                                                               <rowConstraints>
+                                                                  <RowConstraints vgrow="SOMETIMES" />
+                                                                  <RowConstraints vgrow="ALWAYS" />
+                                                               </rowConstraints>
+                                                               <children>
+                                                                  <Button id="addTanksPortSide" fx:id="ballastTanksPortSideButton" mnemonicParsing="false" onAction="#addBallastTanksPortSide" styleClass="logbookAddTankMarpolDetail" text="Add Tanks Port Side" />
+                                                                  <Button id="addTanksSbdSide" fx:id="ballastTanksSbdSideButton" mnemonicParsing="false" onAction="#addBallastTanksSbdSide" styleClass="logbookAddTankMarpolDetail" text="Add Tanks Sbd Side" GridPane.columnIndex="2" />
+                                                                  <GridPane fx:id="ballastTanksPortSideGridPane" hgap="15.0" vgap="10.0" GridPane.rowIndex="1">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints fillHeight="false" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Label styleClass="logbookOtherLabel" text="Identifier" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Volume (m3)" GridPane.columnIndex="2" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Actual Volume (m3)" GridPane.columnIndex="1" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                                  <GridPane fx:id="ballastTanksSbdSideGridPane" hgap="15.0" layoutX="499.0" layoutY="40.0" vgap="10.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints fillHeight="false" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Label styleClass="logbookOtherLabel" text="Identifier" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Volume (m3)" GridPane.columnIndex="2" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Actual Volume (m3)" GridPane.columnIndex="1" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                                  <GridPane GridPane.columnIndex="1" GridPane.rowSpan="2147483647">
+                                                                    <columnConstraints>
+                                                                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                      <RowConstraints vgrow="NEVER" />
+                                                                      <RowConstraints vgrow="SOMETIMES" />
+                                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints vgrow="NEVER" />
+                                                                        <RowConstraints vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                     <children>
+                                                                        <Button id="addTanksForePeak" fx:id="ballastTanksForePeakButton" mnemonicParsing="false" onAction="#addBallastTanksForePeak" styleClass="logbookAddTankMarpolDetail" text="Add Tanks Fore Peak" />
+                                                                        <GridPane fx:id="ballastTanksForePeakGridPane" hgap="15.0" vgap="10.0" GridPane.rowIndex="1">
+                                                                           <columnConstraints>
+                                                                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                           </columnConstraints>
+                                                                           <rowConstraints>
+                                                                              <RowConstraints fillHeight="false" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                                                                           </rowConstraints>
+                                                                           <children>
+                                                                              <Label styleClass="logbookOtherLabel" text="Identifier" />
+                                                                              <Label styleClass="logbookOtherLabel" text="Volume (m3)" GridPane.columnIndex="2" />
+                                                                              <Label styleClass="logbookOtherLabel" text="Actual Volume (m3)" GridPane.columnIndex="1" />
+                                                                           </children>
+                                                                        </GridPane>
+                                                                        <Button id="addTanksAftPeak" fx:id="ballastTanksAftPeakButton" mnemonicParsing="false" onAction="#addBallastTanksAftPeak" styleClass="logbookAddTankMarpolDetail" text="Add Tanks Aft Peak" GridPane.rowIndex="3" />
+                                                                        <GridPane fx:id="ballastTanksAftPeakGridPane" hgap="15.0" layoutX="10.0" layoutY="58.0" vgap="10.0" GridPane.rowIndex="4">
+                                                                           <columnConstraints>
+                                                                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                           </columnConstraints>
+                                                                           <rowConstraints>
+                                                                              <RowConstraints fillHeight="false" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                                                                           </rowConstraints>
+                                                                           <children>
+                                                                              <Label styleClass="logbookOtherLabel" text="Identifier" />
+                                                                              <Label styleClass="logbookOtherLabel" text="Volume (m3)" GridPane.columnIndex="2" />
+                                                                              <Label styleClass="logbookOtherLabel" text="Actual Volume (m3)" GridPane.columnIndex="1" />
+                                                                           </children>
+                                                                        </GridPane>
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </GridPane>
+                                                            <HBox alignment="CENTER_RIGHT">
+                                                               <children>
+                                                                  <Label id="totalVolumeofCargoTanks" fx:id="totalVolumeofBallastTanks" styleClass="logbookMarpolDetailTotalVolumeOfTanks" text="Total Volume of BallastTanks">
+                                                                     <font>
+                                                                        <Font size="18.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <DoubleField fx:id="totalVolumeofBallastTanksField" editable="false" minWidth="150.0" prefWidth="150.0" spinnersVisible="false" styleClass="logbook-text-field" />
+                                                                  <Label fx:id="cm2" styleClass="logbookOtherLabel" text="M3" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                   </padding>
+                                                </AnchorPane>
+                                             </content>
+                                          </ScrollPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab text="Ship Particulars">
+                                       <content>
+                                          <ScrollPane fitToHeight="true" fitToWidth="true">
+                                            <content>
+                                              <AnchorPane>
+                                                   <children>
+                                                      <VBox styleClass="logbookVBox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <GridPane fx:id="shipParticularsGridPane">
+                                                              <columnConstraints>
+                                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="90.0" minWidth="80.0" prefWidth="87.0" />
+                                                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="87.0" />
+                                                                  <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="90.0" minWidth="80.0" prefWidth="87.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="100.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" />
+                                                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                              </columnConstraints>
+                                                              <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                              </rowConstraints>
+                                                               <children>
+                                                                  <Label text="1." />
+                                                                  <Label fx:id="shipParticularsLabel" text="Particulars of ship" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="LEFT" />
+                                                                  <Label styleClass="logbookOtherLabel" text="1.1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                  <Label styleClass="logbookOtherLabel" text="Name of ship" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                                                  <Label styleClass="logbookOtherLabel" text="1.2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                  <Label styleClass="logbookOtherLabel" text="Distinctive number or letters" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                                                                  <Label styleClass="logbookOtherLabel" text="1.3" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                  <Label styleClass="logbookOtherLabel" text="1.4" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                                  <Label styleClass="logbookOtherLabel" text="1.5" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                                  <Label styleClass="logbookOtherLabel" text="Port of registry" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                                                                  <Label styleClass="logbookOtherLabel" text="Gross tonnage" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                                                                  <Label styleClass="logbookOtherLabel" text="Carring capacity of ship" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+                                                                  <Label styleClass="logbookOtherLabel" text="1.6" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                                  <Label styleClass="logbookOtherLabel" text="1.7" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                                                  <Label styleClass="logbookOtherLabel" text="1.8" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                                                  <Label styleClass="logbookOtherLabel" text="1.8.1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="10" />
+                                                                  <Label styleClass="logbookOtherLabel" text="1.8.2" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="11" />
+                                                                  <Label styleClass="logbookOtherLabel" text="1.8.3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="12" />
+                                                                  <Label styleClass="logbookOtherLabel" text="Deadweight of ship (Regulation 1.23)" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="7" />
+                                                                  <Label styleClass="logbookOtherLabel" text="Length of ship (Regulation 1.19)" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+                                                                  <Label styleClass="logbookOtherLabel" text="Date of build:" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="9" />
+                                                                  <Label styleClass="logbookOtherLabel" text="Date of building contract" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="10" />
+                                                                  <Label styleClass="logbookOtherLabel" text="Date on which keel was laid or ship was at similar stage of construction" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="11" />
+                                                                  <Label styleClass="logbookOtherLabel" text="Date of delivery" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="12" />
+                                                                  <Label styleClass="logbookOtherLabel" text="IMO Number" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+                                                                  <TextField fx:id="shipNameTextField" styleClass="logbook-text-field" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                                                  <TextField fx:id="shipDistinctiveNumberTextField" styleClass="logbook-text-field" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                                                  <TextField fx:id="shipPortOfRegistryTextField" styleClass="logbook-text-field" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                                                                  <TextField fx:id="shipGrossTonnageTextField" styleClass="logbook-text-field" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                                                                  <DoubleField fx:id="shipCarringCapacityDoubleField" styleClass="logbook-text-field" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                                                                  <DoubleField fx:id="shipDeadweightDoubleField" styleClass="logbook-text-field" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                                                                  <DoubleField fx:id="shipLengthDoubleField" styleClass="logbook-text-field" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+                                                                  <Label styleClass="logbookOtherLabel" text="(m3)" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                                                                  <Label styleClass="logbookOtherLabel" text="(t) (tonnes)" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                                                                  <Label styleClass="logbookOtherLabel" text="(m)" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+                                                                  <TextField fx:id="shipImoNumberTextField" styleClass="logbook-text-field" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                                                  <LocalDateTextField fx:id="shipBuildingContractDate" styleClass="logbook-LocalDateTimeTextFieldSkin" GridPane.columnIndex="6" GridPane.rowIndex="10" />
+                                                                  <LocalDateTextField fx:id="shipKeelLaidDate" styleClass="logbook-LocalDateTimeTextFieldSkin" GridPane.columnIndex="6" GridPane.rowIndex="11" />
+                                                                  <LocalDateTextField fx:id="shipDeliveryDate" styleClass="logbook-LocalDateTimeTextFieldSkin" GridPane.columnIndex="6" GridPane.rowIndex="12" />
+                                                                  <Label styleClass="logbookOtherLabel" text="1.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                               </children>
+                                                            </GridPane>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                   </padding>
+                                                </AnchorPane>
+                                            </content>
+                                          </ScrollPane>
+                                       </content>
+                                    </Tab>
+                                 </tabs>
+                              </TabPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane>
+                           <children>
+                              <TabPane id="tabPane2" fx:id="tabPane2" minHeight="350.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <tabs>
+                                    <Tab closable="false" text="Identification Of Fuel Tanks">
+                                       <content>
+                                          <ScrollPane fitToHeight="true" fitToWidth="true">
+                                             <content>
+                                                <AnchorPane>
+                                                   <children>
+                                                      <VBox styleClass="logbookVBox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <HBox fillHeight="false">
+                                                               <children>
+                                                                  <Label id="cargoTanks" fx:id="cargoTanks3" alignment="CENTER" minHeight="20.0" minWidth="180.0" text="Fuel Tanks" />
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets bottom="10.0" />
+                                                               </padding>
+                                                            </HBox>
+                                                            <GridPane hgap="30.0" VBox.vgrow="ALWAYS">
+                                                               <columnConstraints>
+                                                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                               </columnConstraints>
+                                                               <rowConstraints>
+                                   									<RowConstraints vgrow="NEVER" />
+                                                                	<RowConstraints vgrow="ALWAYS" />
+                                                               </rowConstraints>
+                                                               <children>
+                                                                  <Button id="addTanksPortSide" fx:id="fuelOilTanksPortSideButton" mnemonicParsing="false" onAction="#addFuelOilTanksPortSide" styleClass="logbookAddTankMarpolDetail" text="Add Tanks Port Side" />
+                                                                  <Button id="addTanksCenter" fx:id="fuelOilTanksCenter1Button" mnemonicParsing="false" onAction="#addFuelOilTanksCenter1" styleClass="logbookAddTankMarpolDetail" text="Add Tanks Center 1" GridPane.columnIndex="1" />
+                                                                  <Button id="addTanksSbdSide" fx:id="fuelOilTanksSbdSideButton" mnemonicParsing="false" onAction="#addFuelOilTanksSbdSide" styleClass="logbookAddTankMarpolDetail" text="Add Tanks Sbd Side" GridPane.columnIndex="3" />
+                                                                  <GridPane fx:id="fuelOilTanksPortSideGridPane" hgap="15.0" vgap="10.0" GridPane.rowIndex="1">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints fillHeight="false" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Label styleClass="logbookOtherLabel" text="Identifier" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Volume (m3)" GridPane.columnIndex="2" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Actual Volume (m3)" GridPane.columnIndex="1" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                                  <GridPane fx:id="fuelOilTanksCenter1GridPane" hgap="15.0" layoutX="10.0" layoutY="40.0" vgap="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints fillHeight="false" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Label styleClass="logbookOtherLabel" text="Identifier" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Volume (m3)" GridPane.columnIndex="2" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Actual Volume (m3)" GridPane.columnIndex="1" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                                  <GridPane fx:id="fuelOilTanksSbdSideGridPane" hgap="15.0" layoutX="499.0" layoutY="40.0" vgap="10.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints fillHeight="false" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Label styleClass="logbookOtherLabel" text="Identifier" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Volume (m3)" GridPane.columnIndex="2" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Actual Volume (m3)" GridPane.columnIndex="1" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                                  <Button id="addTanksCenter" fx:id="fuelOilTanksCenter2Button" mnemonicParsing="false" onAction="#addFuelOilTanksCenter2" styleClass="logbookAddTankMarpolDetail" text="Add Tanks Center 2" GridPane.columnIndex="2" />
+                                                                  <GridPane fx:id="fuelOilTanksCenter2GridPane" hgap="15.0" vgap="10.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints fillHeight="false" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Label styleClass="logbookOtherLabel" text="Identifier" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Volume (m3)" GridPane.columnIndex="2" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Actual Volume (m3)" GridPane.columnIndex="1" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </GridPane>
+                                                            <HBox alignment="CENTER_RIGHT">
+                                                               <children>
+                                                                  <Label id="totalVolumeofCargoTanks" fx:id="totalVolumeofCargoTanks3" styleClass="logbookMarpolDetailTotalVolumeOfTanks" text="Total Volume of Fuel Tanks">
+                                                                     <font>
+                                                                        <Font size="18.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <DoubleField fx:id="totalVolumeofFuelTanksField" editable="false" minWidth="150.0" prefWidth="150.0" spinnersVisible="false" styleClass="logbook-text-field" />
+                                                                  <Label fx:id="cm3" styleClass="logbookOtherLabel" text="M3" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                   </padding>
+                                                </AnchorPane>
+                                             </content>
+                                          </ScrollPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab closable="false" text="Identification Of Oil &amp; Bilge Tanks">
+                                       <content>
+                                          <ScrollPane fitToHeight="true" fitToWidth="true">
+                                             <content>
+                                                <AnchorPane>
+                                                   <children>
+                                                      <VBox styleClass="logbookVBox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <HBox VBox.vgrow="NEVER">
+                                                               <children>
+                                                                  <Label id="cargoTanks" fx:id="cargoTanks4" alignment="CENTER" minHeight="20.0" minWidth="180.0" text="Oil &amp; Bilge Tanks" />
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets bottom="10.0" />
+                                                               </padding>
+                                                            </HBox>
+                                                            <GridPane hgap="30.0" VBox.vgrow="ALWAYS">
+                                                               <columnConstraints>
+                                                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                               </columnConstraints>
+                                                               <rowConstraints>
+                   												  <RowConstraints vgrow="NEVER" />
+                                                                  <RowConstraints vgrow="ALWAYS" />
+                                                               </rowConstraints>
+                                                               <children>
+                                                                  <Button id="addTanksPortSide" fx:id="oilBilgeTanksPortSideButton" mnemonicParsing="false" onAction="#addOilBilgeTanksPortSide" styleClass="logbookAddTankMarpolDetail" text="Add Tanks Port Side" />
+                                                                  <Button id="addTanksCenter" fx:id="oilBilgeTanksCenter1Button" mnemonicParsing="false" onAction="#addOilBilgeTanksCenter1" styleClass="logbookAddTankMarpolDetail" text="Add Tanks Center 1" GridPane.columnIndex="1" />
+                                                                  <Button id="addTanksSbdSide" fx:id="oilBilgeTanksSbdSideButton" mnemonicParsing="false" onAction="#addOilBilgeTanksSbdSide" styleClass="logbookAddTankMarpolDetail" text="Add Tanks Sbd Side" GridPane.columnIndex="3" />
+                                                                  <GridPane fx:id="oilBilgeTanksPortSideGridPane" hgap="15.0" vgap="10.0" GridPane.rowIndex="1">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints fillHeight="false" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Label styleClass="logbookOtherLabel" text="Identifier" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Volume (m3)" GridPane.columnIndex="2" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Actual Volume (m3)" GridPane.columnIndex="1" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                                  <GridPane fx:id="oilBilgeTanksCenter1GridPane" hgap="15.0" layoutX="10.0" layoutY="40.0" vgap="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints fillHeight="false" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Label styleClass="logbookOtherLabel" text="Identifier" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Volume (m3)" GridPane.columnIndex="2" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Actual Volume (m3)" GridPane.columnIndex="1" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                                  <GridPane fx:id="oilBilgeTanksSbdSideGridPane" hgap="15.0" layoutX="499.0" layoutY="40.0" vgap="10.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints fillHeight="false" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Label styleClass="logbookOtherLabel" text="Identifier" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Volume (m3)" GridPane.columnIndex="2" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Actual Volume (m3)" GridPane.columnIndex="1" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                                  <Button id="addTanksCenter" fx:id="oilBilgeTanksCenter2Button" mnemonicParsing="false" onAction="#addOilBilgeTanksCenter2" styleClass="logbookAddTankMarpolDetail" text="Add Tanks Center 2" GridPane.columnIndex="2" />
+                                                                  <GridPane fx:id="oilBilgeTanksCenter2GridPane" hgap="15.0" vgap="10.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints fillHeight="false" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Label styleClass="logbookOtherLabel" text="Identifier" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Volume (m3)" GridPane.columnIndex="2" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Actual Volume (m3)" GridPane.columnIndex="1" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </GridPane>
+                                                            <HBox alignment="CENTER_RIGHT">
+                                                               <children>
+                                                                  <Label id="totalVolumeofCargoTanks" fx:id="totalVolumeofCargoTanks4" styleClass="logbookMarpolDetailTotalVolumeOfTanks" text="Total Volume of Oil &amp; Bilge Tanks">
+                                                                     <font>
+                                                                        <Font size="18.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <DoubleField fx:id="totalVolumeofOilBilgeTanksField" editable="false" minWidth="150.0" prefWidth="150.0" spinnersVisible="false" styleClass="logbook-text-field" />
+                                                                  <Label fx:id="cm4" styleClass="logbookOtherLabel" text="M3" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                   </padding>
+                                                </AnchorPane>
+                                             </content>
+                                          </ScrollPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab closable="false" text="Identification Sludge Tanks &amp; Other Tanks">
+                                       <content>
+                                          <ScrollPane fitToHeight="true" fitToWidth="true">
+                                             <content>
+                                                <AnchorPane>
+                                                   <children>
+                                                      <VBox styleClass="logbookVBox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <HBox>
+                                                               <children>
+                                                                  <Label id="cargoTanks" fx:id="cargoTanks5" alignment="CENTER" minHeight="20.0" minWidth="180.0" text="Sludge Tanks" />
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets bottom="10.0" />
+                                                               </padding>
+                                                            </HBox>
+                                                            <GridPane hgap="30.0" VBox.vgrow="ALWAYS">
+                                                               <columnConstraints>
+                                                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                               </columnConstraints>
+                                                               <rowConstraints>
+                   												  <RowConstraints vgrow="NEVER" />
+                                                                  <RowConstraints vgrow="ALWAYS" />
+                                                               </rowConstraints>
+                                                               <children>
+                                                                  <Button id="addTanksPortSide" fx:id="sludgeTanksPortSideButton" mnemonicParsing="false" onAction="#addSludgeTanksPortSide" styleClass="logbookAddTankMarpolDetail" text="Add Tanks Port Side" />
+                                                                  <Button id="addTanksCenter" fx:id="sludgeTanksCenter1Button" mnemonicParsing="false" onAction="#addSludgeTanksCenter1" styleClass="logbookAddTankMarpolDetail" text="Add Tanks Center 1" GridPane.columnIndex="1" />
+                                                                  <Button id="addTanksSbdSide" fx:id="sludgeTanksSbdSideButton" mnemonicParsing="false" onAction="#addSludgeTanksSbdSide" styleClass="logbookAddTankMarpolDetail" text="Add Tanks Sbd Side" GridPane.columnIndex="3" />
+                                                                  <GridPane fx:id="sludgeTanksPortSideGridPane" hgap="15.0" vgap="10.0" GridPane.rowIndex="1">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints fillHeight="false" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Label styleClass="logbookOtherLabel" text="Identifier" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Volume (m3)" GridPane.columnIndex="2" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Actual Volume (m3)" GridPane.columnIndex="1" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                                  <GridPane fx:id="sludgeTanksCenter1GridPane" hgap="15.0" layoutX="10.0" layoutY="40.0" vgap="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints fillHeight="false" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Label styleClass="logbookOtherLabel" text="Identifier" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Volume (m3)" GridPane.columnIndex="2" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Actual Volume (m3)" GridPane.columnIndex="1" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                                  <GridPane fx:id="sludgeTanksSbdSideGridPane" hgap="15.0" layoutX="499.0" layoutY="40.0" vgap="10.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints fillHeight="false" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Label styleClass="logbookOtherLabel" text="Identifier" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Volume (m3)" GridPane.columnIndex="2" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Actual Volume (m3)" GridPane.columnIndex="1" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                                  <Button id="addTanksCenter" fx:id="sludgeTanksCenter2Button" mnemonicParsing="false" onAction="#addSludgeTanksCenter2" styleClass="logbookAddTankMarpolDetail" text="Add Tanks Center 2" GridPane.columnIndex="2" />
+                                                                  <GridPane fx:id="sludgeTanksCenter2GridPane" hgap="15.0" vgap="10.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints fillHeight="false" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Label styleClass="logbookOtherLabel" text="Identifier" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Volume (m3)" GridPane.columnIndex="2" />
+                                                                        <Label styleClass="logbookOtherLabel" text="Actual Volume (m3)" GridPane.columnIndex="1" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                               </children>
+                                                            </GridPane>
+                                                            <HBox alignment="CENTER_RIGHT">
+                                                               <children>
+                                                                  <Label id="totalVolumeofCargoTanks" fx:id="totalVolumeofCargoTanks5" styleClass="logbookMarpolDetailTotalVolumeOfTanks" text="Total Volume of Sludge Tanks">
+                                                                     <font>
+                                                                        <Font size="18.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <DoubleField fx:id="totalVolumeofSludgeTanksField" editable="false" minWidth="150.0" prefWidth="150.0" spinnersVisible="false" styleClass="logbook-text-field" />
+                                                                  <Label fx:id="cm5" styleClass="logbookOtherLabel" text="M3" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                   </padding>
+                                                </AnchorPane>
+                                             </content>
+                                          </ScrollPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab closable="false" text="Incinerator Boilers Other">
+                                       <content>
+                                          <ScrollPane fitToHeight="true" fitToWidth="true">
+                                             <padding>
+                                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                             </padding>
+                                             <content>
+                                                <AnchorPane>
+                                                   <children>
+                                                      <VBox styleClass="logbookVBox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <HBox fillHeight="false" VBox.vgrow="NEVER">
+                                                               <children>
+                                                                  <Label id="meansOfDisposal" text="Means for disposal of residues in adition to provisions of sludge Tanks" />
+                                                               </children>
+                                                            </HBox>
+                                                            <GridPane VBox.vgrow="ALWAYS">
+                                                              <columnConstraints>
+                                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                              </columnConstraints>
+                                                              <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                              </rowConstraints>
+                                                               <children>
+                                                                  <Label minWidth="310.0" styleClass="logbookOtherLabel" text="Incinerator for oil residues, capacity">
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font></Label>
+                                                                  <DoubleField fx:id="inceneratorCapacityDoubleField" styleClass="logbook-text-field" GridPane.columnIndex="1" />
+                                                                  <Label styleClass="logbookOtherLabel" text="L/H" GridPane.columnIndex="2" />
+                                                               </children>
+                                                            </GridPane>
+                                                            <HBox fillHeight="false" VBox.vgrow="NEVER">
+                                                               <children>
+                                                                  <Label id="auxilaryBoiler" text="Auxiliary Boiler sitable for burning oil residues" />
+                                                               </children>
+                                                            </HBox>
+                                                            <GridPane VBox.vgrow="ALWAYS">
+                                                              <columnConstraints>
+                                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                              </columnConstraints>
+                                                              <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                              </rowConstraints>
+                                                               <children>
+                                                                  <Label minWidth="310.0" styleClass="logbookOtherLabel" text="Tank for mixing oil with fuel oil residues">
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <DoubleField fx:id="oilFuelOilResiduesDoubleField" styleClass="logbook-text-field" GridPane.columnIndex="1" />
+                                                                  <Label styleClass="logbookOtherLabel" text="M3" GridPane.columnIndex="2" />
+                                                               </children>
+                                                            </GridPane>
+                                                            <HBox>
+                                                               <children>
+                                                                  <Label id="bilgeWaterSeparator" text="Bilge Water Separator (15ppm)" />
+                                                               </children>
+                                                            </HBox>
+                                                            <GridPane VBox.vgrow="ALWAYS">
+                                                              <columnConstraints>
+                                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                                              </columnConstraints>
+                                                              <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                              </rowConstraints>
+                                                               <children>
+                                                                  <Label minWidth="315.0" styleClass="logbookOtherLabel" text="Bilge Water Separator (15ppm) maximum throughput">
+                                                                     <font>
+                                                                        <Font size="13.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label styleClass="logbookOtherLabel" text="M3/H" GridPane.columnIndex="2" />
+                                                                  <DoubleField fx:id="bilgeWaterSeparatorThroughputDoubleField" styleClass="logbook-text-field" GridPane.columnIndex="1" />
+                                                               </children>
+                                                            </GridPane>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                   </padding>
+                                                </AnchorPane>
+                                             </content>
+                                          </ScrollPane>
+                                       </content>
+                                    </Tab>
+                                 </tabs>
+                              </TabPane>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+                  <HBox fx:id="hBoxReturnOrSaveMarpol" alignment="CENTER_RIGHT" minHeight="30.0">
+                     <children>
+                        <GridPane hgap="20.0" minHeight="80.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" />
+                            <ColumnConstraints hgrow="SOMETIMES" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button id="returnObr" fx:id="returnObr" mnemonicParsing="false" onAction="#handleReturnToOrb" prefHeight="25.0" prefWidth="113.0" text="Return ORB" />
+                              <Button id="save" fx:id="save" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="109.0" text="Save" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children>
+                     <padding>
+                        <Insets right="50.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="mainAnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="al.sybina.ebr.logbook.views.history.LogModificationsController">
+   <children>
+      <ScrollPane focusTraversable="false" style="-fx-fit-to-width: true; -fx-fit-to-height: true;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <VBox alignment="CENTER">
+               <children>
+               		<TableView id="logModificationsTableView" fx:id="logTableView" tableMenuButtonVisible="true" VBox.vgrow="SOMETIMES">
+	                    <columns>
+	                      <TableColumn fx:id="typeCol" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="-1.0" sortable="false" text="Log Type" visible="false" />
+	                      <TableColumn fx:id="dateCol" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="-1.0" sortable="false" text="Date" />
+	                      <TableColumn fx:id="codeLetterGroupCol" maxWidth="1.7976931348623157E308" minWidth="90.0" prefWidth="-1.0" sortable="false" text="Code Letter" />
+                          <TableColumn fx:id="codeNumberGroupCol" maxWidth="1.7976931348623157E308" minWidth="90.0" prefWidth="-1.0" sortable="false" text="Code Number" />
+                          <TableColumn fx:id="contentGroupCol" maxWidth="1.7976931348623157E308" minWidth="300.0" prefWidth="-1.0" sortable="false" style="-fx-alignment: center-left;" text="Content" />
+	                      <TableColumn fx:id="nameCreatorCol" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="-1.0" sortable="false" text="Name" />
+	                      <TableColumn fx:id="signatureCreatorCol" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="-1.0" sortable="false" styleClass="table-signature-column" text="Signature" />
+                        <TableColumn fx:id="masterCol" minWidth="200.0" prefWidth="200.0" text="Master" visible="false" />
+	                      <TableColumn fx:id="correctionNoteCol" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="-1.0" sortable="false" text="Correction Note" />
+	                      <TableColumn fx:id="correctionDateCol" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="-1.0" sortable="false" text="Correction Date" />
+	                      <TableColumn fx:id="noteCol" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="-1.0" sortable="false" text="Note" />
+	                    </columns>
+	                </TableView>
+                  <ButtonBar id="buttonBarLogModifications" prefHeight="40.0">
+                     <buttons>
+                        <Button id="cancelLogModification" cancelButton="true" mnemonicParsing="false" onAction="#cancel" styleClass="logModificationsButton" text="Cancel" />
+                        <Button fx:id="detailedButton" mnemonicParsing="false" onAction="#detailed" styleClass="logModificationsButton" text="Detailed" />
+                        <Button fx:id="simpleButton" disable="true" mnemonicParsing="false" onAction="#simple" styleClass="logModificationsButton" text="Simple" />
+                        <Button fx:id="showPreviewButton" mnemonicParsing="false" onAction="#showPreview" styleClass="logModificationsButton" text="Preview" />
+                     </buttons>
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                  </ButtonBar>
+               </children>
+            </VBox>
+         </content></ScrollPane>
+   </children>
+</AnchorPane>

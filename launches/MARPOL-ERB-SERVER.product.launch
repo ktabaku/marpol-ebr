@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.pde.ui.RuntimeWorkbench">
+    <setAttribute key="additional_plugins">
+        <setEntry value="al.sybina.ebr.jasperreports:1.0.0.qualifier:default:true:5:true"/>
+        <setEntry value="al.sybina.ebr.logbook.commons:1.0.0.qualifier:default:true:5:true"/>
+        <setEntry value="al.sybina.ebr.logbook.domain:1.0.0.qualifier:default:true:5:true"/>
+        <setEntry value="al.sybina.ebr.logbook.ui:1.0.0.qualifier:default:true:5:true"/>
+        <setEntry value="al.sybina.ebr.login:1.0.0.qualifier:default:true:5:false"/>
+        <setEntry value="al.sybina.ebr.s63:1.0.0.qualifier:default:true:default:true"/>
+        <setEntry value="al.sybina.ebr.server:1.0.0.qualifier:default:true:4:true"/>
+        <setEntry value="al.sybina.ebr.rcp:1.0.0:default:true:6:false"/>
+        <setEntry value="org.eclipse.core.runtime:3.13.0.v20170207-1030:default:true:default:true"/>
+        <setEntry value="org.eclipse.e4.tools.resources:1.0.0.qualifier:default:true:default:true"/>
+        <setEntry value="org.eclipse.equinox.common:3.9.0.v20170207-1454:default:true:2:true"/>
+        <setEntry value="org.eclipse.equinox.ds:1.5.0.v20170307-1429:default:true:2:true"/>
+        <setEntry value="org.eclipse.equinox.event:1.4.0.v20170105-1446:default:true:2:true"/>
+        <setEntry value="org.eclipse.equinox.simpleconfigurator:1.2.1.v20180131-1435:default:true:1:true"/>
+        <setEntry value="org.eclipse.osgi:3.12.100.v20180210-1608:default:true:default:true"/>
+    </setAttribute>
+    <booleanAttribute key="append.args" value="true"/>
+    <stringAttribute key="application" value="org.eclipse.fx.ui.workbench.fx.main-thread-application"/>
+    <booleanAttribute key="askclear" value="true"/>
+    <booleanAttribute key="automaticAdd" value="false"/>
+    <booleanAttribute key="automaticIncludeRequirements" value="true"/>
+    <booleanAttribute key="automaticValidate" value="true"/>
+    <stringAttribute key="bootstrap" value=""/>
+    <booleanAttribute key="clearConfig" value="true"/>
+    <booleanAttribute key="clearws" value="false"/>
+    <booleanAttribute key="clearwslog" value="false"/>
+    <stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/MARPOL-ERB-SERVER.product"/>
+    <booleanAttribute key="default" value="false"/>
+    <stringAttribute key="featureDefaultLocation" value="workspace"/>
+    <stringAttribute key="featurePluginResolution" value="workspace"/>
+    <booleanAttribute key="includeOptional" value="false"/>
+    <stringAttribute key="location" value="${workspace_loc}/../runtime-MARPOL-ERB-SERVER.product"/>
+    <booleanAttribute key="org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING" value="false"/>
+    <stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -clean -clearPersistedState"/>
+    <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dorg.eclipse.swt.graphics.Resource.reportNonDisposed=true -Dfile.encoding=UTF-8 -Dosgi.requiredJavaVersion=1.8 -Xms512m -Xmx1024m -Dprism.maxvram=512m -Dorg.osgi.framework.bundle.parent=ext -Dosgi.framework.extensions=org.eclipse.fx.osgi -Defxclipse.osgi.hook.debug=true"/>
+    <stringAttribute key="pde.version" value="3.3"/>
+    <stringAttribute key="product" value="al.sybina.ebr.rcp.product"/>
+    <stringAttribute key="productFile" value="\al.sybina.ebr.eclipse-repository\MARPOL-ERB-SERVER.product"/>
+    <stringAttribute key="productId" value="MARPOL-ERB-SERVER"/>
+    <stringAttribute key="productName" value="MARPOL-ERB-SERVER"/>
+    <stringAttribute key="productVersion" value="1.0.0"/>
+    <setAttribute key="root_features"/>
+    <setAttribute key="selected_features">
+        <setEntry value="al.sybina.ebr.logbook.feature:default"/>
+        <setEntry value="al.sybina.ebr.rcp.feature:default"/>
+        <setEntry value="al.sybina.ebr.server.feature:default"/>
+        <setEntry value="org.eclipse.ecf.core.feature:default"/>
+        <setEntry value="org.eclipse.ecf.core.ssl.feature:default"/>
+        <setEntry value="org.eclipse.ecf.filetransfer.feature:default"/>
+        <setEntry value="org.eclipse.ecf.filetransfer.httpclient4.feature:default"/>
+        <setEntry value="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature:default"/>
+        <setEntry value="org.eclipse.ecf.filetransfer.ssl.feature:default"/>
+        <setEntry value="org.eclipse.emf.codegen:default"/>
+        <setEntry value="org.eclipse.emf.edit:default"/>
+        <setEntry value="org.eclipse.equinox.executable:default"/>
+        <setEntry value="org.eclipse.equinox.p2.core.feature:default"/>
+        <setEntry value="org.eclipse.fx.runtime.e4fx.feature:default"/>
+        <setEntry value="org.eclipse.fx.runtime.e4fx.p2.feature:default"/>
+        <setEntry value="org.eclipse.fx.runtime.feature:default"/>
+        <setEntry value="org.eclipse.persistence.jpa:default"/>
+        <setEntry value="org.eclipse.xtext.xbase.lib:default"/>
+    </setAttribute>
+    <setAttribute key="selected_target_bundles">
+        <setEntry value="antlr@default:default"/>
+        <setEntry value="at.bestsolution.fx.test.e4.junit@default:default"/>
+        <setEntry value="at.bestsolution.fx.test.junit@default:default"/>
+        <setEntry value="at.bestsolution.fx.test.rcontrol@default:default"/>
+        <setEntry value="c3p0@default:default"/>
+        <setEntry value="colt@default:default"/>
+        <setEntry value="com.goldmansachs.gs-collections-api@default:default"/>
+        <setEntry value="com.goldmansachs.gs-collections@default:default"/>
+        <setEntry value="com.goldmansachs.reladomo.serial@default:default"/>
+        <setEntry value="com.goldmansachs.reladomo@default:default"/>
+        <setEntry value="com.google.gson@default:default"/>
+        <setEntry value="com.google.guava@default:default"/>
+        <setEntry value="com.google.inject@default:default"/>
+        <setEntry value="com.ibm.icu.base@default:default"/>
+        <setEntry value="com.ibm.icu@default:default"/>
+        <setEntry value="com.jfoenix@default:default"/>
+        <setEntry value="com.linuxense.javadbf@default:default"/>
+        <setEntry value="com.lowagie.itext@default:default"/>
+        <setEntry value="controlsfx@default:default"/>
+        <setEntry value="de.jensd.fontawesomefx@default:default"/>
+        <setEntry value="gov.nist.math.jama@default:default"/>
+        <setEntry value="javax.activation@default:default"/>
+        <setEntry value="javax.annotation*1.2.0.v201602091430@default:default"/>
+        <setEntry value="javax.el-api@default:default"/>
+        <setEntry value="javax.el@default:default"/>
+        <setEntry value="javax.enterprise.cdi-api@default:default"/>
+        <setEntry value="javax.inject@default:default"/>
+        <setEntry value="javax.interceptor-api@default:default"/>
+        <setEntry value="javax.mail@default:default"/>
+        <setEntry value="javax.measure.unit-api@default:default"/>
+        <setEntry value="javax.media.jai_imageio@default:default"/>
+        <setEntry value="javax.persistence@default:default"/>
+        <setEntry value="javax.servlet@default:default"/>
+        <setEntry value="javax.transaction-api@default:default"/>
+        <setEntry value="javax.xml.jre@default:default"/>
+        <setEntry value="javax.xml.stream@default:default"/>
+        <setEntry value="javax.xml@default:default"/>
+        <setEntry value="jcl.over.slf4j@default:default"/>
+        <setEntry value="joda-time@default:default"/>
+        <setEntry value="jul.to.slf4j@default:default"/>
+        <setEntry value="net.sf.jasperreports.engine@default:default"/>
+        <setEntry value="net.sf.jasperreports.fonts@default:default"/>
+        <setEntry value="net.tascalate.javaflow.api@default:default"/>
+        <setEntry value="org.antlr.runtime@default:default"/>
+        <setEntry value="org.antlr@default:default"/>
+        <setEntry value="org.apache.commons.beanutils@default:default"/>
+        <setEntry value="org.apache.commons.codec*1.9.0.v20170208-1614@default:default"/>
+        <setEntry value="org.apache.commons.collections@default:default"/>
+        <setEntry value="org.apache.commons.digester@default:default"/>
+        <setEntry value="org.apache.commons.io@default:default"/>
+        <setEntry value="org.apache.commons.jxpath@default:default"/>
+        <setEntry value="org.apache.commons.lang@default:default"/>
+        <setEntry value="org.apache.commons.logging@default:default"/>
+        <setEntry value="org.apache.commons.validator@default:default"/>
+        <setEntry value="org.apache.felix.gogo.command@default:default"/>
+        <setEntry value="org.apache.felix.gogo.runtime@default:default"/>
+        <setEntry value="org.apache.felix.gogo.shell@default:default"/>
+        <setEntry value="org.apache.felix.scr@default:default"/>
+        <setEntry value="org.apache.httpcomponents.httpclient@default:default"/>
+        <setEntry value="org.apache.httpcomponents.httpcore@default:default"/>
+        <setEntry value="org.apache.log4j@default:default"/>
+        <setEntry value="org.apache.poi@default:default"/>
+        <setEntry value="org.apache.servicemix.bundles.dbunit@default:default"/>
+        <setEntry value="org.apache.servicemix.bundles.derby@default:default"/>
+        <setEntry value="org.apache.servicemix.bundles.derbynet@default:default"/>
+        <setEntry value="org.apache.shiro.core@default:default"/>
+        <setEntry value="org.apache.xerces@default:default"/>
+        <setEntry value="org.apache.xml.resolver@default:default"/>
+        <setEntry value="org.apache.xml.serializer@default:default"/>
+        <setEntry value="org.eclipse.collections.eclipse-collections-api@default:default"/>
+        <setEntry value="org.eclipse.collections.eclipse-collections@default:default"/>
+        <setEntry value="org.eclipse.core.commands@default:default"/>
+        <setEntry value="org.eclipse.core.contenttype@default:default"/>
+        <setEntry value="org.eclipse.core.databinding.observable@default:default"/>
+        <setEntry value="org.eclipse.core.databinding.property@default:default"/>
+        <setEntry value="org.eclipse.core.databinding@default:default"/>
+        <setEntry value="org.eclipse.core.expressions@default:default"/>
+        <setEntry value="org.eclipse.core.filesystem@default:default"/>
+        <setEntry value="org.eclipse.core.jobs@default:default"/>
+        <setEntry value="org.eclipse.core.net@default:default"/>
+        <setEntry value="org.eclipse.core.resources@default:default"/>
+        <setEntry value="org.eclipse.core.runtime@default:true"/>
+        <setEntry value="org.eclipse.core.variables@default:default"/>
+        <setEntry value="org.eclipse.debug.core@default:default"/>
+        <setEntry value="org.eclipse.e4.core.commands@default:default"/>
+        <setEntry value="org.eclipse.e4.core.contexts@default:default"/>
+        <setEntry value="org.eclipse.e4.core.di.annotations@default:default"/>
+        <setEntry value="org.eclipse.e4.core.di.extensions.supplier@default:default"/>
+        <setEntry value="org.eclipse.e4.core.di.extensions@default:default"/>
+        <setEntry value="org.eclipse.e4.core.di@default:default"/>
+        <setEntry value="org.eclipse.e4.core.services@default:default"/>
+        <setEntry value="org.eclipse.e4.emf.xpath@default:default"/>
+        <setEntry value="org.eclipse.e4.ui.di@default:default"/>
+        <setEntry value="org.eclipse.e4.ui.model.workbench@default:default"/>
+        <setEntry value="org.eclipse.e4.ui.services@default:default"/>
+        <setEntry value="org.eclipse.e4.ui.workbench@default:default"/>
+        <setEntry value="org.eclipse.ecf.filetransfer@default:default"/>
+        <setEntry value="org.eclipse.ecf.identity@default:default"/>
+        <setEntry value="org.eclipse.ecf.provider.filetransfer.httpclient4.ssl@default:default"/>
+        <setEntry value="org.eclipse.ecf.provider.filetransfer.httpclient4@default:default"/>
+        <setEntry value="org.eclipse.ecf.provider.filetransfer.ssl@default:default"/>
+        <setEntry value="org.eclipse.ecf.provider.filetransfer@default:default"/>
+        <setEntry value="org.eclipse.ecf.provider@default:default"/>
+        <setEntry value="org.eclipse.ecf.remoteservice.eventadmin@default:default"/>
+        <setEntry value="org.eclipse.ecf.sharedobject@default:default"/>
+        <setEntry value="org.eclipse.ecf.ssl@default:default"/>
+        <setEntry value="org.eclipse.ecf@default:default"/>
+        <setEntry value="org.eclipse.emf.common@default:default"/>
+        <setEntry value="org.eclipse.emf.databinding@default:default"/>
+        <setEntry value="org.eclipse.emf.ecore.change@default:default"/>
+        <setEntry value="org.eclipse.emf.ecore.xmi@default:default"/>
+        <setEntry value="org.eclipse.emf.ecore@default:default"/>
+        <setEntry value="org.eclipse.emf.edit@default:default"/>
+        <setEntry value="org.eclipse.equinox.app@default:default"/>
+        <setEntry value="org.eclipse.equinox.common@2:true"/>
+        <setEntry value="org.eclipse.equinox.concurrent@default:default"/>
+        <setEntry value="org.eclipse.equinox.console@default:default"/>
+        <setEntry value="org.eclipse.equinox.ds@2:true"/>
+        <setEntry value="org.eclipse.equinox.event@2:true"/>
+        <setEntry value="org.eclipse.equinox.frameworkadmin.equinox@default:default"/>
+        <setEntry value="org.eclipse.equinox.frameworkadmin@default:default"/>
+        <setEntry value="org.eclipse.equinox.launcher.win32.win32.x86_64@default:default"/>
+        <setEntry value="org.eclipse.equinox.launcher@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.artifact.repository@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.console@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.core@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.director@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.engine@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.garbagecollector@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.jarprocessor@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.metadata.repository@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.metadata@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.operations@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.repository@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.touchpoint.eclipse@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.touchpoint.natives@default:default"/>
+        <setEntry value="org.eclipse.equinox.p2.transport.ecf@default:default"/>
+        <setEntry value="org.eclipse.equinox.preferences@default:default"/>
+        <setEntry value="org.eclipse.equinox.registry@default:default"/>
+        <setEntry value="org.eclipse.equinox.security.win32.x86_64@default:default"/>
+        <setEntry value="org.eclipse.equinox.security@default:default"/>
+        <setEntry value="org.eclipse.equinox.simpleconfigurator.manipulator@default:default"/>
+        <setEntry value="org.eclipse.equinox.simpleconfigurator@1:true"/>
+        <setEntry value="org.eclipse.equinox.util@default:default"/>
+        <setEntry value="org.eclipse.fx.core.databinding.source@default:default"/>
+        <setEntry value="org.eclipse.fx.core.databinding@default:default"/>
+        <setEntry value="org.eclipse.fx.core.di.context.source@default:default"/>
+        <setEntry value="org.eclipse.fx.core.di.context@default:default"/>
+        <setEntry value="org.eclipse.fx.core.di.source@default:default"/>
+        <setEntry value="org.eclipse.fx.core.di@default:default"/>
+        <setEntry value="org.eclipse.fx.core.fxml.source@default:default"/>
+        <setEntry value="org.eclipse.fx.core.fxml@default:default"/>
+        <setEntry value="org.eclipse.fx.core.guice.source@default:default"/>
+        <setEntry value="org.eclipse.fx.core.guice@default:default"/>
+        <setEntry value="org.eclipse.fx.core.log4j.source@default:default"/>
+        <setEntry value="org.eclipse.fx.core.log4j@default:default"/>
+        <setEntry value="org.eclipse.fx.core.p2.source@default:default"/>
+        <setEntry value="org.eclipse.fx.core.p2@default:default"/>
+        <setEntry value="org.eclipse.fx.core.slf4j.source@default:default"/>
+        <setEntry value="org.eclipse.fx.core.slf4j@default:default"/>
+        <setEntry value="org.eclipse.fx.core.source@default:default"/>
+        <setEntry value="org.eclipse.fx.core@default:default"/>
+        <setEntry value="org.eclipse.fx.emf.databinding.source@default:default"/>
+        <setEntry value="org.eclipse.fx.emf.databinding@default:default"/>
+        <setEntry value="org.eclipse.fx.emf.edit.ui.source@default:default"/>
+        <setEntry value="org.eclipse.fx.emf.edit.ui@default:default"/>
+        <setEntry value="org.eclipse.fx.formats.svg.source@default:default"/>
+        <setEntry value="org.eclipse.fx.formats.svg@default:default"/>
+        <setEntry value="org.eclipse.fx.osgi.source@default:default"/>
+        <setEntry value="org.eclipse.fx.osgi.util.source@default:default"/>
+        <setEntry value="org.eclipse.fx.osgi.util@default:default"/>
+        <setEntry value="org.eclipse.fx.osgi@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.animation.source@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.animation@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.controls.source@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.controls@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.databinding.source@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.databinding@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.di.source@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.di@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.dialogs.source@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.dialogs@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.keybindings.e4.source@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.keybindings.e4@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.keybindings.generic.source@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.keybindings.generic@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.keybindings.source@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.keybindings@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.mobile.source@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.mobile@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.panes.source@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.panes@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.preferences.context@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.preferences@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.services.source@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.services@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.theme.source@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.theme@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.workbench.base.source@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.workbench.base@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.workbench.fx.source@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.workbench.fx@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.workbench.renderers.base.source@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.workbench.renderers.base@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.workbench.renderers.fx.source@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.workbench.renderers.fx@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.workbench.services.source@default:default"/>
+        <setEntry value="org.eclipse.fx.ui.workbench.services@default:default"/>
+        <setEntry value="org.eclipse.jdt.annotation@default:default"/>
+        <setEntry value="org.eclipse.jdt.core@default:default"/>
+        <setEntry value="org.eclipse.jdt.debug@default:default"/>
+        <setEntry value="org.eclipse.osgi.compatibility.state@default:default"/>
+        <setEntry value="org.eclipse.osgi.services@default:default"/>
+        <setEntry value="org.eclipse.osgi.util@default:default"/>
+        <setEntry value="org.eclipse.osgi@default:true"/>
+        <setEntry value="org.eclipse.persistence.antlr@default:default"/>
+        <setEntry value="org.eclipse.persistence.asm@default:default"/>
+        <setEntry value="org.eclipse.persistence.core@default:default"/>
+        <setEntry value="org.eclipse.persistence.jpa.jpql@default:default"/>
+        <setEntry value="org.eclipse.persistence.jpa@default:default"/>
+        <setEntry value="org.eclipse.persistence.oracle@default:default"/>
+        <setEntry value="org.eclipse.text@default:default"/>
+        <setEntry value="org.eclipse.xsd@default:default"/>
+        <setEntry value="org.eclipse.xtext.xbase.lib.source*2.12.0.v20170518-0757@default:default"/>
+        <setEntry value="org.eclipse.xtext.xbase.lib@default:default"/>
+        <setEntry value="org.glassfish.main.javax.transaction@default:default"/>
+        <setEntry value="org.hamcrest.core@default:default"/>
+        <setEntry value="org.jfxtras.common@default:default"/>
+        <setEntry value="org.jfxtras.controls@default:default"/>
+        <setEntry value="org.jfxtras.fxml@default:default"/>
+        <setEntry value="org.jpedal.OpenViewerFX@default:default"/>
+        <setEntry value="org.junit@default:default"/>
+        <setEntry value="org.quartz-scheduler.quartz-jobs@default:default"/>
+        <setEntry value="org.quartz-scheduler.quartz@default:default"/>
+        <setEntry value="org.sat4j.core@default:default"/>
+        <setEntry value="org.sat4j.pb@default:default"/>
+        <setEntry value="org.tukaani.xz@default:default"/>
+        <setEntry value="slf4j.api@default:default"/>
+        <setEntry value="slf4j.log4j12@default:default"/>
+    </setAttribute>
+    <setAttribute key="selected_workspace_bundles">
+        <setEntry value="com.opcoach.e4.preferences@default:default"/>
+        <setEntry value="al.sybina.ebr.commons.domain@default:default"/>
+        <setEntry value="al.sybina.ebr.commons.utils@default:default"/>
+        <setEntry value="al.sybina.ebr.jasperreports@5:true"/>
+        <setEntry value="al.sybina.ebr.javafx.controls@default:default"/>
+        <setEntry value="al.sybina.ebr.libs@default:default"/>
+        <setEntry value="al.sybina.ebr.log4j.configuration@default:default"/>
+        <setEntry value="al.sybina.ebr.logbook.commons@5:true"/>
+        <setEntry value="al.sybina.ebr.logbook.core@default:default"/>
+        <setEntry value="al.sybina.ebr.logbook.domain@5:true"/>
+        <setEntry value="al.sybina.ebr.logbook.ui@5:true"/>
+        <setEntry value="al.sybina.ebr.logbook2.ui@default:default"/>
+        <setEntry value="al.sybina.ebr.login@5:false"/>
+        <setEntry value="al.sybina.ebr.s63@default:true"/>
+        <setEntry value="al.sybina.ebr.server@4:true"/>
+        <setEntry value="al.sybina.ebr.core@default:default"/>
+        <setEntry value="al.sybina.ebr.library.S57Library@default:default"/>
+        <setEntry value="al.sybina.ebr.rcp@6:false"/>
+        <setEntry value="org.apache.commons.compress@default:default"/>
+        <setEntry value="org.eclipse.e4.tools.resources@default:true"/>
+        <setEntry value="org.osgeo.proj4j@default:default"/>
+    </setAttribute>
+    <booleanAttribute key="show_selected_only" value="false"/>
+    <booleanAttribute key="useCustomFeatures" value="true"/>
+    <booleanAttribute key="useDefaultConfig" value="true"/>
+    <booleanAttribute key="useDefaultConfigArea" value="true"/>
+    <booleanAttribute key="useProduct" value="true"/>
+</launchConfiguration>

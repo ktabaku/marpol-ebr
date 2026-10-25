@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>configure.xhtml</title>
+  <link rel="stylesheet" href="../styles/shared.css" type="text/css" />
+  </head>
+
+<body>
+<h1>Configuration of your intrumentation</h1>
+<h4>1) Introduction</h4>
+<p>There are different ways to define the instrumentation of your capcode software. <br/> 
+Capcode receive messages from your instruments via serial communication ports<br/>
+To select the serial communication port that will be used: 
+</p>
+<h4>1) automatically</h4>
+<p>select the scan button <img src="scan_icon32.gif" alt="scan button" />, all available serial communication ports should appear as follow: 
+<img src="configuration1.jpg" alt="" height="200" width="300" style="height: 443px; width: 614px; "/><br/>
+</p>
+<h4>2) manually</h4>
+<p>select the add comm port button <img src="commport.jpg" alt="comm port" />, and enter the characteristics of the port, usually the default values are ok.
+For AIS, set the baud rate to 38400, or the one specified in the technical leaflet of your instrument.<br/>
+You can also select the menu "add comm port":
+<img src="configuration2.jpg" alt="" height="200" width="300" style="height: 260px; width: 380px; "/><br/>
+</p>
+<p>When you connect your instruments, the ports that receive data are marked with a green dot:
+<img src="configuration3.jpg" alt="" height="200" width="300" style="height: 260px; width: 380px; "/><br/>
+You can double click on the port to see the instruments connected. If you double click on an instrument and see the NMEA messages running on this port.
+<img src="configuration4.jpg" alt="" height="200" width="300" style="height: 260px; width: 380px; "/><br/> 
+</p>
+<p>Select now the freeze button<img src="freeze_icon32.gif" alt="freeze button" />, to select only the comm ports having NMEA messages (it will release the other ports)</p>
+<p>Finish by pressing the validate button<img src="validatebtn.jpg" alt="validate button" />, to validate and store this configuration for further starts of capcode.</p>
+</body>
+</html>

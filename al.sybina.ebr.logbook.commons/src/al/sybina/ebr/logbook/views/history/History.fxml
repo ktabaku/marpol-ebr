@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXSlider?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import jfxtras.scene.control.LocalDateTimeTextField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+
+<AnchorPane id="coloreTesto" fx:id="mainAnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="al.sybina.ebr.logbook.views.history.HistoryController">
+   <children>
+      <ScrollPane focusTraversable="false" style="-fx-fit-to-width: true; -fx-fit-to-height: true;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <HBox>
+               <children>
+                  <VBox alignment="TOP_CENTER" spacing="10.0">
+                     <children>
+                        <Label styleClass="logbookOtherLabel" text="Ship Operations Date" />
+                        <LocalDateTimeTextField fx:id="businessDatePicker" disable="true" minWidth="200.0" styleClass="logbook-LocalDateTimeTextFieldSkin">
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding></LocalDateTimeTextField>
+                        <JFXSlider fx:id="businessDateSlider" blockIncrement="1.0" disable="true" indicatorPosition="RIGHT" majorTickUnit="10.0" max="-1.0" min="-31.0" minorTickCount="10" nodeOrientation="LEFT_TO_RIGHT" orientation="VERTICAL" showTickLabels="true" showTickMarks="true" snapToTicks="true" styleClass="sliderLogbookHistory" VBox.vgrow="ALWAYS" />
+                        <CheckBox fx:id="businessDateCheckBox" mnemonicParsing="false" selected="true" styleClass="logbookHistoryCheckBox" text="Actual Ship Operations" />
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Pagination fx:id="pagination" VBox.vgrow="SOMETIMES">
+                        	<fx:define>
+      	                  <TableView id="logtable" fx:id="logTableView" styleClass="historyTableView" tableMenuButtonVisible="true" VBox.vgrow="SOMETIMES">
+      	                    <columns>
+      	                    	<TableColumn fx:id="actionsCol" maxWidth="1.7976931348623157E308" minWidth="120.0" prefWidth="-1.0" sortable="false" text="" />
+      <!-- 	                      <TableColumn fx:id="typeCol" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="-1.0" sortable="false" text="Log Type" /> -->
+      		                    <TableColumn fx:id="businessDateCol" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="-1.0" sortable="false" text="Date" />
+      		                    <TableColumn fx:id="codeLetterCol" maxWidth="1.7976931348623157E308" minWidth="90.0" prefWidth="-1.0" sortable="false" text="Code Letter" />
+      	                        <TableColumn fx:id="codeNumberCol" maxWidth="1.7976931348623157E308" minWidth="90.0" prefWidth="-1.0" sortable="false" text="Code Number" />
+      	                        <TableColumn id="content" fx:id="contentCol" maxWidth="1.7976931348623157E308" minWidth="300.0" prefWidth="-1.0" sortable="false" text="Content" />
+       	                        <TableColumn fx:id="correctionNoteCol" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="-1.0" sortable="false" text="Correction Note" />
+      	                        <TableColumn fx:id="nameCreatorCol" maxWidth="1.7976931348623157E308" minWidth="110.0" prefWidth="-1.0" text="Name" />
+      	                        <TableColumn fx:id="signatureCreatorCol" maxWidth="1.7976931348623157E308" minWidth="110.0" prefWidth="-1.0" text="Signature" />
+      		                    <TableColumn fx:id="masterCol" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="-1.0" sortable="false" text="Master" />
+      		                    <TableColumn fx:id="masterSignatureCol" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="-1.0" sortable="false" styleClass="table-signature-column" text="Master Signature" />
+      		                    <TableColumn fx:id="attachmentCol" maxWidth="1.7976931348623157E308" minWidth="90.0" prefWidth="-1.0" sortable="false" text="Attachment" />
+       	                        <TableColumn fx:id="noteCol" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="-1.0" sortable="false" text="Note" />
+      	                    </columns>
+      	                  </TableView>
+                        	</fx:define>
+                        </Pagination>
+                        <HBox alignment="CENTER_LEFT" spacing="50.0">
+                           <children>
+                              <VBox alignment="CENTER" spacing="10.0" style="-fx-effect: none;">
+                                 <children>
+                                    <Label styleClass="logbookOtherLabel" text="Log Registration Date" />
+                                    <LocalDateTimeTextField fx:id="processingDatePicker" disable="true" minWidth="200.0" styleClass="logbook-LocalDateTimeTextFieldSkin" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <JFXSlider fx:id="processingDateSlider" blockIncrement="1.0" disable="true" majorTickUnit="10.0" max="31.0" min="1.0" minorTickCount="10" showTickLabels="true" showTickMarks="true" snapToTicks="true" styleClass="sliderLogbookHistory" value="1.0" HBox.hgrow="ALWAYS" />
+                              <CheckBox fx:id="processingDateCheckBox" mnemonicParsing="false" selected="true" styleClass="logbookHistoryCheckBox" text="Actual Log Registration" />
+                           </children>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding></HBox>
+                        <ButtonBar fx:id="buttonBarHistory" prefHeight="40.0">
+                          <buttons>
+                              <Button fx:id="historyPreviewButton" mnemonicParsing="false" onAction="#showHistoryPreview" text="History Preview" />
+                            <Button fx:id="showPreviewButton" disable="true" mnemonicParsing="false" onAction="#showPreview" text="Preview" />
+                              <Button fx:id="saveButtonMaster" disable="true" mnemonicParsing="false" onAction="#saveDialogMaster" text="Master Sign &amp; Save" />
+                          </buttons>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </ButtonBar>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </content></ScrollPane>
+   </children>
+</AnchorPane>

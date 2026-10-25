@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import jfxtras.scene.control.ImageViewButton?>
+<?import jidefx.scene.control.field.DoubleField?>
+
+<TabPane id="mainLogbook2TabPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="al.sybina.ebr.logbook2.views.OilRecordBookPart2CodeLetterRController">
+	<Tab id="coloreTesto" closable="false" text="R">
+		<content>
+			<ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true;">
+				<content>
+									<AnchorPane fx:id="codeLetterContentAnchorPane">
+										<children>
+                     <VBox styleClass="logbookBodyVBox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <children>
+											<GridPane styleClass="codeLetterTitleGridPane">
+												<columnConstraints>
+													<ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+													<ColumnConstraints hgrow="SOMETIMES" />
+                                 <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" />
+												</columnConstraints>
+												<rowConstraints>
+													<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+												</rowConstraints>
+												<children>
+                                 <HBox alignment="CENTER_LEFT">
+                                    <GridPane.margin>
+                                       <Insets />
+                                    </GridPane.margin>
+                                    <children>
+													<Label fx:id="codeletter" styleClass="codeletterLabel" text="Code Letter R">
+														<padding>
+															<Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+														</padding>
+														<font>
+															<Font name="System Bold Italic" size="13.0" />
+														</font>
+													</Label>
+                                       <Region styleClass="logbook-title-arrow-region" />
+                                    </children>
+                                 </HBox>
+													<Label id="ballastingOrCleaningOfoilFuelTanks" fx:id="ballastingOrCleaningOfoilFuelTanks" text="BALLAST WATER DISCHARGE TO RECEPTION FACILITY" GridPane.columnIndex="1" GridPane.halignment="LEFT">
+														<font>
+															<Font size="22.0" />
+														</font>
+													</Label>
+													<ImageViewButton fx:id="infoLetterAImageViewButton" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#letterR" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+												</children>
+											</GridPane>
+											<VBox styleClass="logbookVBox">
+												<children>
+													<GridPane vgap="10.0">
+														<columnConstraints>
+															<ColumnConstraints hgrow="SOMETIMES" minWidth="360.0" />
+															<ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+															<ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+															<ColumnConstraints hgrow="NEVER" minWidth="-Infinity" />
+															<ColumnConstraints hgrow="ALWAYS" minWidth="30.0" />
+                                       <ColumnConstraints hgrow="NEVER" minWidth="30.0" />
+                                       <ColumnConstraints hgrow="NEVER" minWidth="30.0" />
+														</columnConstraints>
+														<rowConstraints>
+                                       <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+															<RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+															<RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+															<RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+														</rowConstraints>
+														<children>
+                                       <TextField fx:id="logbook2LetterR83TextField" styleClass="logbook-text-field" GridPane.columnIndex="2" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" />
+                                       <DoubleField fx:id="logbook2LetterR84DoubleField" styleClass="logbook-text-field" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+															<TextField fx:id="logbook2LetterR82TextField" styleClass="logbook-text-field" GridPane.columnIndex="2" GridPane.columnSpan="2147483647" />
+                                       <ImageViewButton fx:id="logbook2LetterRHelpImageViewButton" onMouseClicked="#showBalloon" GridPane.columnIndex="6" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+                                          <GridPane.margin>
+                                             <Insets left="10.0" />
+                                          </GridPane.margin>
+                                       </ImageViewButton>
+                                       <TextField fx:id="logbook2LetterR85TextField" styleClass="logbook-text-field" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+                                       <Label styleClass="logbookOtherLabel" text="M3" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                                          <padding>
+                                             <Insets left="5.0" />
+                                          </padding>
+                                       </Label>
+                                       <ImageViewButton fx:id="uploadReceiptImageViewButton" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+                                          <GridPane.margin>
+                                             <Insets left="5.0" />
+                                          </GridPane.margin>
+                                       </ImageViewButton>
+                                       <HBox alignment="CENTER_LEFT">
+                                          <children>
+                                             <HBox id="logbook2LetterQ82HBox" alignment="CENTER_LEFT" styleClass="logbookDarkLabel">
+                                                <children>
+                  															<CheckBox fx:id="logbook2LetterR82CheckBox" mnemonicParsing="false" styleClass="logbookcheck-box" />
+                                                   <HBox alignment="CENTER_LEFT" styleClass="logbook-label-hbox">
+                                                      <children>
+                        															<Label alignment="CENTER" styleClass="logbookCodeLetterLabel" text="82. Port(s) where ballast water was discharged." />
+                                                      </children>
+                                                   </HBox>
+                                                </children>
+                                             </HBox>
+                                             <Region>
+                                                <styleClass>
+                                                   <String fx:value="logbook-arrow-region" />
+                                                   <String fx:value="logbook-arrow-region-color-dark" />
+                                                </styleClass>
+                                             </Region>
+                                          </children>
+                                       </HBox>
+                                       <HBox alignment="CENTER_LEFT" GridPane.rowIndex="1">
+                                          <children>
+                                             <HBox id="logbook2LetterQ83HBox" alignment="CENTER_LEFT" styleClass="logbookLightGreyLabel">
+                                                <children>
+                  															<CheckBox fx:id="logbook2LetterR83CheckBox" mnemonicParsing="false" styleClass="logbookcheck-box" />
+                                                   <HBox alignment="CENTER_LEFT" styleClass="logbook-label-hbox">
+                                                      <children>
+                        															<Label alignment="CENTER" styleClass="logbookOtherLabel" text="83. Name or designation of reception facility." />
+                                                      </children>
+                                                   </HBox>
+                                                </children>
+                                             </HBox>
+                                             <Region>
+                                                <styleClass>
+                                                   <String fx:value="logbook-arrow-region" />
+                                                   <String fx:value="logbook-arrow-region-color-light-grey" />
+                                                </styleClass>
+                                             </Region>
+                                          </children>
+                                       </HBox>
+                                       <HBox alignment="CENTER_LEFT" GridPane.rowIndex="2">
+                                          <children>
+                                             <HBox id="logbook2LetterQ84HBox" alignment="CENTER_LEFT" styleClass="logbookColorBlueLabel">
+                                                <children>
+            															<CheckBox fx:id="logbook2LetterR84CheckBox" mnemonicParsing="false" styleClass="logbookcheck-box" />
+                                                   <HBox alignment="CENTER_LEFT" styleClass="logbook-label-hbox">
+                                                      <children>
+                        															<Label styleClass="logbookOtherLabel" text="84. Total quantity of ballast water discharged in&#10;cubic metres." />
+                                                      </children>
+                                                   </HBox>
+                                                </children>
+                                             </HBox>
+                                             <Region>
+                                                <styleClass>
+                                                   <String fx:value="logbook-arrow-region" />
+                                                   <String fx:value="logbook-arrow-region-color-blue" />
+                                                </styleClass>
+                                             </Region>
+                                          </children>
+                                       </HBox>
+                                       <HBox alignment="CENTER_LEFT" GridPane.rowIndex="3">
+                                          <children>
+                                             <HBox id="logbook2LetterQ85HBox" alignment="CENTER_LEFT" styleClass="logbookGreyLabel">
+                                                <children>
+                                                   <CheckBox fx:id="logbook2LetterR85CheckBox" mnemonicParsing="false" styleClass="logbookcheck-box" />
+                                                   <HBox alignment="CENTER_LEFT" styleClass="logbook-label-hbox">
+                                                      <children>
+                                                         <Label styleClass="logbookOtherLabel" text="85. Date, signature and stamp of port authority&#10;official." />
+                                                      </children>
+                                                   </HBox>
+                                                </children>
+                                             </HBox>
+                                             <Region>
+                                                <styleClass>
+                                                   <String fx:value="logbook-arrow-region" />
+                                                   <String fx:value="logbook-arrow-region-color-grey" />
+                                                </styleClass>
+                                             </Region>
+                                          </children>
+                                       </HBox>
+														</children>
+													</GridPane>
+												</children>
+											</VBox>
+                        </children>
+                     </VBox>
+										</children>
+									</AnchorPane>
+				</content>
+			</ScrollPane>
+		</content>
+	</Tab>
+</TabPane>

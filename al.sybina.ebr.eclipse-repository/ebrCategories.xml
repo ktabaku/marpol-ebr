@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/al.sybina.ebr.feature.core_2.0.0.jar" id="al.sybina.ebr.feature.core" version="2.0.0">
+      <category name="al.sybina.ebr.core"/>
+   </feature>
+   <feature url="features/al.sybina.ebr.feature.advanced_2.0.0.jar" id="al.sybina.ebr.feature.advanced" version="2.0.0">
+      <category name="al.sybina.ebr.category.advanced"/>
+   </feature>
+   <feature url="features/al.sybina.ebr.feature.basics_2.0.0.jar" id="al.sybina.ebr.feature.basics" version="2.0.0">
+      <category name="al.sybina.ebr.category.basic"/>
+   </feature>
+   <category-def name="al.sybina.ebr.core" label="Ebr Core (required)">
+      <description>
+         required plugins to run ebr in eclipse
+      </description>
+   </category-def>
+   <category-def name="al.sybina.ebr.category.basic" label="Ebr basic functions">
+      <description>
+         basics function of ebr (charting, NMEA aquisition, boat tracking)
+      </description>
+   </category-def>
+   <category-def name="al.sybina.ebr.category.advanced" label="Ebr advanced functions">
+      <description>
+         specialized functions (routing, weather, AIS)
+      </description>
+   </category-def>
+   <category-def name="al.sybina.ebr.category.regatta" label="Regatta">
+      <description>
+         functions for regatta
+      </description>
+   </category-def>
+</site>
