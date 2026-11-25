@@ -348,10 +348,25 @@ public class SaveMasterController implements Initializable {
 		String partType="";
 		String appVersion="V 1.0.0";
 		try {
+			// PATCH: version.properties lives at version/version.properties in the bundle; the old
+			// "/version.properties" lookup was null -> prop.load(null) NPE escaped catch(IOException)
+			// and aborted this method silently. Try both locations, guard nulls, skip unfiltered ${...}.
 			InputStream resourceAsStream = al.sybina.ebr.rcp.Activator.class.getResourceAsStream("/version.properties");
-			Properties prop = new Properties();
-			prop.load(resourceAsStream);
-			appVersion = "V " + prop.getProperty("releasedVersion.version");
+			if (resourceAsStream == null) {
+				resourceAsStream = al.sybina.ebr.rcp.Activator.class.getResourceAsStream("/version/version.properties");
+			}
+			if (resourceAsStream != null) {
+				try {
+					Properties prop = new Properties();
+					prop.load(resourceAsStream);
+					String v = prop.getProperty("releasedVersion.version");
+					if (v != null && !v.trim().isEmpty() && !v.contains("${")) {
+						appVersion = "V " + v;
+					}
+				} finally {
+					resourceAsStream.close();
+				}
+			}
 		} catch (IOException e1) {
 			logger.error(e1.getMessage(), e1);
 		}

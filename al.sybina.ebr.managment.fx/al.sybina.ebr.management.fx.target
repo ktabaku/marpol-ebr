@@ -17,10 +17,6 @@
 <repository location="http://download.eclipse.org/releases/oxygen/201804111000"/>
 </location>
 <location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="javax.media.jai_imageio-feature.feature.group" version="1.1.3"/>
-<repository location="http://udig.refractions.net/files/update-jai/"/>
-</location>
-<location includeAllPlatforms="true" includeConfigurePhase="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.persistence.sdk.feature.group" version="2.6.4.v20160829-44060b6"/>
 <repository location="http://download.eclipse.org/rt/eclipselink/updates/2.6.4.v20160829-44060b6"/>
 </location>
@@ -136,7 +132,6 @@
 <unit id="org.glassfish.main.javax.transaction" version="4.0.0.b33"/>
 <unit id="org.jfree.chart" version="1.0.19"/>
 <unit id="org.jfree.chart" version="1.5.1"/>
-<unit id="org.jfree.chart.fx" version="2.0.0.java8"/>
 <unit id="org.jfree.fxgraphics2d" version="1.8.0"/>
 <unit id="org.jfree.jcommon" version="1.0.23"/>
 <unit id="org.jfxtras.common" version="8.0.0.r5"/>
@@ -162,7 +157,7 @@
 <unit id="tech.units.indriya" version="2.0.4"/>
 <unit id="uom-lib-common" version="2.0.1"/>
 <unit id="xalan" version="2.7.2"/>
-<repository location="http://localhost:8080/site/"/>
+<repository location="file:/C:/ai-reloaded/marpol-ebr/al.sybina.ebr.p2-site/target/repository"/>
 </location>
 </locations>
 <includeBundles>
@@ -226,7 +221,6 @@
 <plugin id="javax.mail" version="1.4.0.v201005080615"/>
 <plugin id="javax.measure.unit-api"/>
 <plugin id="javax.measure.unit-api.source"/>
-<plugin id="javax.media.jai_imageio"/>
 <plugin id="javax.persistence"/>
 <plugin id="javax.persistence.source"/>
 <plugin id="javax.servlet" version="3.1.0.v201410161800"/>
@@ -734,7 +728,6 @@
 <plugin id="org.hamcrest.core.source"/>
 <plugin id="org.jfree.chart" version="1.5.1"/>
 <plugin id="org.jfree.chart" version="1.0.19"/>
-<plugin id="org.jfree.chart.fx"/>
 <plugin id="org.jfree.fxgraphics2d"/>
 <plugin id="org.jfree.jcommon"/>
 <plugin id="org.jfxtras.common"/>

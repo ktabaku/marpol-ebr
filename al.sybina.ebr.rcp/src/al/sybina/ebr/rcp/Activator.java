@@ -41,6 +41,10 @@ public class Activator implements BundleActivator {
 	public void start(BundleContext context) throws Exception {
 		plugin = this;
 		bundleContext = context;
+		// PATCH: make silent failures visible. Uncaught RuntimeExceptions on the JavaFX
+		// thread (e.g. the BLOB/VARBINARY save failure, the missing version.properties NPE)
+		// previously only reached stderr, so the user saw a no-op. See GlobalFxExceptionHandler.
+		GlobalFxExceptionHandler.install();
         new Thread(() -> {
             try {
                 SVGGlyphLoader.loadGlyphsFont(Activator.class.getResourceAsStream("icomoon.svg"),

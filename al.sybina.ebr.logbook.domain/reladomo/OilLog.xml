@@ -63,6 +63,14 @@
 	<Attribute name="masterSigDate" javaType="Date" columnName="MASTERSIGDATE" nullable="true" />
 	<Attribute name="signatureGroupUuid" javaType="String" columnName="SIGNATUREGROUPUUID" nullable="true" />
 	<Attribute name="attachmentName" javaType="String" columnName="ATTACHMENTNAME" nullable="true" />
+	<!-- NOTE: ATTACHMENTDATA is BLOB in the DDL. Reladomo 17.1.4 generates setNull(Types.VARBINARY)
+	     for null byte[] here, which Derby 10.14 rejects (SQLState 22005) and ORB saves fail silently
+	     (exception swallowed in MithraAbstractDatabaseObject.zBatchInsertForSameSourceAttribute).
+	     'jdbcType'/'jdbcDataType' are not supported <Attribute> options in 17.1.4 (verified
+	     against the reladomogen 17.1.4 bytecode), so the generated
+	     OilLogDatabaseObjectAbstract.setInsertAttributes() is corrected to Types.BLOB after
+	     generation. The Maven build does this itself (generateReladomo in this bundle's pom.xml);
+	     after regenerating any other way run: python tools/repatch_blob.py (idempotent). -->
 	<Attribute name="attachmentData" javaType="byte[]" columnName="ATTACHMENTDATA" nullable="true" />
 	
 <!-- 	@Basic -->
