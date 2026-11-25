@@ -158,8 +158,7 @@
 	                                <source>false</source>
 	                                <override>true</override>
 	                                <instructions>
-	                                    <Import-Package>al.sybina.ebr.logbook.core.services;resolution:=optional,
-															com.mchange.v2.c3p0,commonj.work;resolution:=optional,
+	                                    <Import-Package>com.mchange.v2.c3p0,commonj.work;resolution:=optional,
 															javax.ejb;resolution:=optional,
 															javax.jms;resolution:=optional,
 															javax.mail;resolution:=optional,
@@ -188,6 +187,11 @@
 															weblogic.jdbc.jts;resolution:=optional,
 															weblogic.jdbc.vendor.oracle;resolution:=optional,
 	                                    				*</Import-Package>
+	                                    <!-- Quartz uses the JDBC job store, so it loads BackupDatabaseJob by name with
+	                                         its own class loader. A dynamic import gives it that package without the
+	                                         build-path cycle (logbook.core requires quartz) that a static import of
+	                                         al.sybina.ebr.logbook.core.services causes in the Eclipse workspace. -->
+	                                    <DynamicImport-Package>al.sybina.ebr.logbook.core.services</DynamicImport-Package>
 	                                </instructions>
 	                            </artifact>
 	                            <artifact><id>org.quartz-scheduler:quartz-jobs:2.2.0</id></artifact>
@@ -203,9 +207,9 @@
 	                                <excludes/>
 	                            </artifact>
 	                            <artifact><id>org.apache.servicemix.bundles:org.apache.servicemix.bundles.dbunit:2.7.0_1</id></artifact>
-	                            <artifact><id>at.bestsolution.fx.test:at.bestsolution.fx.test.rcontrol:0.0.1</id></artifact>
-								<artifact><id>at.bestsolution.fx.test:at.bestsolution.fx.test.junit:0.0.1</id></artifact>
-								<artifact><id>at.bestsolution.fx.test:at.bestsolution.fx.test.e4.junit:0.0.1</id></artifact>
+	                            <artifact><id>at.bestsolution.fx.test:at.bestsolution.fx.test.rcontrol:0.0.1</id><transitive>false</transitive></artifact>
+								<artifact><id>at.bestsolution.fx.test:at.bestsolution.fx.test.junit:0.0.1</id><transitive>false</transitive></artifact>
+								<artifact><id>at.bestsolution.fx.test:at.bestsolution.fx.test.e4.junit:0.0.1</id><transitive>false</transitive></artifact>
 								
 								<artifact><id>io.datafx:datafx:8.0.1</id></artifact>
 								<artifact><id>io.datafx:core:8.0.1</id></artifact>
@@ -213,7 +217,12 @@
 								<artifact><id>de.jensd:fontawesomefx:8.9</id></artifact>
 								<artifact><id>org.jfree:fxgraphics2d:1.8</id></artifact>
 								<artifact><id>org.jfree:jfreechart:1.5.1</id></artifact>
-								<artifact><id>org.jfree:org.jfree.chart.fx:2.0.java8</id></artifact>
+								<!-- org.jfree:org.jfree.chart.fx:2.0.java8 was listed here. That is a private Java 8
+								     build that is not on Maven Central; the published 2.0.x releases are Java 11 and
+								     cannot load on the Java 8 runtime. No bundle imports it, so it is left out. To
+								     restore it, install the 2.0.java8 jar in the local repository and re-add
+								     <artifact><id>org.jfree:org.jfree.chart.fx:2.0.java8</id></artifact> here and
+								     unit/plugin org.jfree.chart.fx (2.0.0.java8) in the target definition. -->
 								<artifact><id>org.jfxtras:jfxtras-common:8.0-r5</id></artifact>
 								<artifact><id>org.jfxtras:jfxtras-controls:8.0-r5</id></artifact>
 								<artifact><id>org.jfxtras:jfxtras-fxml:8.0-r5</id></artifact>
@@ -401,6 +410,13 @@
             <layout>p2</layout>
         </repository>
 
+        <!-- hosts com.lowagie:itext:2.1.7.js6 (Jaspersoft's itext fork), not on Maven Central -->
+        <repository>
+            <id>jaspersoft-third-party</id>
+            <url>https://jaspersoft.jfrog.io/jaspersoft/third-party-ce-artifacts/</url>
+            <releases><enabled>true</enabled></releases>
+            <snapshots><enabled>false</enabled></snapshots>
+        </repository>
 
 	</repositories>
 

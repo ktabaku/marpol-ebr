@@ -159,10 +159,27 @@ public class HistoryPreviewController implements Initializable {
 		String partType="";
 		String appVersion="V 1.0.0";
 		try {
+			// PATCH: the file ships at version/version.properties in the bundle (Bundle-ClassPath is "."),
+			// so the old "/version.properties" lookup returned null and prop.load(null) threw NPE here,
+			// which the catch(IOException) did not cover -> showPreview aborted with no visible error.
+			// (jdb-confirmed: resourceAsStream=null at line 164.) Try both locations, guard nulls, and
+			// ignore unfiltered ${...} placeholders from the Maven template.
 			InputStream resourceAsStream = al.sybina.ebr.rcp.Activator.class.getResourceAsStream("/version.properties");
-			Properties prop = new Properties();
-			prop.load(resourceAsStream);
-			appVersion = "V " + prop.getProperty("releasedVersion.version");
+			if (resourceAsStream == null) {
+				resourceAsStream = al.sybina.ebr.rcp.Activator.class.getResourceAsStream("/version/version.properties");
+			}
+			if (resourceAsStream != null) {
+				try {
+					Properties prop = new Properties();
+					prop.load(resourceAsStream);
+					String v = prop.getProperty("releasedVersion.version");
+					if (v != null && !v.trim().isEmpty() && !v.contains("${")) {
+						appVersion = "V " + v;
+					}
+				} finally {
+					resourceAsStream.close();
+				}
+			}
 		} catch (IOException e1) {
 			logger.error(e1.getMessage(), e1);
 		}

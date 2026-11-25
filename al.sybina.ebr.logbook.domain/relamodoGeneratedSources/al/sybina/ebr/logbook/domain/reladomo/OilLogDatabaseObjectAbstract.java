@@ -655,7 +655,13 @@ implements MithraDatedTransactionalDatabaseObject, MithraDatedTransactionalObjec
 
 		if (data.isAttachmentDataNull())
 		{
-			stm.setNull(pos++, java.sql.Types.VARBINARY);
+			// PATCH: ATTACHMENTDATA is a BLOB column (see OCEAN_LOGBOOK_OPERATION_OIL_LOG.ddl).
+			// The Reladomo 17.1.4 generator emits setNull(Types.VARBINARY) for nullable byte[]
+			// attributes; the Derby 10.14 network client rejects that against a BLOB parameter
+			// (SQLState 22005: "get a data value of type 'VARBINARY' from ... 'BLOB'"), which made
+			// every ORB save fail silently. jdbcType is not a valid <Attribute> option in 17.1.4,
+			// so if this file is regenerated, re-apply Types.BLOB here.
+			stm.setNull(pos++, java.sql.Types.BLOB);
 		}
 		else
 		{

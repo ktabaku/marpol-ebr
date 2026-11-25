@@ -59,6 +59,23 @@
                                               generatedDir="${project.basedir}/relamodoGeneratedSources"
                                               nonGeneratedDir="${project.basedir}/src"
                                         />
+                                <!-- ATTACHMENTDATA is a BLOB column, but Reladomo ${reladomo.version} generates
+                                     setNull(Types.VARBINARY) for a null byte[] and has no attribute option to
+                                     change it. Derby rejects that (SQLState 22005) and the save fails silently,
+                                     so the generated file is corrected here after every generation. -->
+                                <property name="oillog.dbo"
+                                          value="${project.basedir}/relamodoGeneratedSources/al/sybina/ebr/logbook/domain/reladomo/OilLogDatabaseObjectAbstract.java"/>
+                                <replace file="${oillog.dbo}"
+                                         token="stm.setNull(pos++, java.sql.Types.VARBINARY);"
+                                         value="stm.setNull(pos++, java.sql.Types.BLOB);"/>
+                                <fail message="OilLogDatabaseObjectAbstract.java: the null ATTACHMENTDATA parameter is not bound as Types.BLOB. The generator output changed; update the replace step in this pom.">
+                                    <condition>
+                                        <or>
+                                            <not><resourcecontains resource="${oillog.dbo}" substring="stm.setNull(pos++, java.sql.Types.BLOB);"/></not>
+                                            <resourcecontains resource="${oillog.dbo}" substring="Types.VARBINARY);"/>
+                                        </or>
+                                    </condition>
+                                </fail>
                             </tasks>
                         </configuration>
                     </execution>
